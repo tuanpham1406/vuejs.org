@@ -254,7 +254,7 @@ Beyond the `scoped` attribute, using unique class names can help ensure that 3rd
 {% raw %}
 
 <div class="style-example example-good">
-  {% endraw %} #### Good ``` html <template> <button class="button button-close">X</button> </template> <!-- Using the scoped attribute --> 
+  {% endraw %} #### Good ``` html <template> <button class="button button-close">X</button> </template> <!-- Using the `scoped` attribute --> 
 <style scoped>
 .button {
   border: none;
@@ -464,6 +464,39 @@ This does not mean the component is only used in a single page, but it will only
 
 If a component only makes sense in the context of a single parent component, that relationship should be evident in its name. Since editors typically organize files alphabetically, this also keeps these related files next to each other.
 
+{% raw %} <details> <summary>
+
+#### Detailed Explanation
+
+</summary> {% endraw %}
+
+You might be tempted to solve this problem by nesting child components in directories named after their parent. For example:
+
+    components/
+    |- TodoList/
+       |- Item/
+          |- index.vue
+          |- Button.vue
+       |- index.vue
+    
+
+or:
+
+    components/
+    |- TodoList/
+       |- Item/
+          |- Button.vue
+       |- Item.vue
+    |- TodoList.vue
+    
+
+This isn't recommended, as it results in:
+
+- Many files with similar names, making rapid file switching in code editors more difficult.
+- Many nested sub-directories, which increases the time it takes to browse components in an editor's sidebar.
+
+{% raw %}</details>{% endraw %}
+
 {% raw %}
 
 <div class="style-example example-bad">
@@ -580,7 +613,7 @@ Unfortunately, HTML doesn't allow custom elements to be self-closing - only [off
 
 ### Component name casing in templates <sup data-p="b">strongly recommended</sup>
 
-**Component names should always be PascalCase in [single-file components](../guide/single-file-components.html) and string templates - but kebab-case in DOM templates.**
+**In most projects, component names should always be PascalCase in [single-file components](../guide/single-file-components.html) and string templates - but kebab-case in DOM templates.**
 
 PascalCase has a few advantages over kebab-case:
 
@@ -590,12 +623,12 @@ PascalCase has a few advantages over kebab-case:
 
 Unfortunately, due to HTML's case insensitivity, DOM templates must still use kebab-case.
 
+Also note that if you've already invested heavily in kebab-case, consistency with HTML conventions and being able to use the same casing across all your projects may be more important than the advantages listed above. In those cases, **using kebab-case everywhere is also acceptable.**
+
 {% raw %}
 
 <div class="style-example example-bad">
   {% endraw %} #### Bad ``` html <!-- In single-file components and string templates --><mycomponent/> ``` ``` html 
-  
-  <!-- In single-file components and string templates --><my-component/> ``` ``` html 
   
   <!-- In single-file components and string templates --><mycomponent/> ``` ``` html 
   
@@ -609,7 +642,9 @@ Unfortunately, due to HTML's case insensitivity, DOM templates must still use ke
 <div class="style-example example-good">
   {% endraw %} #### Good ``` html <!-- In single-file components and string templates --><mycomponent/> ``` ``` html 
   
-  <!-- In DOM templates --><my-component></my-component> ``` {% raw %}
+  <!-- In DOM templates --><my-component></my-component> ``` OR ``` html 
+  
+  <!-- Everywhere --><my-component></my-component> ``` {% raw %}
 </div>
 
 {% endraw %}
@@ -629,7 +664,9 @@ In JavaScript, PascalCase is the convention for classes and prototype constructo
 However, for applications that use **only** global component definitions via `Vue.component`, we recommend kebab-case instead. The reasons are:
 
 - It's rare that global components are ever referenced in JavaScript, so following a convention for JavaScript makes less sense.
-- These applications always include many in-DOM components, where kebab-case [**must** be used](#Component-name-casing-in-templates). {% raw %}</details>{% endraw %}
+- These applications always include many in-DOM templates, where [kebab-case **must** be used](#Component-name-casing-in-templates-strongly-recommended).
+
+{% raw %}</details>{% endraw %}
 
 {% raw %}
 
@@ -715,7 +752,7 @@ In JavaScript, splitting objects with multiple properties over multiple lines is
 
 {% endraw %}
 
-### Complex expressions in templates <sup data-p="b">strongly recommended</sup>
+### Simple expressions in templates <sup data-p="b">strongly recommended</sup>
 
 **Component templates should only include simple expressions, with more complex expressions refactored into computed properties or methods.**
 
@@ -737,7 +774,7 @@ Complex expressions in your templates make them less declarative. We should stri
 
 {% endraw %}
 
-### Complex computed properties <sup data-p="b">strongly recommended</sup>
+### Simple computed properties <sup data-p="b">strongly recommended</sup>
 
 **Complex computed properties should be split into as many simpler properties as possible.**
 
@@ -1115,7 +1152,7 @@ button {
 
 {% endraw %}
 
-### Parent-child communication <sup data-p="d">use with caution</sup>
+### Implicit parent-child communication <sup data-p="d">use with caution</sup>
 
 **Props and events should be preferred for parent-child component communication, instead of `this.$parent` or mutating props.**
 
@@ -1139,7 +1176,7 @@ The problem is, there are also many *simple* cases where these patterns may offe
 
 {% endraw %}
 
-### Global state management <sup data-p="d">use with caution</sup>
+### Non-flux state management <sup data-p="d">use with caution</sup>
 
 **[Vuex](https://github.com/vuejs/vuex) should be preferred for global state management, instead of `this.$root` or a global event bus.**
 
