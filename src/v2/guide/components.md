@@ -361,28 +361,28 @@ Một lỗi mà người mới học thường vấp phải là thử truyền x
 <comp some-prop="1"></comp>
 ```
 
-Tuy nhiên, vì đây là một prop literal, giá trị của nó được truyền xuống dưới dạng chuỗi `"1"` thay vì một con số thật sự. Để truyền xuống một giá trị kiểu number trong JavaScript, chúng ta cần dùng `v-bind` để cho giá trị của nó được xem như một biểu thức JavaScript:
+Tuy nhiên, vì đây là một prop literal, giá trị của nó được truyền xuống dưới dạng chuỗi `"1"` thay vì một con số thật sự. Muốn truyền xuống một giá trị kiểu number trong JavaScript, chúng ta cần dùng `v-bind` để cho giá trị của nó được xem như một biểu thức JavaScript:
+
 
 ``` html
 <!-- cách này sẽ truyền xuống một con số thật sự -->
 <comp v-bind:some-prop="1"></comp>
 ```
 
-### One-Way Data Flow
+### Luồng dữ liệu một chiều
 
-All props form a **one-way-down** binding between the child property and the parent one: when the parent property updates, it will flow down to the child, but not the other way around. This prevents child components from accidentally mutating the parent's state, which can make your app's data flow harder to understand.
+Tất cả các prop tạo ra một ràng buộc (binding) **đi xuống một chiều** giữa thuộc tính của cha và thuộc tính của con. Khi thuộc tính của cha được cập nhật, sự thay đổi này sẽ được truyền xuống dưới, nhưng không xảy ra điều ngược lại. Điều này ngăn không cho component con vô tình thay đổi trạng thái của cha (và làm luồng dữ liệu trở nên rối loạn).
 
-In addition, every time the parent component is updated, all props in the child component will be refreshed with the latest value. This means you should **not** attempt to mutate a prop inside a child component. If you do, Vue will warn you in the console.
+Thêm vào đó, mỗi khi component cha được cập nhật, toàn bộ prop trong component con sẽ được refresh với giá trị mới nhất. Điều này có nghĩa là bạn **không nên** thay đổi prop bên trong component con. Nếu bạn vẫn cố làm, Vue sẽ hiện cảnh báo trong console.
 
-There are usually two cases where it's tempting to mutate a prop:
+Thông thường thì có hai trường hợp bạn muốn thay đổi một prop:
 
-1. The prop is used to pass in an initial value; the child component wants to use it as a local data property afterwards.
+1. Prop này được dùng để truyền một giá trị ban đầu, sau đó component con muốn dùng giá trị này như một thuộc tính dữ liệu cục bộ.
+2. Prop được truyền xuống dưới dạng giá trị thô (raw value) và cần được chuyển đổi
 
-2. The prop is passed in as a raw value that needs to be transformed.
+Cách làm đúng cho hai trường hợp trên là:
 
-The proper answer to these use cases are:
-
-1. Define a local data property that uses the prop's initial value as its initial value:
+1. Định nghĩa một thuộc tính dữ liệu cục bộ và dùng giá trị ban đầu của prop làm giá trị ban đầu của thuộc tính này:
 
   ``` js
   props: ['initialCounter'],
@@ -391,7 +391,7 @@ The proper answer to these use cases are:
   }
   ```
 
-2. Define a computed property that is computed from the prop's value:
+2. Đĩnh nghĩa một [computed property](computed.html) dựa trên giá trị của prop:
 
   ``` js
   props: ['size'],
@@ -402,40 +402,40 @@ The proper answer to these use cases are:
   }
   ```
 
-<p class="tip">Note that objects and arrays in JavaScript are passed by reference, so if the prop is an array or object, mutating the object or array itself inside the child **will** affect parent state.</p>
+<p class="tip">Lưu ý là object và array trong JavaScript được truyền bằng tham chiếu, vì vậy nếu prop là một array hay object, thay đổi array hay object này bên trong component con cũng sẽ ảnh hưởng đến component cha.</p>
 
-### Prop Validation
+### Kiểm chứng prop
 
-It is possible for a component to specify requirements for the props it is receiving. If a requirement is not met, Vue will emit warnings. This is especially useful when you are authoring a component that is intended to be used by others.
+Component có thể chỉ định một số yêu cầu (requirement) cho prop. Nếu có yêu cầu nào không được thỏa mãn, Vue sẽ cảnh báo. Điều này trở nên đặc biệt hữu ích khi component bạn đang viết là để cho người khác dùng.
 
-Instead of defining the props as an array of strings, you can use an object with validation requirements:
+Thay vì định nghĩa các prop dưới dạng một mảng chứa tên prop, bạn có thể dùng một object chứa các yêu cầu kiểm chứng (validation requirement).
 
 ``` js
 Vue.component('example', {
   props: {
-    // basic type check (`null` means accept any type)
+    // kiểm tra kiểu dữ liệu cơ bản (`null` chấp nhận tất cả các kiểu)
     propA: Number,
-    // multiple possible types
+    // chấp nhận một số kiểu dữ liệu cùng lúc
     propB: [String, Number],
-    // a required string
+    // một chuỗi bắt buộc
     propC: {
       type: String,
       required: true
     },
-    // a number with default value
+    // một con số với giá trị mặc định
     propD: {
       type: Number,
       default: 100
     },
-    // object/array defaults should be returned from a
-    // factory function
+    // giá trị mặc định cho object/array nên được trả về 
+    // từ một hàm factory
     propE: {
       type: Object,
       default: function () {
-        return { message: 'hello' }
+        return { message: 'Xin chào' }
       }
     },
-    // custom validator function
+    // hàm kiểm tra tùy biến
     propF: {
       validator: function (value) {
         return value > 10
@@ -445,7 +445,7 @@ Vue.component('example', {
 })
 ```
 
-The `type` can be one of the following native constructors:
+Thuộc tính `type` có thể là một trong các hàm dựng native sau:
 
 - String
 - Number
@@ -455,33 +455,33 @@ The `type` can be one of the following native constructors:
 - Array
 - Symbol
 
-In addition, `type` can also be a custom constructor function and the assertion will be made with an `instanceof` check.
+Ngoài ra, `type` cũng có thể là một hàm dựng tùy biến (custom constructor), và Vue sẽ so sánh bằng lệnh `instanceof`.
 
-When prop validation fails, Vue will produce a console warning (if using the development build). Note that props are validated __before__ a component instance is created, so within `default` or `validator` functions, instance properties such as from `data`, `computed`, or `methods` will not be available.
+Khi prop không thỏa mãn một hay nhiều điều kiện đã đặt ra, Vue sẽ cảnh báo trong console (nếu bạn đang dùng [bản development](installation.html#Che-do-development-va-production)). Lưu ý rằng prop được kiểm chứng __trước khi__ đối tượng component được khởi tạo, vì vậy bên trong các hàm `default` hoặc `validator`, các thuộc tính đối tượng như `data`, `computed`, hay `methods` sẽ không khả dụng.
 
-## Non-Prop Attributes
+## Các thuộc tính non-prop
 
-A non-prop attribute is an attribute that is passed to a component, but does not have a corresponding prop defined.
+Thuộc tính non-prop là một thuộc tính được truyền vào component mà không có prop tương ứng được định nghĩa sẵn. 
 
-While explicitly defined props are preferred for passing information to a child component, authors of component libraries can't always foresee the contexts in which their components might be used. That's why components can accept arbitrary attributes, which are added to the component's root element.
+Tuy props nên được định nghĩa một cách minh bạch bất cứ khi nào có thể, tác giả của các thư viện component không phải lúc nào cũng có thể thấy trước được ngữ cảnh mà component của mình được sử dụng. Đó là lí do component có thể nhận những giá trị "linh động" hơn, các giá trị này được thêm vào root của component.
 
-For example, imagine we're using a 3rd-party `bs-date-input` component with a Bootstrap plugin that requires a `data-3d-date-picker` attribute on the `input`. We can add this attribute to our component instance:
+Ví dụ, thử tưởng tượng chúng ta sử dụng component bên thứ ba gọi là `bs-date-input` với một plugin Bootstrap. Plugin này yêu cầu một thuộc tính tên là `data-3d-date-picker` trên `input`. Chúng ta có thể thêm thuộc tính này vào đối tượng component của chúng ta như sau:
 
 ``` html
 <bs-date-input data-3d-date-picker="true"></bs-date-input>
 ```
 
-And the `data-3d-date-picker="true"` attribute will automatically be added to the root element of `bs-date-input`.
+Ở đây thuộc tính `data-3d-date-picker="true"` sẽ được tự động gắn vào phần tử root của `bs-date-input`.
 
-### Replacing/Merging with Existing Attributes
+### Thay thế / sáp nhập với các thuộc tính sẵn có
 
-Imagine this is the template for `bs-date-input`:
+Ví dụ đây là template của `bs-date-input`:
 
 ``` html
 <input type="date" class="form-control">
 ```
 
-To specify a theme for our date picker plugin, we might need to add a specific class, like this:
+Để chỉ định một theme cho plugin date picker, có thể chúng ta sẽ phải thêm vào một `class` như sau:
 
 ``` html
 <bs-date-input
@@ -490,31 +490,31 @@ To specify a theme for our date picker plugin, we might need to add a specific c
 ></bs-date-input>
 ```
 
-In this case, two different values for `class` are defined:
+Như vậy ở đây có đến hai giá trị cho thuộc tính `class`:
 
-- `form-control`, which is set by the component in its template
-- `date-picker-theme-dark`, which is passed to the component by its parent
+- `form-control`, gán trong template của component
+- `date-picker-theme-dark`, truyền vào component con từ đối tượng cha
 
-For most attributes, the value provided to the component will replace the value set by the component. So for example, passing `type="large"` will replace `type="date"` and probably break it! Fortunately, the `class` and `style` attributes are a little smarter, so both values are merged, making the final value: `form-control date-picker-theme-dark`.
+Đối với đa số các thuộc tính, giá trị truyền vào sẽ thay thế cho giá trị được gắn sẵn trong component, có nghĩa là truyền vào `type="large"` sẽ thay thế `type="date"` (và có thể là làm hỏng luôn chương trình!) May thay, các thuộc tính `class` và `style` thông minh hơn một chút vã sẽ sáp nhập (merge) các giá trị lại với nhau, tạo thành kết quả cuối cùng: `class="form-control date-picker-theme-dark"`.
 
-## Custom Events
+## Các sự kiện tùy biến
 
-We have learned that the parent can pass data down to the child using props, but how do we communicate back to the parent when something happens? This is where Vue's custom event system comes in.
+Chúng ta đã biết rằng đối tượng cha có thể truyền dữ liệu xuống đối tượng con thông qua prop, nhưng nếu có gì đó xảy ra thì chúng ta làm thế nào để tương tác ngược lại từ đối tượng con lên đối tượng cha? Câu trả lời là hệ thống các sự kiện tùy biến (custom event) của Vue.
 
-### Using `v-on` with Custom Events
+### Sử dụng `v-on` với các sự kiện tùy biến
 
-Every Vue instance implements an [events interface](../api/#Instance-Methods-Events), which means it can:
+Mỗi đối tượng Vue đều phát triển một [giao diện sự kiện](../api/#Instance-Methods-Events), có nghĩa là nó có thể:
 
-- Listen to an event using `$on(eventName)`
-- Trigger an event using `$emit(eventName)`
+- Lắng nghe một sự kiện với `$on(eventName)`
+- Kích hoạt một sự kiện với `$emit(eventName)`
 
-<p class="tip">Note that Vue's event system is different from the browser's [EventTarget API](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget). Though they work similarly, `$on` and `$emit` are __not__ aliases for `addEventListener` and `dispatchEvent`.</p>
+<p class="tip">Lưu ý rằng hệ thống sự kiện của Vue khác với [EventTarget API](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget) của trình duyệt. Tuy cách hoạt động có vẻ giống nhau, `$on` và `$emit` __không phải__ là alias của `addEventListener` và `dispatchEvent`.</p>
 
-In addition, a parent component can listen to the events emitted from a child component using `v-on` directly in the template where the child component is used.
+Thêm vào đó, một component cha có thể lắng nghe các sự kiện được component con phát ra bằng cách sử dụng `v-on` trực tiếp trên template nơi component con được nhúng vào.
 
-<p class="tip">You cannot use `$on` to listen to events emitted by children. You must use `v-on` directly in the template, as in the example below.</p>
+<p class="tip">Bạn không thể dùng `$on` để lắng nghe sự kiện được component con phát ra. Thay vào đó, bạn phải dùng `v-on` trực tiếp trong template, như trong ví dụ dưới đây.</p>
 
-Here's an example:
+Đây là một ví dụ: 
 
 ``` html
 <div id="counter-event-example">
@@ -588,53 +588,54 @@ new Vue({
 </script>
 {% endraw %}
 
-In this example, it's important to note that the child component is still completely decoupled from what happens outside of it. All it does is report information about its own activity, just in case a parent component might care.
+Trong ví dụ này, cần lưu ý rằng đối tượng con hoàn toàn không bị ràng buộc gì với thế giới bên ngoài. Nó chỉ làm đúng một việc là thông báo thông tin về hoạt động của chính mình – lắng nghe và xử lí thế nào hoàn toàn là việc của component cha.
 
-### Binding Native Events to Components
+### Bind sự kiện native vào component
 
-There may be times when you want to listen for a native event on the root element of a component. In these cases, you can use the `.native` modifier for `v-on`. For example:
+Đôi khi bạn cũng muốn lắng nghe một sự kiện native trên phần tử root của component. Trong những trường hợp này, bạn có thể sử dụng modifier `.native` cho `v-on`. Ví dụ:
 
 ``` html
 <my-component v-on:click.native="doTheThing"></my-component>
 ```
 
-### `.sync` Modifier
+### Modifier `.sync`
 
 > 2.3.0+
 
-In some cases we may need "two-way binding" for a prop - in fact, in Vue 1.x this is exactly what the `.sync` modifier provided. When a child component mutates a prop that has `.sync`, the value change will be reflected in the parent. This is convenient, however it leads to maintenance issues in the long run because it breaks the one-way data flow assumption: the code that mutates child props are implicitly affecting parent state.
+Trong một số trường hợp có thể chúng ta cần "two-way binding" (ràng buộc hai chiều) cho một prop - thật ra, trong 1.x đây chính xác là mục đích của modifier `.sync`. Khi component con thay đổi một prop có modifier `.sync`, giá trị ở parent cũng sẽ thay đổi theo. Điều này tiện thì có tiện nhưng về lâu dài sẽ làm cho việc bảo trì phần mềm gặp khó khăn vì nó phá vỡ luồng dữ liệu một chiều: code thay đổi prop của con cũng lẳng lặng làm ảnh hưởng đến trạng thái của cha. Đây chính là lí do chúng tôi quyết định bỏ modifier `.sync` khi ra mắt phiên bản 2.0. 
 
-This is why we removed the `.sync` modifier when 2.0 was released. However, we've found that there are indeed cases where it could be useful, especially when shipping reusable components. What we need to change is **making the code in the child that affects parent state more consistent and explicit.**
+Tuy nhiên, modifier `.sync` như trên vẫn có giá trị trong một số trường hợp nhất định, đặc biệt là khi ship những component tái sử dụng được. Cái chúng ta cần ở đây là **làm cho những đoạn code trong component con ảnh hưởng đến trạng thái của component cha được minh bạch (explicit) và ổn định (consistent) hơn.**
 
-In 2.3.0+ we re-introduced the `.sync` modifier for props, but this time it is only syntax sugar that automatically expands into an additional `v-on` listener:
+Từ bản 2.3.0 trở đi, chúng tôi giới thiệu lại modifier `.sync` cho prop, nhưng lần này `.sync` chỉ là một syntactic sugar (cú pháp đẹp/dễ nhìn) tự động mở rộng thêm thành một listener `v-on`:
 
-The following
+Đoạn code sau
 
 ``` html
 <comp :foo.sync="bar"></comp>
 ```
 
-is expanded into:
+sẽ được mở rộng ra thành:
 
 ``` html
 <comp :foo="bar" @update:foo="val => bar = val"></comp>
 ```
 
-For the child component to update `foo`'s value, it needs to explicitly emit an event instead of mutating the prop:
+Để có thể cập nhật giá trị của `foo`, component con phải phát ra một sự kiện một cách minh bạch thay vì trực tiếp thay đổi `foo`:
 
 ``` js
-this.$emit('update:foo', newValue)
+this.foo = 'baz' // cách làm sai, và Vue sẽ cảnh báo
+this.$emit('update:foo', newValue) // OK
 ```
 
-### Form Input Components using Custom Events
+### Sử dụng sự kiện tùy biến với form input component
 
-Custom events can also be used to create custom inputs that work with `v-model`. Remember:
+Các sự kiện tùy biến cũng có thể được dùng để tạo custom input hoạt động với `v-model`. Nhớ là:
 
 ``` html
 <input v-model="something">
 ```
 
-is syntactic sugar for:
+là syntactic sugar của:
 
 ``` html
 <input
@@ -642,7 +643,7 @@ is syntactic sugar for:
   v-on:input="something = $event.target.value">
 ```
 
-When used with a component, it instead simplifies to:
+Khi sử dụng với một component, nó được đơn giản hóa thành:
 
 ``` html
 <custom-input
@@ -651,12 +652,14 @@ When used with a component, it instead simplifies to:
 </custom-input>
 ```
 
-So for a component to work with `v-model`, it should (these can be configured in 2.2.0+):
+Vì thế để hoạt động với `v-model`, một component cần
 
-- accept a `value` prop
-- emit an `input` event with the new value
+- nhận một prop `value`
+- $emit một sự kiện `input` với giá trị mới
 
-Let's see it in action with a simple currency input:
+(những giá trị này tùy chỉnh được từ phiên bản 2.2.0 trở đi):
+
+Chúng ta hãy xem ví dụ sau:
 
 ``` html
 <currency-input v-model="price"></currency-input>
@@ -675,26 +678,26 @@ Vue.component('currency-input', {
   ',
   props: ['value'],
   methods: {
-    // Instead of updating the value directly, this
-    // method is used to format and place constraints
-    // on the input's value
+    // Thay vì cập nhật giá trị trực tiếp, phương thức này
+    // được dùng để format và đặt một số ràng buộc lên giá trị
+    // của input
     updateValue: function (value) {
       var formattedValue = value
-        // Remove whitespace on either side
+        // Bỏ khoảng trắng ở hai bên
         .trim()
-        // Shorten to 2 decimal places
+        // Rút ngắn lại còn hai chữ số thập phân
         .slice(
           0,
           value.indexOf('.') === -1
             ? value.length
             : value.indexOf('.') + 3
         )
-      // If the value was not already normalized,
-      // manually override it to conform
+      // Nếu giá trị chưa được chuẩn hóa, ta ghi đè (override)
+      // để bắt nó chuẩn không cần chỉnh
       if (formattedValue !== value) {
         this.$refs.input.value = formattedValue
       }
-      // Emit the number value through the input event
+      // Phát ra sự kiện input
       this.$emit('input', Number(formattedValue))
     }
   }
@@ -742,9 +745,9 @@ new Vue({
 </script>
 {% endraw %}
 
-The implementation above is pretty naive though. For example, users are allowed to enter multiple periods and even letters sometimes - yuck! So for those that want to see a non-trivial example, here's a more robust currency filter:
+Ví dụ trên thật ra còn rất cơ bản. Ví dụ, người dùng vẫn có thể nhập vào nhiều dấu chấm và đôi khi cả chữ cái. Sau đây là một ví dụ hoàn chỉnh hơn:
 
-<iframe width="100%" height="300" src="https://jsfiddle.net/chrisvfritz/1oqjojjx/embedded/result,html,js" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="300" src="//jsfiddle.net/phanan/1oqjojjx/1464/embedded/result,html,js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ### Customizing Component `v-model`
 
