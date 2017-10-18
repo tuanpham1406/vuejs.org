@@ -499,7 +499,7 @@ Như vậy ở đây có đến hai giá trị cho thuộc tính `class`:
 
 ## Các sự kiện tùy biến
 
-Chúng ta đã biết rằng đối tượng cha có thể truyền dữ liệu xuống đối tượng con thông qua prop, nhưng nếu có gì đó xảy ra thì chúng ta làm thế nào để tương tác ngược lại từ đối tượng con lên đối tượng cha? Câu trả lời là hệ thống các sự kiện tùy biến (custom event) của Vue.
+Chúng ta đã biết rằng đối tượng cha có thể truyền dữ liệu xuống đối tượng con thông qua prop, nhưng nếu có gì đó xảy ra thì chúng ta làm thế nào để giao tiếp ngược lại từ đối tượng con lên đối tượng cha? Câu trả lời là hệ thống các sự kiện tùy biến (custom event) của Vue.
 
 ### Sử dụng `v-on` với các sự kiện tùy biến
 
@@ -745,15 +745,15 @@ new Vue({
 </script>
 {% endraw %}
 
-Ví dụ trên thật ra còn rất cơ bản. Ví dụ, người dùng vẫn có thể nhập vào nhiều dấu chấm và đôi khi cả chữ cái. Sau đây là một ví dụ hoàn chỉnh hơn:
+Ví dụ trên thật ra còn khá sơ sài, đơn cử như người dùng vẫn có thể nhập vào nhiều dấu chấm và đôi khi cả chữ cái. Sau đây là một ví dụ hoàn chỉnh hơn:
 
 <iframe width="100%" height="300" src="//jsfiddle.net/phanan/1oqjojjx/1464/embedded/result,html,js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-### Customizing Component `v-model`
+### Tùy biến `v-model` cho component
 
-> New in 2.2.0+
+> 2.2.0+
 
-By default, `v-model` on a component uses `value` as the prop and `input` as the event, but some input types such as checkboxes and radio buttons may want to use the `value` prop for a different purpose. Using the `model` option can avoid the conflict in such cases:
+Mặc định, `v-model` dùng cho một component sử dụng prop tên là `value` và sự kiện tên là `input`. Tuy nhiên, một số kiểu input như checkbox và radio button có thể dùng prop `value` vào mục đích khác. Trong những trường hợp như vậy, tùy chọn `model` sẽ giúp chúng ta tránh được xung đột:
 
 ``` js
 Vue.component('my-checkbox', {
@@ -763,7 +763,8 @@ Vue.component('my-checkbox', {
   },
   props: {
     checked: Boolean,
-    // this allows using the `value` prop for a different purpose
+    // ở đây chúng ta có thể sử dụng prop `value` 
+    // vào một mục đích khác
     value: String
   },
   // ...
@@ -774,7 +775,7 @@ Vue.component('my-checkbox', {
 <my-checkbox v-model="foo" value="some value"></my-checkbox>
 ```
 
-The above will be equivalent to:
+Đoạn code trên là tương đồng với đoạn dưới đây:
 
 ``` html
 <my-checkbox
@@ -784,31 +785,31 @@ The above will be equivalent to:
 </my-checkbox>
 ```
 
-<p class="tip">Note that you still have to declare the `checked` prop explicitly.</p>
+<p class="tip">Lưu ý là bạn vẫn phải khai báo prop `checked` một cách minh bạch.</p>
 
-### Non Parent-Child Communication
+### Giao tiếp giữa hai component không phải cha-con
 
-Sometimes two components may need to communicate with one-another but they are not parent/child to each other. In simple scenarios, you can use an empty Vue instance as a central event bus:
+Đôi lúc hai component cần giao tiếp với nhau nhưng lại không có mối quan hệ cha-con (component không trực tiếp chứa component kia). Trong những trường hợp đơn giản, bạn có thể dùng một đối tượng Vue rỗng để làm một event bus (nôm na là kênh truyền tải sự kiện).
 
 ``` js
 var bus = new Vue()
 ```
 ``` js
-// in component A's method
+// trong phương thức của component A
 bus.$emit('id-selected', 1)
 ```
 ``` js
-// in component B's created hook
+// trong hook `created` của component B
 bus.$on('id-selected', function (id) {
   // ...
 })
 ```
 
-In more complex cases, you should consider employing a dedicated [state-management pattern](state-management.html).
+Trong những trường hợp phức tạp hơn, bạn nên xem xét sử dụng một [pattern quản lí trạng thái](state-management.html).
 
-## Content Distribution with Slots
+## Phân bố nội dung với slot
 
-When using components, it is often desired to compose them like this:
+Khi dùng component, thông thường ta sẽ muốn kết hợp như sau:
 
 ``` html
 <app>
@@ -817,17 +818,16 @@ When using components, it is often desired to compose them like this:
 </app>
 ```
 
-There are two things to note here:
+Ở đây có hai điểm cần lưu ý:
 
-1. The `<app>` component does not know what content it will receive. It is decided by the component using `<app>`.
+1. Component `<app>` không biết nội dung nó nhận được là gì. Thay vào đó, nội dung của `<app>` được quyết định bởi các component con, trong trường hợp này là `<app-header>` và `<app-footer>`.
+2. Thường thì component `<app>` có template riêng.
 
-2. The `<app>` component very likely has its own template.
+Để đạt được kết quả như trên, chúng ta cần có một cách để trộn lẫn nội dung và template của component cha. Quá trình này gọi là **phân bố nội dung** (content distribution, hay còn gọi là "transclusion" trong Angular). Vue.js phát triển một API phân bố nội dung dựa trên [bản quy tắc về Web Component](https://github.com/w3c/webcomponents/blob/gh-pages/proposals/Slots-Proposal.md) hiện hành, sử dụng phần tử đặc biệt `<slot>` để làm các _outlet_ phân bố cho nội dung ban đầu.
 
-To make the composition work, we need a way to interweave the parent "content" and the component's own template. This is a process called **content distribution** (or "transclusion" if you are familiar with Angular). Vue.js implements a content distribution API that is modeled after the current [Web Components spec draft](https://github.com/w3c/webcomponents/blob/gh-pages/proposals/Slots-Proposal.md), using the special `<slot>` element to serve as distribution outlets for the original content.
+### Scope khi biên dịch
 
-### Compilation Scope
-
-Before we dig into the API, let's first clarify which scope the contents are compiled in. Imagine a template like this:
+Trước khi đi sâu vào API, trước tiên chúng ta phải làm rõ: nội dung được biên dịch trong scope nào? Tưởng tượng chúng ta có một template như sau:
 
 ``` html
 <child-component>
@@ -835,24 +835,24 @@ Before we dig into the API, let's first clarify which scope the contents are com
 </child-component>
 ```
 
-Should the `message` be bound to the parent's data or the child data? The answer is the parent. A simple rule of thumb for component scope is:
+Trong trường hợp này thì `message` nên là dữ liệu của component cha hay component con? Câu trả lời là component cha. Một quy tắc cơ bản về scope của component là:
 
-> Everything in the parent template is compiled in parent scope; everything in the child template is compiled in child scope.
+> Cái gì trong template của cha thì được biên dịch trong scope của cha, cái gì trong template của con thì được biên dịch trong scope của con.
 
-A common mistake is trying to bind a directive to a child property/method in the parent template:
+Một lỗi mà người dùng hay mắc phải là cố bind một directive vào một thuộc tính hay phương thức của component con trong template của cha:
 
 ``` html
-<!-- does NOT work -->
+<!-- cách này KHÔNG HOẠT ĐỘNG -->
 <child-component v-show="someChildProperty"></child-component>
 ```
 
-Assuming `someChildProperty` is a property on the child component, the example above would not work. The parent's template is not aware of the state of a child component.
+Giả định `someChildProperty` là một thuộc tính của component con, ví dụ trên sẽ không hoạt động. Template của component cha không biết gì về trạng thái của component con.
 
-If you need to bind child-scope directives on a component root node, you should do so in the child component's own template:
+Nếu muốn bind các directive với scope con trên node gốc của một component, bạn nên làm thế trong template của chính component con:
 
 ``` js
 Vue.component('child-component', {
-  // this does work, because we are in the right scope
+  // cách này sẽ hoạt động, vì chúng ta đang ở đúng scope
   template: '<div v-show="someChildProperty">Child</div>',
   data: function () {
     return {
@@ -862,104 +862,129 @@ Vue.component('child-component', {
 })
 ```
 
-Similarly, distributed content will be compiled in the parent scope.
+Tương tự như vậy, nội dung được phân bố sẽ được biên dịch trong scope của cha.
 
-### Single Slot
+### Slot đơn lẻ
 
-Parent content will be **discarded** unless the child component template contains at least one `<slot>` outlet. When there is only one slot with no attributes, the entire content fragment will be inserted at its position in the DOM, replacing the slot itself.
+Nội dung của component cha sẽ **bị loại bỏ** trừ phi template của component con chứa ít nhất một `<slot>`. Khi chỉ có một slot và slot này không có thuộc tính gì, toàn bộ phần nội dung sẽ được chèn vào vị trí của slot trong DOM, thay thế cho slot đó.
 
-Anything originally inside the `<slot>` tags is considered **fallback content**. Fallback content is compiled in the child scope and will only be displayed if the hosting element is empty and has no content to be inserted.
+Mọi thứ bên trong thẻ `<slot>` lúc ban đầu được xem như **nội dung dự phòng**. Nội dung dự phòng được biên dịch trong scope của component con và chỉ được hiển thị nếu phần tử host là rỗng và không có nội dung gì để chèn vào.
 
-Suppose we have a component called `my-component` with the following template:
+Giả sử ta có một component gọi là `child-component` với template như sau:
 
 ``` html
 <div>
-  <h2>I'm the child title</h2>
+  <h2>Lời của con</h2>
   <slot>
-    This will only be displayed if there is no content
-    to be distributed.
+    Dòng này sẽ chỉ được hiển thị nếu không có 
+    nội dung nào được phân bố.
   </slot>
 </div>
 ```
 
-And a parent that uses the component:
+và một component cha sử dụng `child-component`:
 
 ``` html
 <div>
-  <h1>I'm the parent title</h1>
-  <my-component>
-    <p>This is some original content</p>
-    <p>This is some more original content</p>
-  </my-component>
+  <h1>Lời của cha</h1>
+  <p>
+    “Theo cánh buồm đi mãi đến nơi xa,
+    Sẽ có cây, có cửa, có nhà,
+    Vẫn là đất nước của ta
+    Những nơi đó cha chưa hề đi đến.”
+  </p>
+  <child-component>
+    <p>
+      “Cha mượn cho con buồm trắng nhé
+      Để con đi”
+    </p>
+  </child-component>
 </div>
 ```
 
-The rendered result will be:
+Nội dung được render sẽ là:
 
 ``` html
 <div>
-  <h1>I'm the parent title</h1>
+  <h1>Lời của cha</h1>
+  <p>
+    “Theo cánh buồm đi mãi đến nơi xa,
+    Sẽ có cây, có cửa, có nhà,
+    Vẫn là đất nước của ta
+    Những nơi đó cha chưa hề đi đến.”
+  </p>
   <div>
-    <h2>I'm the child title</h2>
-    <p>This is some original content</p>
-    <p>This is some more original content</p>
+    <h2>Lời của con</h2>
+    <p>
+      “Cha mượn cho con buồm trắng nhé
+      Để con đi”
+    </p>
   </div>
 </div>
 ```
 
-### Named Slots
+### Slot có tên
 
-`<slot>` elements have a special attribute, `name`, which can be used to further customize how content should be distributed. You can have multiple slots with different names. A named slot will match any element that has a corresponding `slot` attribute in the content fragment.
+Các phần tử `<slot>` có một thuộc tính đặc biệt là `name` (tên). Thuộc tính này được dùng để tùy biến thêm về cách phân bố nội dung. Bạn có thể có nhiều slot với các tên khác nhau.  Một slot có tên sẽ khớp với bất kì phần tử nào có thuộc tính `slot` tương ứng nằm trong phần nội dung.
 
-There can still be one unnamed slot, which is the **default slot** that serves as a catch-all outlet for any unmatched content. If there is no default slot, unmatched content will be discarded.
+Ngoài ra chúng ta vẫn có thể dùng một slot không có tên để là **slot mặc định**. Những nội dung không khớp với bất kì slot nào sẽ được chèn vào slot này. Nếu trong template không có slot mặc định, bất cứ nội dung nào không khớp sẽ bị bỏ đi.
 
-For example, suppose we have an `app-layout` component with the following template:
+Ví dụ, giả sử chúng ta có một component gọi là `app-layout` với template như sau:
 
 ``` html
 <div class="container">
   <header>
+    <!-- đây là một slot có tên -->
     <slot name="header"></slot>
   </header>
   <main>
+    <!-- 
+      đây là slot mặc định, slot không tên,
+      ta cũng có thể gọi là slot của Vũ Thành An
+    -->
     <slot></slot>
   </main>
   <footer>
+    <!-- đây lại là một slot có tên -->
     <slot name="footer"></slot>
   </footer>
 </div>
 ```
 
-Parent markup:
+HTML của cha trông như sau:
 
 ``` html
 <app-layout>
-  <h1 slot="header">Here might be a page title</h1>
+  <!-- nội dung này sẽ được chèn vào slot "header" -->
+  <h1 slot="header">Tiêu đề của trang</h1>
 
-  <p>A paragraph for the main content.</p>
-  <p>And another one.</p>
+  <!-- nội dung này sẽ được chèn vào slot mặc định -->
+  <p>Một đoạn nội dung.</p>
+  <p>Thêm một đoạn nữa cho dài.</p>
 
-  <p slot="footer">Here's some contact info</p>
+  <!-- nội dung này sẽ được chèn vào slot "footer" -->
+  <p slot="footer">Thông tin liên hệ</p>
 </app-layout>
 ```
 
-The rendered result will be:
+Kết quả cuối cùng sẽ là:
 
 ``` html
 <div class="container">
   <header>
-    <h1>Here might be a page title</h1>
+    <h1>Tiêu đề của trang</h1>
   </header>
   <main>
-    <p>A paragraph for the main content.</p>
-    <p>And another one.</p>
+    <p>Một đoạn nội dung.</p>
+    <p>Thêm một đoạn nữa cho dài.</p>
   </main>
   <footer>
-    <p>Here's some contact info</p>
+    <p>Thông tin liên hệ</p>
   </footer>
 </div>
 ```
 
-The content distribution API is a very useful mechanism when designing components that are meant to be composed together.
+API phân bố nội dung là một cơ chế rất mạnh khi biên soạn những component nên dùng chung với nhau.
 
 ### Scoped Slots
 
