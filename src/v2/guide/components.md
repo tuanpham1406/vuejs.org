@@ -224,11 +224,11 @@ Trong Vue, mối quan hệ component cha-con có thể được tóm tắt thàn
   <img style="width: 300px;" src="/images/props-events.png" alt="props down, events up">
 </p>
 
-## Props
+## Prop
 
-### Truyền dữ liệu với props
+### Truyền dữ liệu với prop
 
-Mỗi đối tượng component có một scope được cô lập (isolated) riêng. Điều này có nghĩa là bạn không thể (và cũng không nên) truy xuất đến dữ liệu cha trong template của component con. Thay vào đó, dữ liệu có thể được truyền từ cha xuống con bằng cách sử dụng **props**.
+Mỗi đối tượng component có một scope được cô lập (isolated) riêng. Điều này có nghĩa là bạn không thể (và cũng không nên) truy xuất đến dữ liệu cha trong template của component con. Thay vào đó, dữ liệu có thể được truyền từ cha xuống con bằng cách sử dụng các **prop**.
 
 Một `prop`là một thuộc tính tùy biến để truyền thông tin từ các component cha. Một component con cần phải khai báo một cách minh bạch (explicitly) các `prop` mà nó trông đợi được nhận bằng [tùy chọn `props`](../api/#props):
 
@@ -281,7 +281,7 @@ Vue.component('child', {
 
 ``` html
 <!-- kebab-case trong HTML -->
-<child my-message="hello!"></child>
+<child my-message="Xin chào!"></child>
 ```
 
 Một lần nữa, nếu bạn đang dùng string template thì sẽ không tồn tại hạn chế này.
@@ -655,9 +655,9 @@ Khi sử dụng với một component, nó được đơn giản hóa thành:
 Vì thế để hoạt động với `v-model`, một component cần
 
 - nhận một prop `value`
-- $emit một sự kiện `input` với giá trị mới
+- `$emit` một sự kiện `input` với giá trị mới
 
-(những giá trị này tùy chỉnh được từ phiên bản 2.2.0 trở đi):
+(những giá trị này tùy chỉnh được từ phiên bản 2.2.0 trở đi).
 
 Chúng ta hãy xem ví dụ sau:
 
@@ -984,72 +984,73 @@ Kết quả cuối cùng sẽ là:
 </div>
 ```
 
-API phân bố nội dung là một cơ chế rất mạnh khi biên soạn những component nên dùng chung với nhau.
+API phân bố nội dung là một cơ chế rất mạnh dùng để biên soạn những component được dùng chung với nhau.
 
-### Scoped Slots
+### Scoped slot
 
-> New in 2.1.0+
+> 2.1.0+
 
-A scoped slot is a special type of slot that functions as a reusable template (that can be passed data to) instead of already-rendered-elements.
+Scoped slot (slot có phạm vi) là một loại slot đặc biệt, hoạt động như một tempate tái sử dụng được (và có thể nhận dữ liệu tùy biến) thay vì một phần tử đã render sẵn.
 
-In a child component, pass data into a slot as if you are passing props to a component:
+Trong một component con, bạn ca thể truyền dữ liệu vào slot giống như truyền prop vào component:
 
 ``` html
 <div class="child">
-  <slot text="hello from child"></slot>
+  <slot text="Con chào cha"></slot>
 </div>
 ```
 
-In the parent, a `<template>` element with a special attribute `scope` must exist, indicating that it is a template for a scoped slot. The value of `scope` is the name of a temporary variable that holds the props object passed from the child:
+Trong đối tượng cha, một phần tử `<template>` với thuộc tính đặc biệt `scope` phải được khai báo, chỉ rõ rằng đây là một scoped slot. Giá trị của `scope` là tên của một biến tạm chứa object props được truyền từ component con:
 
 ``` html
 <div class="parent">
   <child>
+    <!-- ở đây ta đặt tên biến tạm là `props` -->
     <template scope="props">
-      <span>hello from parent</span>
+      <span>Cha chào con</span>
       <span>{{ props.text }}</span>
     </template>
   </child>
 </div>
 ```
 
-If we render the above, the output will be:
+Kết quả được render của ví dụ trên sẽ là:
 
 ``` html
 <div class="parent">
   <div class="child">
-    <span>hello from parent</span>
-    <span>hello from child</span>
+    <span>Cha chào con</span>
+    <span>Con chào cha</span>
   </div>
 </div>
 ```
 
-A more typical use case for scoped slots would be a list component that allows the component consumer to customize how each item in the list should be rendered:
+Một ví dụ điển hình hơn cho scoped slot là một danh sách các component cho phép người dùng tùy biến hiển thị của từng item:
 
 ``` html
 <my-awesome-list :items="items">
-  <!-- scoped slot can be named too -->
+  <!-- scoped slot cũng có thể có tên -->
   <template slot="item" scope="props">
     <li class="my-fancy-item">{{ props.text }}</li>
   </template>
 </my-awesome-list>
 ```
 
-And the template for the list component:
+Và đây là template của component `my-awesome-list`:
 
 ``` html
 <ul>
   <slot name="item"
     v-for="item in items"
     :text="item.text">
-    <!-- fallback content here -->
+    <!-- nội dung dự phòng -->
   </slot>
 </ul>
 ```
 
-## Dynamic Components
+## Component động
 
-You can use the same mount point and dynamically switch between multiple components using the reserved `<component>` element and dynamically bind to its `is` attribute:
+Dùng một phần tử `<component>` và thuộc tính `is` được bind động, bạn có thể chuyển đổi một cách linh hoạt giữa nhiều component.
 
 ``` js
 var vm = new Vue({
@@ -1067,15 +1068,15 @@ var vm = new Vue({
 
 ``` html
 <component v-bind:is="currentView">
-  <!-- component changes when vm.currentView changes! -->
+  <!-- component thay đổi khi vm.currentView thay đổi! -->
 </component>
 ```
 
-If you prefer, you can also bind directly to component objects:
+Nếu muốn, bạn cũng có thể bind trực tiếp vào các object component:
 
 ``` js
 var Home = {
-  template: '<p>Welcome home!</p>'
+  template: '<p>Đã bấy lâu nay bác tới nhà</p>'
 }
 
 var vm = new Vue({
@@ -1088,33 +1089,33 @@ var vm = new Vue({
 
 ### `keep-alive`
 
-If you want to keep the switched-out components in memory so that you can preserve their state or avoid re-rendering, you can wrap a dynamic component in a `<keep-alive>` element:
+Khi chuyển đổi giữa các component, giữ các component đã bị thay thế trong bộ nhớ để bảo lưu trạng thái hoặc tránh phải render lại, bạn có thể chứa một component động bên trong thẻ `<keep-alive>`:
 
 ``` html
 <keep-alive>
   <component :is="currentView">
-    <!-- inactive components will be cached! -->
+    <!-- component bị thay thế sẽ được cache lại -->
   </component>
 </keep-alive>
 ```
 
-Check out more details on `<keep-alive>` in the [API reference](../api/#keep-alive).
+Đọc thêm về `<keep-alive>` trong phần [API](../api/#keep-alive).
 
-## Misc
+## Khác
 
-### Authoring Reusable Components
+### Viết component sử dụng lại được
 
-When authoring components, it's good to keep in mind whether you intend to reuse it somewhere else later. It's OK for one-off components to be tightly coupled, but reusable components should define a clean public interface and make no assumptions about the context it's used in.
+Khi viết một component, hãy luôn nghĩ đến việc bạn có muốn sử dụng lại component đó ở một nơi nào khác sau này hay không. Nếu chỉ để dùng một lần thì component bạn đang viết có thể được gắn chặt (tightly coupled) với ngữ cảnh hiện hành, nhưng nếu để dùng lại về sau thì component cần phải định nghĩa một giao diện (interface) rõ ràng và không có bất cứ giả định nào về ngữ cảnh xung quanh.
 
-The API for a Vue component comes in three parts - props, events, and slots:
+API dành cho một component trong Vue gồm có ba phần - prop, sự kiện, và slot:
 
-- **Props** allow the external environment to pass data into the component
+- **Prop** cho phép môi trường bên ngoài truyền dữ liệu vào trong component.
 
-- **Events** allow the component to trigger side effects in the external environment
+- **Sự kiện** cho phép component kích hoạt side effect (hiệu ứng lề) ở môi trường bên ngoài.
 
-- **Slots** allow the external environment to compose the component with extra content.
+- **Slot** cho phép môi trường bên ngoài thêm nội dung vào component.
 
-With the dedicated shorthand syntaxes for `v-bind` and `v-on`, the intents can be clearly and succinctly conveyed in the template:
+Với cú pháp tắt cho `v-bind` và `v-on`, những mục tiêu này có thể được truyền tải một cách rõ ràng và súc tích trong template:
 
 ``` html
 <my-component
@@ -1124,13 +1125,13 @@ With the dedicated shorthand syntaxes for `v-bind` and `v-on`, the intents can b
   @event-b="doThat"
 >
   <img slot="icon" src="...">
-  <p slot="main-text">Hello!</p>
+  <p slot="main-text">Xin chào!</p>
 </my-component>
 ```
 
-### Child Component Refs
+### Ref cho component con
 
-Despite the existence of props and events, sometimes you might still need to directly access a child component in JavaScript. To achieve this you have to assign a reference ID to the child component using `ref`. For example:
+Mặc dù đã có prop và sự kiện, đôi khi bạn vẫn cần truy xuất trực tiếp đến một component trong JavaScript. Để làm điều này, bạn cần gán một tham chiếu cho component con với thuộc tính `ref`. Ví dụ:
 
 ``` html
 <div id="parent">
@@ -1140,41 +1141,41 @@ Despite the existence of props and events, sometimes you might still need to dir
 
 ``` js
 var parent = new Vue({ el: '#parent' })
-// access child component instance
+// truy xuất đến component con
 var child = parent.$refs.profile
 ```
 
-When `ref` is used together with `v-for`, the ref you get will be an array containing the child components mirroring the data source.
+Khi dùng chung với `v-for`, giá trị ref bạn nhận được sẽ là một mảng chứa các component con tương ứng với nguồn dữ liệu.
 
-<p class="tip">`$refs` are only populated after the component has been rendered, and it is not reactive. It is only meant as an escape hatch for direct child manipulation - you should avoid using `$refs` in templates or computed properties.</p>
+<p class="tip">`$refs` sẽ chỉ có giá trị sau khi component đã được render, và giá trị này không reactive. Bạn chỉ nên sử dụng `$refs` như là một biện pháp bất đắc dĩ để truy xuất đến component con.</p>
 
-### Async Components
+### Component không đồng bộ
 
-In large applications, we may need to divide the app into smaller chunks and only load a component from the server when it's actually needed. To make that easier, Vue allows you to define your component as a factory function that asynchronously resolves your component definition. Vue will only trigger the factory function when the component actually needs to be rendered and will cache the result for future re-renders. For example:
+Trong những ứng dụng lớn, chúng ta có thể phải chia ứng dụng ra thành nhiều phần nhỏ và chỉ tải một ứng dụng từ server xuống khi cần thiết. Để hỗ trợ điều này, Vue cho phép bạn định nghĩa component bằng một hàm factory, hàm này sẽ chịu trách nhiệm resolve (phân giải) một cách không đồng bộ (async) định nghĩa về component của bạn. Vue sẽ chỉ kích hoạt hàm factory này khi component thật sự cần được render, và sẽ cache lại kết quả cho những lần render tiếp theo. Ví dụ:
 
 ``` js
 Vue.component('async-example', function (resolve, reject) {
   setTimeout(function () {
-    // Pass the component definition to the resolve callback
+    // Truyền định nghĩa của component cho hàm callback
     resolve({
-      template: '<div>I am async!</div>'
+      template: '<div>Nội dung này được tải không đồng bộ.</div>'
     })
   }, 1000)
 })
 ```
 
-The factory function receives a `resolve` callback, which should be called when you have retrieved your component definition from the server. You can also call `reject(reason)` to indicate the load has failed. The `setTimeout` here is for demonstration; how to retrieve the component is up to you. One recommended approach is to use async components together with [Webpack's code-splitting feature](https://webpack.js.org/guides/code-splitting/):
+Như trên cho thấy, hàm factory nhận vào một hàm callback `resolve`. Bạn sẽ gọi hàm `resolve` sau khi tải xong định nghĩa của component từ server về. Bạn cũng có thể gọi `reject(reason)` để chỉ định là việc tải từ server đã thất bại. Hàm `setTimeout` ở đây chỉ có ý nghĩa demo; bạn có thể tải component theo bất kì cách nào mình muốn. Một hướng tiếp cận mà chúng tôi khuyên dùng là sử dụng component không đồng bộ với tính năng [code-splitting](https://webpack.js.org/guides/code-splitting/) của Webpack:
 
 ``` js
 Vue.component('async-webpack-example', function (resolve) {
-  // This special require syntax will instruct Webpack to
-  // automatically split your built code into bundles which
-  // are loaded over Ajax requests.
+  // Cú pháp `require` đặc biệt này sẽ hướng dẫn cho Webpack
+  // tự động chia code được build của bạn ra thành các gói nhỏ hơn
+  // (bundle) để tải về bằng AJAX.
   require(['./my-async-component'], resolve)
 })
 ```
 
-You can also return a `Promise` in the factory function, so with Webpack 2 + ES2015 syntax you can do:
+Bạn cũng có thể trả về một `Promise` bên trong hàm factory, nên với cú pháp Webpack 2 + ES2015 bạn có thể viết như sau:
 
 ``` js
 Vue.component(
@@ -1183,7 +1184,7 @@ Vue.component(
 )
 ```
 
-When using [local registration](components.html#Local-Registration), you can also directly provide a function that returns a `Promise`:
+Khi [đăng kí component ở cấp cục bộ](components.html#Dang-ki-o-cap-cuc-bo), bạn cũng có thể cung cấp một hàm trả về `Promise` một cách trực tiếp:
 
 ``` js
 new Vue({
@@ -1194,31 +1195,33 @@ new Vue({
 })
 ```
 
-<p class="tip">If you're a <strong>Browserify</strong> user that would like to use async components, its creator has unfortunately [made it clear](https://github.com/substack/node-browserify/issues/58#issuecomment-21978224) that async loading "is not something that Browserify will ever support." Officially, at least. The Browserify community has found [some workarounds](https://github.com/vuejs/vuejs.org/issues/620), which may be helpful for existing and complex applications. For all other scenarios, we recommend using Webpack for built-in, first-class async support.</p>
+<p class="tip">Nếu bạn sử dụng <strong>Browserify</strong> và muốn dùng component không đồng bộ, đáng tiếc là tác giả của Browserify đã [nói rõ](https://github.com/substack/node-browserify/issues/58#issuecomment-21978224) rằng tải không đồng bộ "sẽ không bao giờ được Browserify chính thức hỗ trợ." Cộng đồng Browserify đã tìm ra [một vài cách giải quyết](https://github.com/vuejs/vuejs.org/issues/620) có thể có ích cho những ứng dụng có sẵn và phức tạp. Trong những trường hợp khác (viết ứng dụng mới, hoặc ứng dụng sẵn có đủ đơn giản), chúng tôi khuyên bạn nên sử dụng Webpack.</p>
 
-### Advanced Async Components
+### Component không đồng bộ nâng cao
 
-> New in 2.3.0+
+> 2.3.0+
 
-Starting in 2.3.0+ the async component factory can also return an object of the following format:
+Bắt đầu từ bản 2.3.0, factory cho component không đồng bộ có thể trả về một object với định dạng sau:
 
 ``` js
 const AsyncComp = () => ({
-  // The component to load. Should be a Promise
+  // Component cần tải. Nên là một Promise
   component: import('./MyComp.vue'),
-  // A component to use while the async component is loading
+  // Component để dùng khi đang tải component không đồng bộ trên đây,
+  // tạm gọi là "component tải"
   loading: LoadingComp,
-  // A component to use if the load fails
+  // Component dùng khi tải bị lỗi, tạm gọi là "component lỗi"
   error: ErrorComp,
-  // Delay before showing the loading component. Default: 200ms.
+  // Khoảng thời gian đợi (delay) trước khi hiển thị component tải
+  // Mặc định là 200ms.
   delay: 200,
-  // The error component will be displayed if a timeout is
-  // provided and exceeded. Default: Infinity.
+  // Thời gian đợi trước khi hiện component lỗi
+  // Mặc định là Infinity
   timeout: 3000
 })
 ```
 
-Note that when used as a route component in `vue-router`, these properties will be ignored because async components are resolved upfront before the route navigation happens. You also need to use `vue-router` 2.4.0+ if you wish to use the above syntax for route components.
+Lưu ý rằng khi dùng như một route component trong `vue-router`, những thuộc tính này sẽ bị bỏ qua vì component không đồng bộ sẽ được resolve trước khi việc chuyển route xảy ra. Bạn cũng cần phiên bản `vue-router` 2.4.0 trở đi nếu muốn sử dụng cú pháp trên đây cho route component.
 
 ### Component Naming Conventions
 
