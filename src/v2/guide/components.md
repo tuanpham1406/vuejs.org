@@ -1223,36 +1223,34 @@ const AsyncComp = () => ({
 
 Lưu ý rằng khi dùng như một route component trong `vue-router`, những thuộc tính này sẽ bị bỏ qua vì component không đồng bộ sẽ được resolve trước khi việc chuyển route xảy ra. Bạn cũng cần phiên bản `vue-router` 2.4.0 trở đi nếu muốn sử dụng cú pháp trên đây cho route component.
 
-### Component Naming Conventions
+### Quy chuẩn đặt tên cho component
 
-When registering components (or props), you can use kebab-case, camelCase, or PascalCase.
+Khi đăng kí component (hoặc prop), bạn có thể dùng kebab-case, camelCase, hoặc PascalCase.
 
 ``` js
-// in a component definition
 components: {
-  // register using kebab-case
+  // dùng kebab-case
   'kebab-cased-component': { /* ... */ },
-  // register using camelCase
+  // dùng camelCase
   'camelCasedComponent': { /* ... */ },
-  // register using PascalCase
+  // dùng PascalCase
   'PascalCasedComponent': { /* ... */ }
 }
 ```
 
-Within HTML templates though, you have to use the kebab-case equivalents:
+Tuy nhiên, trong template HTML, bạn phải dùng phiên bản kebab-case cho tên component:
 
 ``` html
-<!-- always use kebab-case in HTML templates -->
 <kebab-cased-component></kebab-cased-component>
 <camel-cased-component></camel-cased-component>
 <pascal-cased-component></pascal-cased-component>
 ```
 
-When using _string_ templates however, we're not bound by HTML's case-insensitive restrictions. That means even in the template, you can reference your components using:
+Khi sử dụng _string_ template, chúng ta không bị hạn chế bởi đặc tính không phân biệt hoa thường của HTML. Điều này có nghĩa là ngay cả trong template, bạn vẫn có thể tham chiếu đến component bằng:
 
 - kebab-case
-- camelCase or kebab-case if the component has been defined using camelCase
-- kebab-case, camelCase or PascalCase if the component has been defined using PascalCase
+- camelCase hoặc kebab-case nếu component được định nghĩa bằng camelCase
+- kebab-case, camelCase hoặc PascalCase nếu component đã được định nghĩa bằng PascalCase
 
 ``` js
 components: {
@@ -1273,42 +1271,42 @@ components: {
 <PascalCasedComponent></PascalCasedComponent>
 ```
 
-This means that the PascalCase is the most universal _declaration convention_ and kebab-case is the most universal _usage convention_.
+Điều này có nghĩa là PascalCase là _quy chuẩn khai báo_ thông dụng nhất, và kebab-case là _quy chuẩn sử dụng_ thông dụng nhất.
 
-If your component isn't passed content via `slot` elements, you can even make it self-closing with a `/` after the name:
+Nếu component của bạn không nhận nội dung thông qua `slot`, bạn còn có thể dùng dưới dạng thẻ tự đóng (self-closed) bằng kí tự `/`:
 
 ``` html
 <my-component/>
 ```
 
-Again, this _only_ works within string templates, as self-closing custom elements are not valid HTML and your browser's native parser will not understand them.
+Một lần nữa, cách này chỉ hoạt động với string template, vì trình duyệt không chấp nhận và sẽ không hiểu định dạng tự đóng đối với các phần tử tùy biến.
 
-### Recursive Components
+### Component đệ quy
 
-Components can recursively invoke themselves in their own template. However, they can only do so with the `name` option:
+Một component có thể tự chứa và gọi bản thân một cách đệ quy nếu bạn khai báo cho nó một thuộc tính `name`:
 
 ``` js
-name: 'unique-name-of-my-component'
+name: 'con-kien-ma-leo-canh-da'
 ```
 
-When you register a component globally using `Vue.component`, the global ID is automatically set as the component's `name` option.
+Khi bạn đăng kí component ở cấp toàn cục bằng lệnh `Vue.component`, một ID toàn cục sẽ được tự động gán vào `name`.
 
 ``` js
-Vue.component('unique-name-of-my-component', {
+Vue.component('con-kien-ma-leo-canh-da', {
   // ...
 })
 ```
 
-If you're not careful, recursive components can also lead to infinite loops:
+Nếu bạn không cẩn thận, component đệ quy có thể dẫn đến lặp vô tận.
 
 ``` js
-name: 'stack-overflow',
-template: '<div><stack-overflow></stack-overflow></div>'
+name: 'bi-ngo-la-co-dau-nanh',
+template: '<div><bi-ngo-la-co-dau-nanh/></div>'
 ```
 
-A component like the above will result in a "max stack size exceeded" error, so make sure recursive invocation is conditional (i.e. uses a `v-if` that will eventually be `false`).
+Một component như trên sẽ gây ra lỗi "max stack size exceeded", vì vậy hãy bảo đảm việc gọi đệ quy là có điều kiện (ví dụ sử dụng `v-if` và đến một lúc nào đó thì trả về `false`).
 
-### Circular References Between Components
+### Tham chiếu xoay vòng giữa các component
 
 Let's say you're building a file directory tree, like in Finder or File Explorer. You might have a `tree-folder` component with this template:
 
