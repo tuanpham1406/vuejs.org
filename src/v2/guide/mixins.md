@@ -4,7 +4,7 @@ type: guide
 order: 301
 ---
 
-## Basics
+## Cơ bản
 
 Mixins are a flexible way to distribute reusable functionalities for Vue components. A mixin object can contain any component options. When a component uses a mixin, all options in the mixin will be "mixed" into the component's own options.
 
