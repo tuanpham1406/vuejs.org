@@ -71,7 +71,7 @@ new Vue({ el: '#example' })
 </script>
 {% endraw %}
 
-### Đăng kí ở cấp cục bộ 
+### Đăng kí ở cấp cục bộ
 
 Bạn không nhất thiết phải đăng kí toàn bộ các compoent ở cấp toàn cục. Thay vào đó, bạn có thể đăng kí một component bằng cách dùng tùy chọn `components` khi khởi tạo một đối tượng Vue. Với cách làm này, chỉ đối tượng Vue này mới có thể truy xuất đến component vừa đăng kí.
 
@@ -93,7 +93,7 @@ Cách đóng gói (encapsulation) như trên cũng áp dụng với các tính n
 
 ### Lưu ý về việc parse DOM template
 
-Khi sử dụng DOM làm template (ví dụ dùng tùy chọn `el` để gắn một phần tử web đã có sẵn nội dung), bạn sẽ phải gặp phải một số hạn chế vốn có của HTML, vì Vue chỉ có thể nhận vào nội dung của template **sau khi** trình duyệt đã parse (phân tích) và normalize (bình thường hóa) template này. Đáng lưu ý nhất, bên trong các phần tử như `<ul>`, `<ol>`, `<table>` và `<select>` chúng ta chỉ có thể chứa một số phần tử nhất định (chẳng hạn `<ul>` chỉ chấp nhận `<li>`), trong khi đó các phần tử như `<option>` lại chỉ có thể được đặt trong một số phần tử nhất định khác như `<select>`, `<optgroup>`, hay `<datalist>`. 
+Khi sử dụng DOM làm template (ví dụ dùng tùy chọn `el` để gắn một phần tử web đã có sẵn nội dung), bạn sẽ phải gặp phải một số hạn chế vốn có của HTML, vì Vue chỉ có thể nhận vào nội dung của template **sau khi** trình duyệt đã parse (phân tích) và normalize (bình thường hóa) template này. Đáng lưu ý nhất, bên trong các phần tử như `<ul>`, `<ol>`, `<table>` và `<select>` chúng ta chỉ có thể chứa một số phần tử nhất định (chẳng hạn `<ul>` chỉ chấp nhận `<li>`), trong khi đó các phần tử như `<option>` lại chỉ có thể được đặt trong một số phần tử nhất định khác như `<select>`, `<optgroup>`, hay `<datalist>`.
 
   Điều này sẽ dẫn đến một số vấn đề khi dùng component với các phần tử có những hạn chế vừa nêu, ví dụ:
 
@@ -114,8 +114,8 @@ Khi sử dụng DOM làm template (ví dụ dùng tùy chọn `el` để gắn m
 **Cũng cần lưu ý rằng những hạn chế nêu trên không tồn tại nếu bạn sử dụng string template từ một trong các nguồn sau**:
 
 - `<script type="text/x-template">`
-- Template string bên trong JavaScript 
-- Component dạng `.vue` 
+- Template string bên trong JavaScript
+- Component dạng `.vue`
 
 Vì thế, hãy dùng string template bất cứ khi nào có thể.
 
@@ -147,7 +147,7 @@ var data = { counter: 0 }
 
 Vue.component('simple-counter', {
   template: '<button v-on:click="counter += 1">{{ counter }}</button>',
-  // ở đây `data` về nguyên tắc vẫn là một hàm, 
+  // ở đây `data` về nguyên tắc vẫn là một hàm,
   // nên Vue sẽ không phàn nàn gì, nhưng ta sẽ
   // trả lại cùng một tham chiếu đến object `data`
   // cho mỗi đối tượng component
@@ -427,7 +427,7 @@ Vue.component('example', {
       type: Number,
       default: 100
     },
-    // giá trị mặc định cho object/array nên được trả về 
+    // giá trị mặc định cho object/array nên được trả về
     // từ một hàm factory
     propE: {
       type: Object,
@@ -461,7 +461,7 @@ Khi prop không thỏa mãn một hay nhiều điều kiện đã đặt ra, Vue
 
 ## Các thuộc tính non-prop
 
-Thuộc tính non-prop là một thuộc tính được truyền vào component mà không có prop tương ứng được định nghĩa sẵn. 
+Thuộc tính non-prop là một thuộc tính được truyền vào component mà không có prop tương ứng được định nghĩa sẵn.
 
 Tuy props nên được định nghĩa một cách minh bạch bất cứ khi nào có thể, tác giả của các thư viện component không phải lúc nào cũng có thể thấy trước được ngữ cảnh mà component của mình được sử dụng. Đó là lí do component có thể nhận những giá trị "linh động" hơn, các giá trị này được thêm vào root của component.
 
@@ -514,7 +514,7 @@ Thêm vào đó, một component cha có thể lắng nghe các sự kiện đư
 
 <p class="tip">Bạn không thể dùng `$on` để lắng nghe sự kiện được component con phát ra. Thay vào đó, bạn phải dùng `v-on` trực tiếp trong template, như trong ví dụ dưới đây.</p>
 
-Đây là một ví dụ: 
+Đây là một ví dụ:
 
 ``` html
 <div id="counter-event-example">
@@ -602,7 +602,7 @@ Trong ví dụ này, cần lưu ý rằng đối tượng con hoàn toàn không
 
 > 2.3.0+
 
-Trong một số trường hợp có thể chúng ta cần "two-way binding" (ràng buộc hai chiều) cho một prop - thật ra, trong 1.x đây chính xác là mục đích của modifier `.sync`. Khi component con thay đổi một prop có modifier `.sync`, giá trị ở parent cũng sẽ thay đổi theo. Điều này tiện thì có tiện nhưng về lâu dài sẽ làm cho việc bảo trì phần mềm gặp khó khăn vì nó phá vỡ luồng dữ liệu một chiều: code thay đổi prop của con cũng lẳng lặng làm ảnh hưởng đến trạng thái của cha. Đây chính là lí do chúng tôi quyết định bỏ modifier `.sync` khi ra mắt phiên bản 2.0. 
+Trong một số trường hợp có thể chúng ta cần "two-way binding" (ràng buộc hai chiều) cho một prop - thật ra, trong 1.x đây chính xác là mục đích của modifier `.sync`. Khi component con thay đổi một prop có modifier `.sync`, giá trị ở parent cũng sẽ thay đổi theo. Điều này tiện thì có tiện nhưng về lâu dài sẽ làm cho việc bảo trì phần mềm gặp khó khăn vì nó phá vỡ luồng dữ liệu một chiều: code thay đổi prop của con cũng lẳng lặng làm ảnh hưởng đến trạng thái của cha. Đây chính là lí do chúng tôi quyết định bỏ modifier `.sync` khi ra mắt phiên bản 2.0.
 
 Tuy nhiên, modifier `.sync` như trên vẫn có giá trị trong một số trường hợp nhất định, đặc biệt là khi ship những component tái sử dụng được. Cái chúng ta cần ở đây là **làm cho những đoạn code trong component con ảnh hưởng đến trạng thái của component cha được minh bạch (explicit) và ổn định (consistent) hơn.**
 
@@ -763,7 +763,7 @@ Vue.component('my-checkbox', {
   },
   props: {
     checked: Boolean,
-    // ở đây chúng ta có thể sử dụng prop `value` 
+    // ở đây chúng ta có thể sử dụng prop `value`
     // vào một mục đích khác
     value: String
   },
@@ -876,7 +876,7 @@ Giả sử ta có một component gọi là `child-component` với template nh�
 <div>
   <h2>Lời của con</h2>
   <slot>
-    Dòng này sẽ chỉ được hiển thị nếu không có 
+    Dòng này sẽ chỉ được hiển thị nếu không có
     nội dung nào được phân bố.
   </slot>
 </div>
@@ -938,7 +938,7 @@ Ví dụ, giả sử chúng ta có một component gọi là `app-layout` với 
     <slot name="header"></slot>
   </header>
   <main>
-    <!-- 
+    <!--
       đây là slot mặc định, slot không tên,
       ta cũng có thể gọi là slot của Vũ Thành An
     -->
@@ -992,7 +992,7 @@ API phân bố nội dung là một cơ chế rất mạnh dùng để biên so�
 
 Scoped slot (slot có phạm vi) là một loại slot đặc biệt, hoạt động như một tempate tái sử dụng được (và có thể nhận dữ liệu tùy biến) thay vì một phần tử đã render sẵn.
 
-Trong một component con, bạn ca thể truyền dữ liệu vào slot giống như truyền prop vào component:
+Trong một component con, bạn có thể truyền dữ liệu vào slot giống như truyền prop vào component:
 
 ``` html
 <div class="child">
@@ -1308,7 +1308,7 @@ Một component như trên sẽ gây ra lỗi "max stack size exceeded", vì v�
 
 ### Tham chiếu xoay vòng giữa các component
 
-Let's say you're building a file directory tree, like in Finder or File Explorer. You might have a `tree-folder` component with this template:
+Giả sử bạn bạn đang xây dựng một cây thư mục tươn tự như File Explorer của Windows hoặc Finder của Mac. Bạn có lẽ sẽ có một component `tree-folder` với template sau:
 
 ``` html
 <p>
@@ -1317,7 +1317,7 @@ Let's say you're building a file directory tree, like in Finder or File Explorer
 </p>
 ```
 
-Then a `tree-folder-contents` component with this template:
+và một component `tree-folder-contents` component với template sau:
 
 ``` html
 <ul>
@@ -1328,17 +1328,17 @@ Then a `tree-folder-contents` component with this template:
 </ul>
 ```
 
-When you look closely, you'll see that these components will actually be each other's descendent _and_ ancestor in the render tree - a paradox! When registering components globally with `Vue.component`, this paradox is resolved for you automatically. If that's you, you can stop reading here.
+Nếu nhìn kĩ, bạn sẽ nhận ra rằng các component này thực tế sẽ _chứa lẫn nhau_ trong cây thư mục được render - điều này có thể coi là một nghịch lí (paradox). Nếu bạn đăng kí component ở cấp toàn cục với `Vue.component`, nghịch lí này sẽ được Vue giải quyết một cách tự động, và bạn có thể ngừng đọc tiếp ở đây.
 
-However, if you're requiring/importing components using a __module system__, e.g. via Webpack or Browserify, you'll get an error:
+Tuy nhiên, nếu đang nhúng component bằng lệnh `require` hoặc `import` trong một __hệ thống module__ bằng Webpack hoặc Browserify, bạn sẽ bị báo lỗi:
 
 ```
 Failed to mount component: template or render function not defined.
 ```
 
-To explain what's happening, let's call our components A and B. The module system sees that it needs A, but first A needs B, but B needs A, but A needs B, etc, etc. It's stuck in a loop, not knowing how to fully resolve either component without first resolving the other. To fix this, we need to give the module system a point at which it can say, "A needs B _eventually_, but there's no need to resolve B first."
+Để hiểu việc gì đang xảy ra, hãy gọi hai component ta đang có là A và B. Hệ thống module thấy rằng nó cần A, nhưng A lại cần B, nhưng B lại cần A, nhưng A lại cần B, và cứ thế mãi. Thành ra hệ thống này bị kẹt trong một vòng lặp vô tận, không biết phải resolve component nào trước. Để giải quyết vấn đề này, ta cần cung cấp cho hệ thống một điểm quyết định mà tại đó nó có thể nhận ra rằng "_Cuối cùng thì_ A sẽ cần B, nhưng hiện thì chưa cần phải resolve B trước."
 
-In our case, let's make that point the `tree-folder` component. We know the child that creates the paradox is the `tree-folder-contents` component, so we'll wait until the `beforeCreate` lifecycle hook to register it:
+Trở lại ví dụ của chúng ta, hãy tạo điểm quyết định đó trong component `tree-folder`. Biết rằng component con sẽ tạo nên nghịch lí là `tree-folder-contents`, chúng ta sẽ đợi đến hook vòng đời `beforeCreate` để đăng kí component này thay vì đăng kí ngay từ đầu:
 
 ``` js
 beforeCreate: function () {
@@ -1346,51 +1346,55 @@ beforeCreate: function () {
 }
 ```
 
-Problem solved!
+Thế là vấn đề đã được giải quyết!
 
-### Inline Templates
+### Inline Template
 
-When the `inline-template` special attribute is present on a child component, the component will use its inner content as its template, rather than treating it as distributed content. This allows more flexible template-authoring.
+Khi ta đặt thuộc tính đặc biệt `inline-template` vào một component con, component này sẽ dùng nội dung của nó làm template thay vì coi là nội dung được phân phối. Điều này giúp cho việc biên soạn template được linh hoạt hơn.
 
 ``` html
 <my-component inline-template>
   <div>
-    <p>These are compiled as the component's own template.</p>
-    <p>Not parent's transclusion content.</p>
+    <p>Những nội dung này được dùng làm template.</p>
   </div>
 </my-component>
 ```
 
-However, `inline-template` makes the scope of your templates harder to reason about. As a best practice, prefer defining templates inside the component using the `template` option or in a `template` element in a `.vue` file.
+Tuy nhiên, `inline-template` khiến cho scope của template khó quản lí hơn. Tốt nhất hãy luôn định nghĩa component với tùy chọn `template` hoặc sử dụng thẻ `template` trong một file `.vue`.
 
-### X-Templates
+### X-Template
 
-Another way to define templates is inside of a script element with the type `text/x-template`, then referencing the template by an id. For example:
+Một cách nữa để định nghĩa template là chứa trong một thẻ `<script>` có thuộc tính `type` là `text/x-template`, sau đó tham chiếu đến template này bằng ID. Ví dụ:
 
 ``` html
-<script type="text/x-template" id="hello-world-template">
-  <p>Hello hello hello</p>
+<script type="text/x-template" id="teen-spirit-template">
+  <p>Hello hello hello how low</p>
 </script>
 ```
 
 ``` js
-Vue.component('hello-world', {
-  template: '#hello-world-template'
+Vue.component('teen-spirit', {
+  template: '#teen-spirit-template'
 })
 ```
 
-These can be useful for demos with large templates or in extremely small applications, but should otherwise be avoided, because they separate templates from the rest of the component definition.
+Cách này có thể hữu ích cho những demo có template lớn hoặc cho những ứng dụng vô cùng nhỏ, nhưng với những trường hợp khác thì nên tránh,  vì template bị tách riêng ra khỏi phần còn lại của định nghĩa cho component.
 
-### Cheap Static Components with `v-once`
+### Component với `v-once`
 
-Rendering plain HTML elements is very fast in Vue, but sometimes you might have a component that contains **a lot** of static content. In these cases, you can ensure that it's only evaluated once and then cached by adding the `v-once` directive to the root element, like this:
+Vue render các phần tử HTML rất nhanh, nhưng đôi khi bạn muốn một component chứa **rất nhiều** nội dung tĩnh. Những lúc này, bạn có thể bảo đảm component được xử lí chỉ một lần rồi cache lại, bằng cách thêm directive `v-once` vào phần tử gốc của component như sau:
 
 ``` js
 Vue.component('terms-of-service', {
   template: '\
     <div v-once>\
-      <h1>Terms of Service</h1>\
-      ... a lot of static content ...\
+      <h1>Điều khoản dịch vụ</h1>\
+      ... Rất nhiều nội dung tĩnh ...\
+      ... mà thật sự ...\
+      ... không có ai ...\
+      ... buồn ...\
+      ... đọc ...\
+      ... cả ...\
     </div>\
   '
 })
