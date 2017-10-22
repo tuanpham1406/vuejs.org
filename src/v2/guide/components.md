@@ -1308,7 +1308,7 @@ Một component như trên sẽ gây ra lỗi "max stack size exceeded", vì v�
 
 ### Tham chiếu xoay vòng giữa các component
 
-Giả sử bạn bạn đang xây dựng một cây thư mục tươn tự như File Explorer của Windows hoặc Finder của Mac. Bạn có lẽ sẽ có một component `tree-folder` với template sau:
+Giả sử bạn bạn đang xây dựng một cây thư mục tương tự như File Explorer của Windows hoặc Finder của Mac. Bạn có lẽ sẽ có một component `tree-folder` với template sau:
 
 ``` html
 <p>
@@ -1360,7 +1360,7 @@ Khi ta đặt thuộc tính đặc biệt `inline-template` vào một component
 </my-component>
 ```
 
-Tuy nhiên, `inline-template` khiến cho scope của template khó quản lí hơn. Tốt nhất hãy luôn định nghĩa component với tùy chọn `template` hoặc sử dụng thẻ `template` trong một file `.vue`.
+Tuy nhiên, `inline-template` khiến cho scope của template khó quản lí và theo dõi hơn. Tốt nhất hãy luôn định nghĩa component với tùy chọn `template` hoặc sử dụng thẻ `template` trong một file `.vue`.
 
 ### X-Template
 
