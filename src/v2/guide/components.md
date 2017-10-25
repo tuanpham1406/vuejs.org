@@ -1151,7 +1151,7 @@ Khi dùng chung với `v-for`, giá trị ref bạn nhận được sẽ là m�
 
 ### Component không đồng bộ
 
-Trong những ứng dụng lớn, chúng ta có thể phải chia ứng dụng ra thành nhiều phần nhỏ và chỉ tải một ứng dụng từ server xuống khi cần thiết. Để hỗ trợ điều này, Vue cho phép bạn định nghĩa component bằng một hàm factory, hàm này sẽ chịu trách nhiệm resolve (phân giải) một cách không đồng bộ (async) định nghĩa về component của bạn. Vue sẽ chỉ kích hoạt hàm factory này khi component thật sự cần được render, và sẽ cache lại kết quả cho những lần render tiếp theo. Ví dụ:
+Trong những ứng dụng lớn, chúng ta có thể phải chia ứng dụng ra thành nhiều phần nhỏ và chỉ tải một component từ server xuống khi cần thiết. Để hỗ trợ điều này, Vue cho phép bạn định nghĩa component bằng một hàm factory, hàm này sẽ chịu trách nhiệm resolve (phân giải) một cách không đồng bộ (async) định nghĩa về component của bạn. Vue sẽ chỉ kích hoạt hàm factory này khi component thật sự cần được render, và sẽ cache lại kết quả cho những lần render tiếp theo. Ví dụ:
 
 ``` js
 Vue.component('async-example', function (resolve, reject) {
