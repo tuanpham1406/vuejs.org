@@ -1,5 +1,5 @@
 ---
-title: Custom Directives
+title: Directive tùy biến
 type: guide
 order: 302
 ---
