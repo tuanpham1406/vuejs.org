@@ -13,7 +13,7 @@ order: 202
 
 Tất cả những thông tin này đều hoặc đã được lưu trữ sẵn dưới dạng số liệu, hoặc có thể được chuyển đổi thành số liệu. Một khi làm vậy, chúng ta có thể animate những thay đổi trạng thái này bằng cách dùng những thư viện bên thứ ba, kết hợp với hệ thống phản ứng (reactivity) và component của Vue.
 
-## Abimate cho trạng thái bằng watcher
+## Animate cho trạng thái bằng watcher
 
 Watcher cho phép chúng ta animate các thay đổi từ bất kì thuộc tính dạng số nào sang một thuộc tính khác. Điều này nói một cách trừu tượng thì nghe có vẻ phức tạp, vì thế chúng ta hãy xem một ví dụ với [Tween.js](https://github.com/tweenjs/tween.js):
 
