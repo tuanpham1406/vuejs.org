@@ -76,7 +76,7 @@ Chúng ta sẽ tìm hiểu về các tham số được truyền vào các hàm 
 
 Các hàm hook cho directive được truyền vào các tham số sau đây:
 
-- **el**: Phần tử được directive binhd vào. Tham số này có thể được dùng để thay đổi DOM một cách trực tiếp.
+- **el**: Phần tử được directive bind vào. Tham số này có thể được dùng để thay đổi DOM một cách trực tiếp.
 - **binding**: Một object chứa những thuộc tính sau:
   - **name**: Tên của directive, không có tiếp đầu ngữ `v-`.
   - **value**: Gái trị được truyền vào directive. Ví dụ với `v-my-directive="1 + 1"` thì `value` sẽ là `2`.
