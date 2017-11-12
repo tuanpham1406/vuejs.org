@@ -1,5 +1,5 @@
 ---
-title: Template Syntax
+title: Cú pháp template
 type: guide
 order: 4
 ---
