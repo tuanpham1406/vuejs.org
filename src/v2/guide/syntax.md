@@ -151,7 +151,7 @@ Một ví dụ khác là directive `v-on`. Directive này lắng nghe các sự 
 <a v-on:click="doSomething"> ... </a>
 ```
 
-THam số ở đây là tên của sự kiện để lắng nghe (`click`). Chúng ta cũng sẽ bàn sâu về [quản lí sự kiện](events.html) sau.
+Tham số ở đây là tên của sự kiện để lắng nghe (`click`). Chúng ta cũng sẽ bàn sâu về [quản lí sự kiện](events.html) sau.
 
 ### Modifier
 
