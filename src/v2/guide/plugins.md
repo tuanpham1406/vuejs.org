@@ -1,5 +1,5 @@
 ---
-title: Plugins
+title: Plugin
 type: guide
 order: 304
 ---
