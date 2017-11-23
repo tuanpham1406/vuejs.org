@@ -1427,7 +1427,7 @@
 <p>Updates the element’s <code>innerHTML</code>. <strong>Note that the contents are inserted as plain HTML - they will not be compiled as Vue templates</strong>. If you find yourself trying to compose templates using <code>v-html</code>, try to rethink the solution by using components instead.</p>
 <p class="tip">Dynamically rendering arbitrary HTML on your website can be very dangerous because it can easily lead to <a href="https://en.wikipedia.org/wiki/Cross-site_scripting" target="_blank" rel="external">XSS attacks</a>. Only use <code>v-html</code> on trusted content and <strong>never</strong> on user-provided content.</p>
 
-<p class="tip">In <a href="../guide/single-file-components.html">single-file components</a>, <code>scoped</code> styles will not apply to content inside <code>v-html</code>, because that HTML is not processed by Vue’s template compiler. In you want to target <code>v-html</code> content with scoped CSS, you can instead use <a href="https://vue-loader.vuejs.org/en/features/css-modules.html" target="_blank" rel="external">CSS modules</a> or an additional, global <code>&lt;style&gt;</code> element with a manual scoping strategy such as BEM.</p>
+<p class="tip">In <a href="../guide/single-file-components.html">single-file components</a>, <code>scoped</code> styles will not apply to content inside <code>v-html</code>, because that HTML is not processed by Vue’s template compiler. If you want to target <code>v-html</code> content with scoped CSS, you can instead use <a href="https://vue-loader.vuejs.org/en/features/css-modules.html" target="_blank" rel="external">CSS modules</a> or an additional, global <code>&lt;style&gt;</code> element with a manual scoping strategy such as BEM.</p>
 </li>
 <li><p><strong>Example:</strong></p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-html</span>=<span class="string">"html"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -1676,14 +1676,23 @@
 <li><p><strong>See also:</strong> <a href="../guide/components.html#Named-Slots">Named Slots</a></p>
 </li>
 </ul>
-<h3 id="slot-scope"><a href="#slot-scope" class="headerlink" title="slot-scope"></a>slot-scope</h3><ul>
+<h3 id="slot-scope"><a href="#slot-scope" class="headerlink" title="slot-scope"></a>slot-scope</h3><blockquote>
+<p>New in 2.5.0+</p>
+</blockquote>
+<ul>
 <li><p><strong>Expects:</strong> <code>function argument expression</code></p>
 </li>
 <li><p><strong>Usage:</strong></p>
-<p>Use to denote an element or component as a scoped slot. The attribute’s value should be a valid JavaScript expression that can appear in the argument position of a function signature. This means in supported environments you can also use ES2015 destructuring in the expression.</p>
+<p>Used to denote an element or component as a scoped slot. The attribute’s value should be a valid JavaScript expression that can appear in the argument position of a function signature. This means in supported environments you can also use ES2015 destructuring in the expression. Serves as a replacement for <a href="#scope-replaced"><code>scope</code></a> in 2.5.0+.</p>
 <p>This attribute does not support dynamic binding.</p>
 </li>
 <li><p><strong>See also:</strong> <a href="../guide/components.html#Scoped-Slots">Scoped Slots</a></p>
+</li>
+</ul>
+<h3 id="scope-replaced"><a href="#scope-replaced" class="headerlink" title="scope replaced"></a>scope <sup>replaced</sup></h3><p>Used to denote a <code>&lt;template&gt;</code> element as a scoped slot, which is replaced by <a href="#slot-scope"><code>slot-scope</code></a> in 2.5.0+.</p>
+<ul>
+<li><p><strong>Usage:</strong></p>
+<p>Same as <a href="#slot-scope"><code>slot-scope</code></a> except that <code>scope</code> can only be used on <code>&lt;template&gt;</code> elements.</p>
 </li>
 </ul>
 <h3 id="is"><a href="#is" class="headerlink" title="is"></a>is</h3><ul>

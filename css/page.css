@@ -370,6 +370,11 @@ sup.beta.beta {
   text-transform: uppercase;
   opacity: 0.6;
 }
+.content.api h2 > sup,
+.content.api h3 > sup {
+  margin-left: 0.3em;
+  color: #b9465c;
+}
 .rotating-clockwise {
   animation: 3s rotating-clockwise linear infinite;
 }

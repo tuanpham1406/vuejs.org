@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="vi">
   <head>
-    <title>Filters — Vue.js</title>
+    <title>Filter — Vue.js</title>
     <meta charset="utf-8">
     <meta name="description" content="Vue.js - Framework JavaScript linh động">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -17,12 +17,12 @@
     <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/guide/filters.html">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Filters — Vue.js">
+    <meta property="og:title" content="Filter — Vue.js">
     <meta property="og:description" content="Vue.js - Framework JavaScript linh động">
     <meta property="og:image" content="https://vi.vuejs.org//images/logo.png">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Filters — Vue.js">
+    <meta name="twitter:title" content="Filter — Vue.js">
     <meta name="twitter:description" content="Vue.js - Framework JavaScript linh động">
     <meta name="twitter:image" content="https://vi.vuejs.org/images/logo.png">
 
@@ -546,7 +546,7 @@
     
     
     <li>
-      <a href="/v2/guide/plugins.html" class="sidebar-link">Plugins</a>
+      <a href="/v2/guide/plugins.html" class="sidebar-link">Plugin</a>
     </li>
   
     
@@ -561,7 +561,7 @@
     
     
     <li>
-      <a href="/v2/guide/filters.html" class="sidebar-link current">Filters</a>
+      <a href="/v2/guide/filters.html" class="sidebar-link current">Filter</a>
     </li>
   
     
@@ -763,26 +763,55 @@
     
   
   
-    <h1>Filters</h1>
+    <h1>Filter</h1>
   
-  <p>Vue.js allows you to define filters that can be used to apply common text formatting. Filters are usable in two places: <strong>mustache interpolations and <code>v-bind</code> expressions</strong> (the latter supported in 2.1.0+). Filters should be appended to the end of the JavaScript expression, denoted by the “pipe” symbol:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- in mustaches --&gt;</span></div><div class="line">&#123;&#123; message | capitalize &#125;&#125;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- in v-bind --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:id</span>=<span class="string">"rawId | formatId"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>You can define local filters in a component’s options:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">filters: &#123;</div><div class="line">  capitalize: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!value) <span class="keyword">return</span> <span class="string">''</span></div><div class="line">    value = value.toString()</div><div class="line">    <span class="keyword">return</span> value.charAt(<span class="number">0</span>).toUpperCase() + value.slice(<span class="number">1</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>or define a filter globally:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.filter(<span class="string">'capitalize'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (!value) <span class="keyword">return</span> <span class="string">''</span></div><div class="line">  value = value.toString()</div><div class="line">  <span class="keyword">return</span> value.charAt(<span class="number">0</span>).toUpperCase() + value.slice(<span class="number">1</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>The filter’s function always receives the expression’s value (the result of the former chain) as its first argument. In the above example, the <code>capitalize</code> filter function will receive the value of <code>message</code> as its argument.</p>
-<p>Filters can be chained:</p>
+  <p>Vue cho phép bạn định nghĩa các filter (bộ lọc) dùng để áp dụng các định dạng văn bản thường gặp. Bạn có thể sử dụng filter ở hai chỗ: <strong>trong thẻ mustache</strong> và <strong>trong các biểu thức <code>v-bind</code></strong> (trường hợp sau này được hỗ trợ từ phiên bản 2.1.0 trở đi). Filter được đặt ở cuối một biểu thức JavaScript,  should be appended to the end of the JavaScript expression, biểu thị bằng kí hiệu <code>|</code>:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- trong thẻ mustache --&gt;</span></div><div class="line">&#123;&#123; message | capitalize &#125;&#125;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- trong v-bind --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:id</span>=<span class="string">"rawId | formatId"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Bạn có thể định nghĩa filter ở cấp cục bộ trong tùy chọn của một component:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">filters: &#123;</div><div class="line">  <span class="comment">/** Viết hoa chữ đầu tiên */</span></div><div class="line">  capitalize: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!value) <span class="keyword">return</span> <span class="string">''</span></div><div class="line">    value = value.toString()</div><div class="line">    <span class="keyword">return</span> value.charAt(<span class="number">0</span>).toUpperCase() + value.slice(<span class="number">1</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>hoặc định nghĩa ở cấp toàn cục:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">/** Viết hoa chữ đầu tiên */</span></div><div class="line">Vue.filter(<span class="string">'capitalize'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (!value) <span class="keyword">return</span> <span class="string">''</span></div><div class="line">  value = value.toString()</div><div class="line">  <span class="keyword">return</span> value.charAt(<span class="number">0</span>).toUpperCase() + value.slice(<span class="number">1</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>Sau đây là một ví dụ sử dụng filter <code>capitalize</code> trên:</p>
+
+<div id="example_1" class="demo">
+  <input type="text" v-model="message" placeholder="Nhập vào một câu">
+  <p>{{ message | capitalize }}</p>
+</div>
+<script>
+  new Vue({
+    el: '#example_1',
+    data: function () {
+      return {
+        message: 'đầu câu thì viết hoa'
+      }
+    },
+    filters: {
+      capitalize: function (value) {
+        if (!value) return ''
+        value = value.toString()
+        return value.charAt(0).toUpperCase() + value.slice(1)
+      }
+    }
+  })
+</script>
+
+<p>Hàm filter luôn nhận giá trị của biểu thức làm tham số đầu tiên. Trong ví dụ trên, hàm <code>capitalize</code> sẽ nhận tham số đầu tiên là giá trị của <code>message</code>.</p>
+<p>Ta cũng có thể nối các filter với nhau:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123; message | filterA | filterB &#125;&#125;</div></pre></td></tr></table></figure>
-<p>In this case, <code>filterA</code>, defined with a single argument, will receive the value of <code>message</code>, and then the <code>filterB</code> function will be called with the result of <code>filterA</code> passed into <code>filterB</code>‘s single argument.</p>
-<p>Filters are JavaScript functions, therefore they can take arguments:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123; message | filterA('arg1', arg2) &#125;&#125;</div></pre></td></tr></table></figure>
-<p>Here <code>filterA</code> is defined as a function taking three arguments. The value of <code>message</code> will be passed into the first argument. The plain string <code>&#39;arg1&#39;</code> will be passed into the <code>filterA</code> as its second argument, and the value of expression <code>arg2</code> will be evaluated and passed in as the third argument.</p>
+<p>Trong ví dụ này, hàm <code>filterA</code> sẽ nhận giá trị của <code>message</code> làm tham số, sau đó hàm <code>filterB</code> sẽ được gọi với tham số là giá trị trả về của <code>filterA</code>.</p>
+<p>Vì đơn giản chỉ là hàm JavaScript nên filter có thể nhận tham số:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123; message | filterA('value 1', arg2) &#125;&#125;</div></pre></td></tr></table></figure>
+<p>Ở đây <code>filterA</code> được định nghĩa dưới dạng một hàm nhận vào ba tham số theo thứ tự sau:</p>
+<ol>
+<li>Giá trị của <code>message</code></li>
+<li>Chuỗi <code>&#39;value 1&#39;</code></li>
+<li>Giá trị của biểu thức <code>arg2</code></li>
+</ol>
 
   
     <div class="guide-links">
       
-        <span>← <a href="/v2/guide/plugins.html">Plugins</a></span>
+        <span>← <a href="/v2/guide/plugins.html">Plugin</a></span>
       
       
     </div>
