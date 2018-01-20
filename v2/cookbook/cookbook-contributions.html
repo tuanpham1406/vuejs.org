@@ -70,8 +70,12 @@
       ga('create', 'UA-46852172-1', 'vi.vuejs.org');
       ga('send', 'pageview');
     </script>
+
+    <!-- vimeo analytics -->
+    <script type="text/javascript" defer="defer" src="https://extend.vimeocdn.com/ga/72160148.js"></script>
   </head>
-  <body class="docs">    <div id="mobile-bar" >
+  <body class="docs">
+    <div id="mobile-bar" >
       <a class="menu-button"></a>
       <a class="logo" href="/"></a>
     </div>
@@ -140,12 +144,12 @@
   <a href="/v2/guide/team.html" class="nav-link team">Đội ngũ</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Cửa hàng</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Hỗ trợ Vue trên OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Hỗ trợ Evan trên Patreon</a></li>
+      <li><a href="/support-vuejs/#One-time-Donations" class="nav-link">Đóng góp một lần</a></li>
+      <li><a href="/support-vuejs/#Recurring-Pledges" class="nav-link">Đóng góp thường xuyên</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Mua áo thun</a></li>
     </ul></li>
   </ul>
 </li>
@@ -233,12 +237,12 @@
   <a href="/v2/guide/team.html" class="nav-link team">Đội ngũ</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Cửa hàng</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Hỗ trợ Vue trên OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Hỗ trợ Evan trên Patreon</a></li>
+      <li><a href="/support-vuejs/#One-time-Donations" class="nav-link">Đóng góp một lần</a></li>
+      <li><a href="/support-vuejs/#Recurring-Pledges" class="nav-link">Đóng góp thường xuyên</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Mua áo thun</a></li>
     </ul></li>
   </ul>
 </li>
@@ -260,13 +264,21 @@
     </ul>
     <div class="list">
       <div class="main-sponsor">
-        <span>Nhà tài trợ bạch kim</span><br>
+        <span>Nhà tài trợ bạch kim</span>
+        <div>
         <a href="https://stdlib.com" target="_blank" class="logo">
           <img src="/images/stdlib.png">
         </a>
         <a href="http://tooltwist.com/" target="_blank" class="logo">
           <img src="/images/tooltwist.png">
         </a>
+        <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
+          <img src="/images/vueschool.png">
+        </a>
+        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
+          <img src="/images/datacamp.png">
+        </a>
+        </div>
       </div>
       <a class="become-backer" href="/support-vuejs">
         Trở thành nhà tài trợ
@@ -301,6 +313,17 @@
     
     <li>
       <a href="/v2/cookbook/adding-instance-properties.html" class="sidebar-link">Adding Instance Properties</a>
+    </li>
+  
+    
+    
+    
+      
+      <!-- Move cookbook sections here once they have -->
+      <!-- at least one recipe -->
+    
+    <li>
+      <a href="/v2/cookbook/form-validation.html" class="sidebar-link">Form Validation</a>
     </li>
   
     
@@ -350,7 +373,8 @@
   
     <h1>Cookbook Contributions</h1>
   
-  <h2 id="What-we’re-looking-for"><a href="#What-we’re-looking-for" class="headerlink" title="What we’re looking for"></a>What we’re looking for</h2><p>The Cookbook gives developers examples to work off of that both cover common or interesting use cases, and also progressively explain more complex detail. Our goal is to move beyond a simple introductory example, and demonstrate concepts that are more widely applicable, as well as some caveats to the approach. </p>
+  
+    <h2 id="What-we’re-looking-for"><a href="#What-we’re-looking-for" class="headerlink" title="What we’re looking for"></a>What we’re looking for</h2><p>The Cookbook gives developers examples to work off of that both cover common or interesting use cases, and also progressively explain more complex detail. Our goal is to move beyond a simple introductory example, and demonstrate concepts that are more widely applicable, as well as some caveats to the approach. </p>
 <p>If you’re interested in contributing, please initiate collaboration by filing an issue under the tag <strong>cookbook idea</strong> with your concept so that we can help guide you to a successful pull request. After your idea has been approved, please follow the template below as much as possible. Some sections are required, and some are optional. Following the numerical order is strongly suggested, but not required.</p>
 <h2 id="Simple-Example"><a href="#Simple-Example" class="headerlink" title="Simple Example"></a>Simple Example</h2><p><em>required</em></p>
 <ol>
@@ -376,14 +400,15 @@
 <h2 id="Additional-Context"><a href="#Additional-Context" class="headerlink" title="Additional Context"></a>Additional Context</h2><p><em>optional</em></p>
 <p>It’s extremely helpful to write a bit about this pattern, where else it would apply, why it works well, and run through a bit of code as you do so or give people further reading materials here.</p>
 <h2 id="When-To-Avoid-This-Pattern"><a href="#When-To-Avoid-This-Pattern" class="headerlink" title="When To Avoid This Pattern"></a>When To Avoid This Pattern</h2><p><em>optional</em></p>
-<p>This section is not required, but heavily recommended. It won’t make sense to write it for something very simple such as toggling classes based on state change, but for more advanced patterns like mixins it’s vital. The answer to most questions about development is <a href="https://codepen.io/rachsmith/pen/YweZbG" target="_blank" rel="external">“It depends!”</a>, this section embraces that. Here, we’ll take an honest look at when the pattern is useful and when it should be avoided, or when something else makes more sense.</p>
+<p>This section is not required, but heavily recommended. It won’t make sense to write it for something very simple such as toggling classes based on state change, but for more advanced patterns like mixins it’s vital. The answer to most questions about development is <a href="https://codepen.io/rachsmith/pen/YweZbG" target="_blank" rel="noopener">“It depends!”</a>, this section embraces that. Here, we’ll take an honest look at when the pattern is useful and when it should be avoided, or when something else makes more sense.</p>
 <h2 id="Alternative-Patterns"><a href="#Alternative-Patterns" class="headerlink" title="Alternative Patterns"></a>Alternative Patterns</h2><p><em>optional, except when the section above is provided</em></p>
-<p>This section is required when you’ve provided the section above about avoidance. It’s important to explore other methods so that people told that something is an antipattern in certain situations are not left wondering. In doing so, consider that the web is a big tent and that many people have different codebase structures and are solving different goals. Is the app large or small? Are they integrating Vue into an existing project, or are they building from scratch? Are their users only trying to achieve one goal or many? Is there a lot of asyncronous data? All of these concerns will impact alternative implementations. A good cookbook recipe gives developers this context.</p>
+<p>This section is required when you’ve provided the section above about avoidance. It’s important to explore other methods so that people told that something is an antipattern in certain situations are not left wondering. In doing so, consider that the web is a big tent and that many people have different codebase structures and are solving different goals. Is the app large or small? Are they integrating Vue into an existing project, or are they building from scratch? Are their users only trying to achieve one goal or many? Is there a lot of asynchronous data? All of these concerns will impact alternative implementations. A good cookbook recipe gives developers this context.</p>
 <h2 id="Thank-you"><a href="#Thank-you" class="headerlink" title="Thank you"></a>Thank you</h2><p>It takes time to contribute to documentation, and if you spend the time to submit a PR this section of our docs, you do so with our gratitude.</p>
 
   
+  
   <div class="footer">
-    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+      <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
 <div class="bsa-cpc"></div>
 <script>
   (function(){

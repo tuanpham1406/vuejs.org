@@ -70,8 +70,12 @@
       ga('create', 'UA-46852172-1', 'vi.vuejs.org');
       ga('send', 'pageview');
     </script>
+
+    <!-- vimeo analytics -->
+    <script type="text/javascript" defer="defer" src="https://extend.vimeocdn.com/ga/72160148.js"></script>
   </head>
-  <body class="docs">    <div id="mobile-bar" >
+  <body class="docs">
+    <div id="mobile-bar" >
       <a class="menu-button"></a>
       <a class="logo" href="/"></a>
     </div>
@@ -140,12 +144,12 @@
   <a href="/v2/guide/team.html" class="nav-link team">Đội ngũ</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Cửa hàng</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Hỗ trợ Vue trên OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Hỗ trợ Evan trên Patreon</a></li>
+      <li><a href="/support-vuejs/#One-time-Donations" class="nav-link">Đóng góp một lần</a></li>
+      <li><a href="/support-vuejs/#Recurring-Pledges" class="nav-link">Đóng góp thường xuyên</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Mua áo thun</a></li>
     </ul></li>
   </ul>
 </li>
@@ -233,12 +237,12 @@
   <a href="/v2/guide/team.html" class="nav-link team">Đội ngũ</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Cửa hàng</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Hỗ trợ Vue trên OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Hỗ trợ Evan trên Patreon</a></li>
+      <li><a href="/support-vuejs/#One-time-Donations" class="nav-link">Đóng góp một lần</a></li>
+      <li><a href="/support-vuejs/#Recurring-Pledges" class="nav-link">Đóng góp thường xuyên</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Mua áo thun</a></li>
     </ul></li>
   </ul>
 </li>
@@ -260,13 +264,21 @@
     </ul>
     <div class="list">
       <div class="main-sponsor">
-        <span>Nhà tài trợ bạch kim</span><br>
+        <span>Nhà tài trợ bạch kim</span>
+        <div>
         <a href="https://stdlib.com" target="_blank" class="logo">
           <img src="/images/stdlib.png">
         </a>
         <a href="http://tooltwist.com/" target="_blank" class="logo">
           <img src="/images/tooltwist.png">
         </a>
+        <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
+          <img src="/images/vueschool.png">
+        </a>
+        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
+          <img src="/images/datacamp.png">
+        </a>
+        </div>
       </div>
       <a class="become-backer" href="/support-vuejs">
         Trở thành nhà tài trợ
@@ -608,7 +620,7 @@
     
     
     <li>
-      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit Testing</a>
+      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit Test</a>
     </li>
   
     
@@ -765,66 +777,68 @@
   
     <h1>Binding cho class và style</h1>
   
-  <p>Một nhu cầu thường gặp khi thực hiện ràng buộc dữ liệu (data binding) là quản lí danh sách <code>class</code> và các <code>style</code> của một phần tử web. Vì cả <code>class</code> và <code>style</code> đều là thuộc tính, chúng ta có thể dùng <code>v-bind</code> để xử lí: chỉ cần sử dụng các biểu đạt (expression) để tạo ra một chuỗi. Tuy nhiên, vì can thiệp vào việc nối chuỗi rất phiền phức và dễ mắc lỗi, Vue cung cấp một số tính năng hỗ trợ khi <code>v-bind</code> được dùng với <code>class</code> và <code>style</code>. Không chỉ có chuỗi, các biểu đạt này có thể xử lí cả mảng và object.</p>
+  
+    <p>Một nhu cầu thường gặp khi thực hiện ràng buộc dữ liệu (data binding) là quản lí danh sách <code>class</code> và các <code>style</code> của một phần tử web. Vì cả <code>class</code> và <code>style</code> đều là thuộc tính, chúng ta có thể dùng <code>v-bind</code> để xử lí: chỉ cần sử dụng các biểu đạt (expression) để tạo ra một chuỗi. Tuy nhiên, vì can thiệp vào việc nối chuỗi rất phiền phức và dễ mắc lỗi, Vue cung cấp một số tính năng hỗ trợ khi <code>v-bind</code> được dùng với <code>class</code> và <code>style</code>. Không chỉ có chuỗi, các biểu đạt này có thể xử lí cả mảng và object.</p>
 <h2 id="Binding-class-trong-HTML"><a href="#Binding-class-trong-HTML" class="headerlink" title="Binding class trong HTML"></a>Binding class trong HTML</h2><h3 id="Su-dung-cu-phap-object"><a href="#Su-dung-cu-phap-object" class="headerlink" title="Sử dụng cú pháp object"></a>Sử dụng cú pháp object</h3><p>Ta có thể truyền một object vào <code>v-bind:class</code> để bật tắt class một cách linh hoạt:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"&#123; active: isActive &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>Cú pháp như trên nghĩa là class <code>active</code> sẽ được áp dụng tùy theo <a href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy" target="_blank" rel="external">tính đúng sai (truthiness)</a> của thuộc tính dữ liệu <code>isActive</code>.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"&#123; active: isActive &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Cú pháp như trên nghĩa là class <code>active</code> sẽ được áp dụng tùy theo <a href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy" target="_blank" rel="noopener">tính đúng sai (truthiness)</a> của thuộc tính dữ liệu <code>isActive</code>.</p>
 <p>Bạn có thể bật tắt nhiều class bằng cách dùng nhiều field (trường) trong object. Thêm vào đó, directive <code>v-bind:class</code> và thuộc tính <code>class</code> thông thường có thể được dùng cùng lúc với nhau. Nếu chúng ta có template sau:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"static"</span></span></div><div class="line"><span class="tag">     <span class="attr">v-bind:class</span>=<span class="string">"&#123; active: isActive, 'text-danger': hasError &#125;"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"static"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">v-bind:class</span>=<span class="string">"&#123; active: isActive, 'text-danger': hasError &#125;"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>và dữ liệu truyền vào như thế này:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">data: &#123;</div><div class="line">  isActive: <span class="literal">true</span>,</div><div class="line">  hasError: <span class="literal">false</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  isActive: <span class="literal">true</span>,</span><br><span class="line">  hasError: <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>thì kết quả render sẽ là:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"static active"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"static active"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Khi giá trị <code>isActive</code> hoặc <code>hasError</code> thay đổi, danh sách class sẽ được cập nhật tương ứng. Ví dụ, nếu <code>hasError</code> trở thành <code>true</code>, danh sách class sẽ trở thành <code>&quot;static active text-danger&quot;</code>.</p>
 <p>Object được bind cũng không bắt buộc phải khai báo trong template:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"classObject"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">data: &#123;</div><div class="line">  classObject: &#123;</div><div class="line">    active: <span class="literal">true</span>,</div><div class="line">    <span class="string">'text-danger'</span>: <span class="literal">false</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"classObject"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  classObject: &#123;</span><br><span class="line">    active: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">'text-danger'</span>: <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Ví dụ trên sẽ render ra cùng một kết quả. Chúng ta cũng có thể bind vào một <a href="computed.html">computed property (thuộc tính được tính toán)</a> trả về một object. Dưới đây là một ví dụ điển hình cho kĩ thuật này: </p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"classObject"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">data: &#123;</div><div class="line">  isActive: <span class="literal">true</span>,</div><div class="line">  error: <span class="literal">null</span></div><div class="line">&#125;,</div><div class="line"></div><div class="line">computed: &#123;</div><div class="line">  classObject: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      active: <span class="keyword">this</span>.isActive &amp;&amp; !<span class="keyword">this</span>.error,</div><div class="line">      <span class="string">'text-danger'</span>: <span class="keyword">this</span>.error &amp;&amp; <span class="keyword">this</span>.error.type === <span class="string">'fatal'</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"classObject"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  isActive: <span class="literal">true</span>,</span><br><span class="line">  error: <span class="literal">null</span></span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line">computed: &#123;</span><br><span class="line">  classObject: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      active: <span class="keyword">this</span>.isActive &amp;&amp; !<span class="keyword">this</span>.error,</span><br><span class="line">      <span class="string">'text-danger'</span>: <span class="keyword">this</span>.error &amp;&amp; <span class="keyword">this</span>.error.type === <span class="string">'fatal'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="Su-dung-cu-phap-mang"><a href="#Su-dung-cu-phap-mang" class="headerlink" title="Sử dụng cú pháp mảng"></a>Sử dụng cú pháp mảng</h3><p>Chúng ta có thể truyền một mảng vào <code>v-bind:class</code> để áp dụng một danh sách class:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"[activeClass, errorClass]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">data: &#123;</div><div class="line">  activeClass: <span class="string">'active'</span>,</div><div class="line">  errorClass: <span class="string">'text-danger'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"[activeClass, errorClass]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  activeClass: <span class="string">'active'</span>,</span><br><span class="line">  errorClass: <span class="string">'text-danger'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>sẽ render ra kết quả sau:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"active text-danger"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"active text-danger"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Nếu muốn bật tắt theo điều kiện một class trong danh sách, bạn có thể dùng một toán tử ba ngôi (ternary expression):</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"[isActive ? activeClass : '', errorClass]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"[isActive ? activeClass : '', errorClass]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Đoạn code trên sẽ luôn luôn áp dụng class <code>errorClass</code>, nhưng chỉ áp dụng <code>activeClass</code> khi <code>isActive</code> mang giá trị đúng.</p>
 <p>Cách làm này có thể hơi dài dòng nếu bạn có nhiều class theo điều kiện. Do đó, bạn có thể dùng cú pháp object bên trong cú pháp mảng, như sau:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"[&#123; active: isActive &#125;, errorClass]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"[&#123; active: isActive &#125;, errorClass]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="Su-dung-voi-cac-component"><a href="#Su-dung-voi-cac-component" class="headerlink" title="Sử dụng với các component"></a>Sử dụng với các component</h3><blockquote>
 <p>Phần này giả định rằng bạn đã có kiến thức về <a href="components.html">Vue component</a>. Nếu chưa, bạn có thể bỏ qua và quay lại sau.</p>
 </blockquote>
 <p>Khi sử dụng thuộc tính <code>class</code> trên một component tùy biến, những class được liệt kê trong thuộc tính này sẽ được thêm vào phần tử root của component đó. Những class có sẵn trên phần tử này sẽ được giữ nguyên.</p>
 <p>Ví dụ, nếu bạn khai báo một component với một số class có sẵn như sau:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'my-component'</span>, &#123;</div><div class="line">  template: <span class="string">'&lt;p class="foo bar"&gt;&lt;/p&gt;'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.component(<span class="string">'my-component'</span>, &#123;</span><br><span class="line">  template: <span class="string">'&lt;p class="foo bar"&gt;&lt;/p&gt;'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>sau đó khi dùng component này bạn lại khai báo một số class khác:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">my-component</span> <span class="attr">class</span>=<span class="string">"baz qux"</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">my-component</span> <span class="attr">class</span>=<span class="string">"baz qux"</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>thì kết quả HTML tạo thành sẽ là:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"foo bar baz qux"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"foo bar baz qux"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Binding cho class cũng vậy: </p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">my-component</span> <span class="attr">v-bind:class</span>=<span class="string">"&#123; active: isActive &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">my-component</span> <span class="attr">v-bind:class</span>=<span class="string">"&#123; active: isActive &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Khi <code>isActive</code> mang giá trị đúng, kết quả HTML sẽ là:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"foo bar active"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"foo bar active"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="Binding-cho-inline-style"><a href="#Binding-cho-inline-style" class="headerlink" title="Binding cho inline style"></a>Binding cho inline style</h2><p class="tip">“Inline style” có thể được hiểu và dịch nôm na là “các thuộc tính CSS được chèn trực tiếp vào thẻ HTML.” Do cách hiểu và dịch này quá dài dòng, chúng tôi sẽ dùng nguyên bản tiếng Anh “inline style.”</p>
 
 <h3 id="Su-dung-cu-phap-object-1"><a href="#Su-dung-cu-phap-object-1" class="headerlink" title="Sử dụng cú pháp object"></a>Sử dụng cú pháp object</h3><p>Cú pháp object của <code>v-bind:style</code> rất đơn giản - trông giống như CSS thông thường, chỉ khác ở chỗ nó là một object JavaScript. Bạn có thể dùng camelCase hoặc kebab-case (đặt trong dấu nháy nếu là kebab-case) đối với tên thuộc tính CSS:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:style</span>=<span class="string">"&#123; color: activeColor, fontSize: fontSize + 'px' &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">data: &#123;</div><div class="line">  activeColor: <span class="string">'red'</span>,</div><div class="line">  fontSize: <span class="number">30</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:style</span>=<span class="string">"&#123; color: activeColor, fontSize: fontSize + 'px' &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  activeColor: <span class="string">'red'</span>,</span><br><span class="line">  fontSize: <span class="number">30</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Thông thường thì ta nên bind vào một object dành riêng cho style để template được gọn gàng hơn:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:style</span>=<span class="string">"styleObject"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">data: &#123;</div><div class="line">  styleObject: &#123;</div><div class="line">    color: <span class="string">'red'</span>,</div><div class="line">    fontSize: <span class="string">'13px'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:style</span>=<span class="string">"styleObject"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  styleObject: &#123;</span><br><span class="line">    color: <span class="string">'red'</span>,</span><br><span class="line">    fontSize: <span class="string">'13px'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Một lần nữa, cú pháp object thường được dùng kết hợp với các computed property trả về object.</p>
 <h3 id="Su-dung-cu-phap-mang-1"><a href="#Su-dung-cu-phap-mang-1" class="headerlink" title="Sử dụng cú pháp mảng"></a>Sử dụng cú pháp mảng</h3><p>Cú pháp mảng của <code>v-bind:style</code> giúp bạn áp dụng nhiều object style cho cùng một phần tử web:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:style</span>=<span class="string">"[baseStyles, overridingStyles]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="Tu-dong-them-prefix"><a href="#Tu-dong-them-prefix" class="headerlink" title="Tự động thêm prefix"></a>Tự động thêm prefix</h3><p>Khi bạn sử dụng một thuộc tính CSS còn khá mới và cần <a href="https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix" target="_blank" rel="external">vendor prefix</a> trong <code>v-bind:style</code>, ví dụ <code>transform</code>, Vue sẽ tự động phát hiện và thêm prefix thích hợp vào các style được áp dụng.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:style</span>=<span class="string">"[baseStyles, overridingStyles]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Tu-dong-them-prefix"><a href="#Tu-dong-them-prefix" class="headerlink" title="Tự động thêm prefix"></a>Tự động thêm prefix</h3><p>Khi bạn sử dụng một thuộc tính CSS còn khá mới và cần <a href="https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix" target="_blank" rel="noopener">vendor prefix</a> trong <code>v-bind:style</code>, ví dụ <code>transform</code>, Vue sẽ tự động phát hiện và thêm prefix thích hợp vào các style được áp dụng.</p>
 <h3 id="Nhieu-gia-tri"><a href="#Nhieu-gia-tri" class="headerlink" title="Nhiều giá trị"></a>Nhiều giá trị</h3><blockquote>
 <p>2.3.0+</p>
 </blockquote>
 <p>Bắt đầu từ phiên bản 2.3.0+ bạn có thể cung cấp một mảng các giá trị (đã có prefix) cho một thuộc tính CSS, như sau:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:style</span>=<span class="string">"&#123; display: ['-webkit-box', '-ms-flexbox', 'flex'] &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>Với kĩ thuật này, Vue sẽ chỉ render ra giá trị cuối cùng trong mảng mà trình duyệt hỗ trợ. Trong ví dụ trên, Vue sẽ render <code>display: flex</code> trên các trình duyệt hỗ trợ <a href="http://caniuse.com/#feat=flexbox" target="_blank" rel="external">flexbox</a>.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:style</span>=<span class="string">"&#123; display: ['-webkit-box', '-ms-flexbox', 'flex'] &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Với kĩ thuật này, Vue sẽ chỉ render ra giá trị cuối cùng trong mảng mà trình duyệt hỗ trợ. Trong ví dụ trên, Vue sẽ render <code>display: flex</code> trên các trình duyệt hỗ trợ <a href="http://caniuse.com/#feat=flexbox" target="_blank" rel="noopener">flexbox</a>.</p>
 
+  
   
     <div class="guide-links">
       
@@ -836,7 +850,7 @@
     </div>
   
   <div class="footer">
-    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+      <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
 <div class="bsa-cpc"></div>
 <script>
   (function(){

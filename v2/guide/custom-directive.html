@@ -70,8 +70,12 @@
       ga('create', 'UA-46852172-1', 'vi.vuejs.org');
       ga('send', 'pageview');
     </script>
+
+    <!-- vimeo analytics -->
+    <script type="text/javascript" defer="defer" src="https://extend.vimeocdn.com/ga/72160148.js"></script>
   </head>
-  <body class="docs">    <div id="mobile-bar" >
+  <body class="docs">
+    <div id="mobile-bar" >
       <a class="menu-button"></a>
       <a class="logo" href="/"></a>
     </div>
@@ -140,12 +144,12 @@
   <a href="/v2/guide/team.html" class="nav-link team">Đội ngũ</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Cửa hàng</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Hỗ trợ Vue trên OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Hỗ trợ Evan trên Patreon</a></li>
+      <li><a href="/support-vuejs/#One-time-Donations" class="nav-link">Đóng góp một lần</a></li>
+      <li><a href="/support-vuejs/#Recurring-Pledges" class="nav-link">Đóng góp thường xuyên</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Mua áo thun</a></li>
     </ul></li>
   </ul>
 </li>
@@ -233,12 +237,12 @@
   <a href="/v2/guide/team.html" class="nav-link team">Đội ngũ</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Cửa hàng</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Hỗ trợ Vue trên OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Hỗ trợ Evan trên Patreon</a></li>
+      <li><a href="/support-vuejs/#One-time-Donations" class="nav-link">Đóng góp một lần</a></li>
+      <li><a href="/support-vuejs/#Recurring-Pledges" class="nav-link">Đóng góp thường xuyên</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Mua áo thun</a></li>
     </ul></li>
   </ul>
 </li>
@@ -260,13 +264,21 @@
     </ul>
     <div class="list">
       <div class="main-sponsor">
-        <span>Nhà tài trợ bạch kim</span><br>
+        <span>Nhà tài trợ bạch kim</span>
+        <div>
         <a href="https://stdlib.com" target="_blank" class="logo">
           <img src="/images/stdlib.png">
         </a>
         <a href="http://tooltwist.com/" target="_blank" class="logo">
           <img src="/images/tooltwist.png">
         </a>
+        <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
+          <img src="/images/vueschool.png">
+        </a>
+        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
+          <img src="/images/datacamp.png">
+        </a>
+        </div>
       </div>
       <a class="become-backer" href="/support-vuejs">
         Trở thành nhà tài trợ
@@ -608,7 +620,7 @@
     
     
     <li>
-      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit Testing</a>
+      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit Test</a>
     </li>
   
     
@@ -765,7 +777,8 @@
   
     <h1>Directive tùy biến</h1>
   
-  <h2 id="Gioi-thieu"><a href="#Gioi-thieu" class="headerlink" title="Giới thiệu"></a>Giới thiệu</h2><p>Bên cạnh những directive được cung cấp mặc định (<code>v-model</code> và <code>v-show</code>), Vue cũng cho phép bạn đăng kí các directive tùy biến của riêng mình. Lưu ý là trong phiên bản Vue 2.0, cách tốt nhất để sử dụng lại và trừu tượng hóa code là dùng <a href="components.html">component</a>, tuy nhiên có thể có những lúc bạn cần một số truy xuất cấp thấp đến các phần tử web, và trong những trường hợp này thì directive tùy biến sẽ trở nên hữu ích. Ví dụ, đây là một phần tử input được focus tự động:</p>
+  
+    <h2 id="Gioi-thieu"><a href="#Gioi-thieu" class="headerlink" title="Giới thiệu"></a>Giới thiệu</h2><p>Bên cạnh những directive được cung cấp mặc định (<code>v-model</code> và <code>v-show</code>), Vue cũng cho phép bạn đăng kí các directive tùy biến của riêng mình. Lưu ý là trong phiên bản Vue 2.0, cách tốt nhất để sử dụng lại và trừu tượng hóa code là dùng <a href="components.html">component</a>, tuy nhiên có thể có những lúc bạn cần một số truy xuất cấp thấp đến các phần tử web, và trong những trường hợp này thì directive tùy biến sẽ trở nên hữu ích. Ví dụ, đây là một phần tử input được focus tự động:</p>
 
 <div id="simplest-directive-example" class="demo">
   <input v-focus="">
@@ -782,11 +795,11 @@ new Vue({
 </script>
 
 <p>Khi trang này được tải, phần tử trên đây sẽ được focus (lưu ý: tính năng focus tự động không được hỗ trợ trên mobile Safari). Nếu bạn chưa hề bấm vào bất kì đâu khác trên trang, ngay lúc này phần tử input sẽ có focus. Giờ chúng ta hãy viết directive hỗ trợ cho tính năng này:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Đăng kí một directive tùy biến cấp toàn cục với tên là `v-focus`</span></div><div class="line">Vue.directive(<span class="string">'focus'</span>, &#123;</div><div class="line">  <span class="comment">// Khi phần tử liên quan được thêm vào DOM...</span></div><div class="line">  inserted: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</div><div class="line">    <span class="comment">// Ta gán focus vào phần tử đó</span></div><div class="line">    el.focus()</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Đăng kí một directive tùy biến cấp toàn cục với tên là `v-focus`</span></span><br><span class="line">Vue.directive(<span class="string">'focus'</span>, &#123;</span><br><span class="line">  <span class="comment">// Khi phần tử liên quan được thêm vào DOM...</span></span><br><span class="line">  inserted: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Ta gán focus vào phần tử đó</span></span><br><span class="line">    el.focus()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>Nếu muốn đăng kí directive ở cấp cục bộ thay vì toàn cục, bạn có thể dùng tùy chọn <code>directives</code> khi khai báo component:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">directives: &#123;</div><div class="line">  focus: &#123;</div><div class="line">    <span class="comment">// định nghĩa cho directive</span></div><div class="line">    inserted: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</div><div class="line">      el.focus()</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">directives: &#123;</span><br><span class="line">  focus: &#123;</span><br><span class="line">    <span class="comment">// định nghĩa cho directive</span></span><br><span class="line">    inserted: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span><br><span class="line">      el.focus()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Sau đó trong template, bạn có thể dùng thuộc tính <code>v-focus</code> trên bất kì phần tử nào, như sau:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-focus</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-focus</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="Cac-ham-hook"><a href="#Cac-ham-hook" class="headerlink" title="Các hàm hook"></a>Các hàm hook</h2><p>Một object khai báo directive có thể cung cấp một số hàm hook (tất cả các hàm này đều không bắt buộc):</p>
 <ul>
 <li><p><code>bind</code>: chỉ được gọi một lần, khi directive được bind (ràng buộc) vào phần tử. Đây là nơi bạn có thể thực hiện các thao tác cài đặt một lần.</p>
@@ -816,11 +829,11 @@ new Vue({
 <li><strong>vnode</strong>: Vnode được trình biên dịch của Vue tạo ra. Xem thêm chi tiết tại <a href="../api/#Giao-dien-cua-VNode">VNode API</a>.</li>
 <li><strong>oldVnode</strong>: VNode trước đây, chỉ tồn tại trong các hook <code>update</code> và <code>componentUpdated</code>.</li>
 </ul>
-<p class="tip">Ngoài <code>el</code>, bạn nên coi là read-only (chỉ đọc) và đừng bao giờ chỉnh sửa các tham số này. Nếu muốn chia sẻ thông tin giữa các hook với nhau, bạn nên dùng <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset" target="_blank" rel="external">dataset</a>.</p>
+<p class="tip">Ngoài <code>el</code>, bạn nên coi là read-only (chỉ đọc) và đừng bao giờ chỉnh sửa các tham số này. Nếu muốn chia sẻ thông tin giữa các hook với nhau, bạn nên dùng <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset" target="_blank" rel="noopener">dataset</a>.</p>
 
 <p>Sau đây là ví dụ về một directive tùy biến với các thuộc tính này:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"hook-arguments-example"</span> <span class="attr">v-demo:foo.a.b</span>=<span class="string">"message"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.directive(<span class="string">'demo'</span>, &#123;</div><div class="line">  bind: <span class="function"><span class="keyword">function</span> (<span class="params">el, binding, vnode</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> s = <span class="built_in">JSON</span>.stringify</div><div class="line">    el.innerHTML =</div><div class="line">      <span class="string">'name: '</span>       + s(binding.name) + <span class="string">'&lt;br&gt;'</span> +</div><div class="line">      <span class="string">'value: '</span>      + s(binding.value) + <span class="string">'&lt;br&gt;'</span> +</div><div class="line">      <span class="string">'expression: '</span> + s(binding.expression) + <span class="string">'&lt;br&gt;'</span> +</div><div class="line">      <span class="string">'argument: '</span>   + s(binding.arg) + <span class="string">'&lt;br&gt;'</span> +</div><div class="line">      <span class="string">'modifiers: '</span>  + s(binding.modifiers) + <span class="string">'&lt;br&gt;'</span> +</div><div class="line">      <span class="string">'vnode keys: '</span> + <span class="built_in">Object</span>.keys(vnode).join(<span class="string">', '</span>)</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  el: <span class="string">'#hook-arguments-example'</span>,</div><div class="line">  data: &#123;</div><div class="line">    message: <span class="string">'Cà rốt'</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"hook-arguments-example"</span> <span class="attr">v-demo:foo.a.b</span>=<span class="string">"message"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.directive(<span class="string">'demo'</span>, &#123;</span><br><span class="line">  bind: <span class="function"><span class="keyword">function</span> (<span class="params">el, binding, vnode</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> s = <span class="built_in">JSON</span>.stringify</span><br><span class="line">    el.innerHTML =</span><br><span class="line">      <span class="string">'name: '</span>       + s(binding.name) + <span class="string">'&lt;br&gt;'</span> +</span><br><span class="line">      <span class="string">'value: '</span>      + s(binding.value) + <span class="string">'&lt;br&gt;'</span> +</span><br><span class="line">      <span class="string">'expression: '</span> + s(binding.expression) + <span class="string">'&lt;br&gt;'</span> +</span><br><span class="line">      <span class="string">'argument: '</span>   + s(binding.arg) + <span class="string">'&lt;br&gt;'</span> +</span><br><span class="line">      <span class="string">'modifiers: '</span>  + s(binding.modifiers) + <span class="string">'&lt;br&gt;'</span> +</span><br><span class="line">      <span class="string">'vnode keys: '</span> + <span class="built_in">Object</span>.keys(vnode).join(<span class="string">', '</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#hook-arguments-example'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    message: <span class="string">'Cà rốt'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <div id="hook-arguments-example" v-demo:foo.a.b="message" class="demo"></div>
 <script>
@@ -845,11 +858,12 @@ new Vue({
 </script>
 
 <h2 id="Cach-khai-bao-rut-gon"><a href="#Cach-khai-bao-rut-gon" class="headerlink" title="Cách khai báo rút gọn"></a>Cách khai báo rút gọn</h2><p>Trong nhiều trường hợp, có thể bạn muốn <code>bind</code> và <code>update</code> có chung một hành vi và không quan tâm đến các hook khác. Những lúc này bạn có thể dùng cách khai báo directive rút gọn, ví dụ:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.directive(<span class="string">'color-swatch'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">el, binding</span>) </span>&#123;</div><div class="line">  el.style.backgroundColor = binding.value</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.directive(<span class="string">'color-swatch'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">el, binding</span>) </span>&#123;</span><br><span class="line">  el.style.backgroundColor = binding.value</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h2 id="Truyen-object-truc-tiep"><a href="#Truyen-object-truc-tiep" class="headerlink" title="Truyền object trực tiếp"></a>Truyền object trực tiếp</h2><p>Nếu directive của bạn cần nhiều giá trị cùng một lúc, bạn có thể trực tiếp truyền vào một object. Nhớ là directive trong Vue có thể nhận bất kì biểu thức JavaScript hợp lệ nào.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-demo</span>=<span class="string">"&#123; color: 'white', text: 'Su hào' &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.directive(<span class="string">'demo'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">el, binding</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(binding.value.color) <span class="comment">// =&gt; "white"</span></div><div class="line">  <span class="built_in">console</span>.log(binding.value.text)  <span class="comment">// =&gt; "Su hào"</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-demo</span>=<span class="string">"&#123; color: 'white', text: 'Su hào' &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.directive(<span class="string">'demo'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">el, binding</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(binding.value.color) <span class="comment">// =&gt; "white"</span></span><br><span class="line">  <span class="built_in">console</span>.log(binding.value.text)  <span class="comment">// =&gt; "Su hào"</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
+  
   
     <div class="guide-links">
       
@@ -861,7 +875,7 @@ new Vue({
     </div>
   
   <div class="footer">
-    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+      <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
 <div class="bsa-cpc"></div>
 <script>
   (function(){

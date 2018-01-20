@@ -70,8 +70,12 @@
       ga('create', 'UA-46852172-1', 'vi.vuejs.org');
       ga('send', 'pageview');
     </script>
+
+    <!-- vimeo analytics -->
+    <script type="text/javascript" defer="defer" src="https://extend.vimeocdn.com/ga/72160148.js"></script>
   </head>
-  <body class="docs">    <div id="mobile-bar" >
+  <body class="docs">
+    <div id="mobile-bar" >
       <a class="menu-button"></a>
       <a class="logo" href="/"></a>
     </div>
@@ -140,12 +144,12 @@
   <a href="/v2/guide/team.html" class="nav-link team">Đội ngũ</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Cửa hàng</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Hỗ trợ Vue trên OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Hỗ trợ Evan trên Patreon</a></li>
+      <li><a href="/support-vuejs/#One-time-Donations" class="nav-link">Đóng góp một lần</a></li>
+      <li><a href="/support-vuejs/#Recurring-Pledges" class="nav-link">Đóng góp thường xuyên</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Mua áo thun</a></li>
     </ul></li>
   </ul>
 </li>
@@ -233,12 +237,12 @@
   <a href="/v2/guide/team.html" class="nav-link team">Đội ngũ</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Cửa hàng</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Hỗ trợ Vue trên OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Hỗ trợ Evan trên Patreon</a></li>
+      <li><a href="/support-vuejs/#One-time-Donations" class="nav-link">Đóng góp một lần</a></li>
+      <li><a href="/support-vuejs/#Recurring-Pledges" class="nav-link">Đóng góp thường xuyên</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Mua áo thun</a></li>
     </ul></li>
   </ul>
 </li>
@@ -260,13 +264,21 @@
     </ul>
     <div class="list">
       <div class="main-sponsor">
-        <span>Nhà tài trợ bạch kim</span><br>
+        <span>Nhà tài trợ bạch kim</span>
+        <div>
         <a href="https://stdlib.com" target="_blank" class="logo">
           <img src="/images/stdlib.png">
         </a>
         <a href="http://tooltwist.com/" target="_blank" class="logo">
           <img src="/images/tooltwist.png">
         </a>
+        <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
+          <img src="/images/vueschool.png">
+        </a>
+        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
+          <img src="/images/datacamp.png">
+        </a>
+        </div>
       </div>
       <a class="become-backer" href="/support-vuejs">
         Trở thành nhà tài trợ
@@ -608,7 +620,7 @@
     
     
     <li>
-      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit Testing</a>
+      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit Test</a>
     </li>
   
     
@@ -765,33 +777,38 @@
   
     <h1>Đối tượng Vue</h1>
   
-  <h2 id="Tao-mot-doi-tuong-Vue"><a href="#Tao-mot-doi-tuong-Vue" class="headerlink" title="Tạo một đối tượng Vue"></a>Tạo một đối tượng Vue</h2><p class="tip">Một số tài liệu kĩ thuật ở Việt Nam dịch “instance” là “thể hiện.” Chúng tôi cho rằng cách dịch này nghe rất lạ tai với người Việt, nên sẽ dịch “instance” là “đối tượng” và giữ nguyên “object” là “object” như trong bản tiếng Anh.</p>
+  
+    <h2 id="Tao-mot-doi-tuong-Vue"><a href="#Tao-mot-doi-tuong-Vue" class="headerlink" title="Tạo một đối tượng Vue"></a>Tạo một đối tượng Vue</h2><p class="tip">Một số tài liệu kĩ thuật ở Việt Nam dịch “instance” là “thể hiện.” Chúng tôi cho rằng cách dịch này nghe rất lạ tai với người Việt, nên sẽ dịch “instance” là “đối tượng” và giữ nguyên “object” là “object” như trong bản tiếng Anh.</p>
 
 <p>Một ứng dụng Vue luôn được bắt đầu bằng cách khởi tạo một <strong>đối tượng Vue</strong> (Vue instance) sử dụng hàm <code>Vue</code>:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="comment">// các tùy chọn</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>Thiết kế của Vue chịu ảnh hưởng – mặt dù không liên kết chặt chẽ – từ pattern <a href="https://en.wikipedia.org/wiki/Model_View_ViewModel" target="_blank" rel="external">MVVM</a>. Vì thế trong bản hướng dẫn này, chúng tôi quy ước sử dụng tên biến <code>vm</code> (viết tắt của ViewModel) cho một đối tượng Vue.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  <span class="comment">// các tùy chọn</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>Thiết kế của Vue chịu ảnh hưởng – mặt dù không liên kết chặt chẽ – từ pattern <a href="https://en.wikipedia.org/wiki/Model_View_ViewModel" target="_blank" rel="noopener">MVVM</a>. Vì thế trong bản hướng dẫn này, chúng tôi quy ước sử dụng tên biến <code>vm</code> (viết tắt của ViewModel) cho một đối tượng Vue.</p>
 <p>Khi khởi tạo một đối tượng Vue, bạn truyền vào một object <strong><code>options</code></strong> với các tùy chọn. Phần lớn bản hướng dẫn này sẽ mô tả cách sử dụng các tùy chọn đó để tạo ra behavior (hành vi) mong muốn. Bạn cũng có thể tham khảo danh sách đầy đủ các tùy chọn ở trang <a href="../api/#Options-Data">API</a>.</p>
 <p>Một ứng dụng Vue bao gồm một <strong>đối tượng Vue gốc</strong> (<strong>root Vue instance</strong>) được tạo với lệnh <code>new Vue</code>. Ứng dụng này cũng thường được sắp xếp thành một cây gồm các component lồng nhau và tái sử dụng được. Ví dụ, cây component của một ứng dụng todo có thể trông như thế này:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">Root Vue instance</div><div class="line">|- TodoList</div><div class="line">   |- TodoItem</div><div class="line">      |- DeleteTodoButton</div><div class="line">      |- EditTodoButton</div><div class="line">   |- TodoListFooter</div><div class="line">      |- ClearTodosButton</div><div class="line">      |- TodoListStatistics</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Root Instance</span><br><span class="line">└─ TodoList</span><br><span class="line">   ├─ TodoItem</span><br><span class="line">   │  ├─ DeleteTodoButton</span><br><span class="line">   │  └─ EditTodoButton</span><br><span class="line">   └─ TodoListFooter</span><br><span class="line">      ├─ ClearTodosButton</span><br><span class="line">      └─ TodoListStatistics</span><br></pre></td></tr></table></figure>
 <p>Chúng ta sẽ nói chi tiết về <a href="components.html">hệ thống component</a> sau. Hiện tại, bạn chỉ cần biết rằng một component Vue cũng là một đối tượng Vue và do đó cũng nhận cùng một object <code>options</code> (trừ một số tùy chọn chỉ dành riêng cho root).</p>
 <h2 id="Du-lieu-va-phuong-thuc"><a href="#Du-lieu-va-phuong-thuc" class="headerlink" title="Dữ liệu và phương thức"></a>Dữ liệu và phương thức</h2><p>Khi một đối tượng Vue được khởi tạo, tất cả các thuộc tính (property) được tìm thấy trong object <code>data</code> sẽ được thêm vào <strong>reactivity system</strong> (hiểu nôm na là “hệ thống phản ứng”) của Vue. Điều này có nghĩa là view sẽ “react” (phản ứng) khi giá trị của các thuộc tính này thay đổi, và tự cập nhật tương ứng với các giá trị mới.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Chúng ta khởi tạo một object "data"</span></div><div class="line"><span class="keyword">var</span> data = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</div><div class="line"></div><div class="line"><span class="comment">// Object này được truyền vào một đối tượng Vue</span></div><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  data: data</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// vm.a và data.a cùng trỏ đến một đối tượng!</span></div><div class="line">vm.a === data.a <span class="comment">// =&gt; true</span></div><div class="line"></div><div class="line"><span class="comment">// Thay đổi thuộc tính của vm cũng</span></div><div class="line"><span class="comment">// ảnh hưởng đến dữ liệu ban đầu</span></div><div class="line">vm.a = <span class="number">2</span></div><div class="line">data.a <span class="comment">// =&gt; 2</span></div><div class="line"></div><div class="line"><span class="comment">// ... và ngược lại</span></div><div class="line">data.a = <span class="number">3</span></div><div class="line">vm.a <span class="comment">// =&gt; 3</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Chúng ta khởi tạo một object "data"</span></span><br><span class="line"><span class="keyword">var</span> data = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Object này được truyền vào một đối tượng Vue</span></span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: data</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// vm.a và data.a cùng trỏ đến một đối tượng!</span></span><br><span class="line">vm.a === data.a <span class="comment">// =&gt; true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Thay đổi thuộc tính của vm cũng</span></span><br><span class="line"><span class="comment">// ảnh hưởng đến dữ liệu ban đầu</span></span><br><span class="line">vm.a = <span class="number">2</span></span><br><span class="line">data.a <span class="comment">// =&gt; 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ... và ngược lại</span></span><br><span class="line">data.a = <span class="number">3</span></span><br><span class="line">vm.a <span class="comment">// =&gt; 3</span></span><br></pre></td></tr></table></figure>
 <p>Khi dữ liệu thay đổi, view sẽ render lại. Cũng nên lưu ý rằng một thuộc tính trong object <code>data</code> chỉ trở nên reactive nếu nó đã tồn tại khi chúng ta khởi tạo đối tượng Vue. Có nghĩa là nếu bạn thêm vào một thuộc tính mới như sau:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">vm.b = <span class="string">'Aloha'</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">vm.b = <span class="string">'Aloha'</span></span><br></pre></td></tr></table></figure>
 <p>thì những thay đổi với <code>b</code> sẽ không kích hoạt thay đổi trên view. Vì thế, nếu bạn biết là sau này mình sẽ cần một thuộc tính nào đó nhưng khi khởi tạo Vue thì thuộc tính này là rỗng hoặc chưa tồn tại, bạn cần gán cho nó một giá trị ban đầu, ví dụ như thế này:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">data: &#123;</div><div class="line">  newTodoText: <span class="string">''</span>,</div><div class="line">  visitCount: <span class="number">0</span>,</div><div class="line">  hideCompletedTodos: <span class="literal">false</span>,</div><div class="line">  todos: [],</div><div class="line">  error: <span class="literal">null</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  newTodoText: <span class="string">''</span>,</span><br><span class="line">  visitCount: <span class="number">0</span>,</span><br><span class="line">  hideCompletedTodos: <span class="literal">false</span>,</span><br><span class="line">  todos: [],</span><br><span class="line">  error: <span class="literal">null</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Ngoại lệ duy nhất ở đây là việc sử dụng <code>Object.freeze()</code>. <code>Object.freeze()</code> ngăn không cho những thuộc tính sẵn có bị chỉnh sửa, cũng có nghĩa là hệ thống reactivity không thể <em>theo dõi</em> các thay đổi xảy ra.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  foo: <span class="string">'bar'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.freeze(obj)</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  data () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      obj</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; obj.foo &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- obj.foo sẽ không thay đổi --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"obj.foo = 'baz'"</span>&gt;</span>Thay đổi<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Ngoài <code>data</code>, một đối tượng Vue cũng hỗ trợ một số thuộc tính và phương thức đối tượng (instance properties &amp; methods) hữu dụng khác. Các thuộc tính và phương thức này được bắt đầu bằng kí hiệu <code>$</code> để phân biệt với thuộc tính và phương thức do người dùng định nghĩa. Ví dụ:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> data = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</div><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  el: <span class="string">'#example'</span>,</div><div class="line">  data: data</div><div class="line">&#125;)</div><div class="line"></div><div class="line">vm.$data === data <span class="comment">// =&gt; true</span></div><div class="line">vm.$el === <span class="built_in">document</span>.getElementById(<span class="string">'example'</span>) <span class="comment">// =&gt; true</span></div><div class="line"></div><div class="line"><span class="comment">// $watch là một phương thức của đối tượng Vue</span></div><div class="line">vm.$watch(<span class="string">'a'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">newValue, oldValue</span>) </span>&#123;</div><div class="line">  <span class="comment">// Hàm callback này sẽ được gọi khi `vm.a` thay đổi</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> data = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#example'</span>,</span><br><span class="line">  data: data</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">vm.$data === data <span class="comment">// =&gt; true</span></span><br><span class="line">vm.$el === <span class="built_in">document</span>.getElementById(<span class="string">'example'</span>) <span class="comment">// =&gt; true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// $watch là một phương thức của đối tượng Vue</span></span><br><span class="line">vm.$watch(<span class="string">'a'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">newValue, oldValue</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// Hàm callback này sẽ được gọi khi `vm.a` thay đổi</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>Bạn cũng có thể tham khảo danh sách đầy đủ các thuộc tính và phương thức đối tượng trên trang <a href="../api/#Instance-Properties">API</a>.</p>
 <h2 id="Vong-doi-cua-doi-tuong"><a href="#Vong-doi-cua-doi-tuong" class="headerlink" title="Vòng đời của đối tượng"></a>Vòng đời của đối tượng</h2><p>Khi được khởi tạo, một đối tượng Vue sẽ đi qua nhiều bước khác nhau - cài đặt quan sát dữ liệu (data observation), biên dịch template, gắn kết vào DOM, cập nhật DOM khi dữ liệu thay đổi v.v. Trong suốt tiến trình này, nó cũng sẽ thực thi một số hàm gọi là <strong>lifecycle hook</strong>, giúp người dùng thêm code của mình vào các giai đoạn (stage) cụ thể trong vòng đời của đối tượng.</p>
 <p>Ví dụ, hook <a href="../api/#created"><code>created</code></a> có thể được dùng để thực thi code sau khi một đối tượng được khởi tạo:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  data: &#123;</div><div class="line">    a: <span class="number">1</span></div><div class="line">  &#125;,</div><div class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// `this` trỏ đến đối tượng Vue hiện hành</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'giá trị của a là '</span> + <span class="keyword">this</span>.a)</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"><span class="comment">// =&gt; "giá trị của a là 1"</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    a: <span class="number">1</span></span><br><span class="line">  &#125;,</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// `this` trỏ đến đối tượng Vue hiện hành</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'giá trị của a là '</span> + <span class="keyword">this</span>.a)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// =&gt; "giá trị của a là 1"</span></span><br></pre></td></tr></table></figure>
 <p>Các hook khác như <a href="../api/#mounted"><code>mounted</code></a>, <a href="../api/#updated"><code>updated</code></a>, và <a href="../api/#destroyed"><code>destroyed</code></a> cũng được gọi vào các giai đoạn khác nhau trong vòng đời của đối tượng. Tất cả các hook này đều được thực thi với ngữ cảnh <code>this</code> trỏ đến đối tượng Vue hiện hành.</p>
-<p class="tip">Đừng dùng <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank" rel="external">hàm mũi tên (arrow functions)</a> cho các thuộc tính tùy chọn hoặc callback như là <code>created: () =&gt; console.log(this.a)</code> hoặc <code>vm.$watch(&#39;a&#39;, newValue =&gt; this.myMethod())</code>. Vì hàm mũi tên được bind vào ngữ cảnh cha (parent context), <code>this</code> sẽ không trỏ đến đối tượng Vue hiện hành. Do vậy <code>this.a</code> hoặc <code>this.myMethod</code> sẽ không trả về giá trị mà bạn mong đợi, mà thay vào đó thường là các lỗi <code>Uncaught TypeError: Cannot read property of undefined</code> hoặc <code>Uncaught TypeError: this.myMethod is not a function</code>.</p>
+<p class="tip">Đừng dùng <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank" rel="noopener">hàm mũi tên (arrow functions)</a> cho các thuộc tính tùy chọn hoặc callback như là <code>created: () =&gt; console.log(this.a)</code> hoặc <code>vm.$watch(&#39;a&#39;, newValue =&gt; this.myMethod())</code>. Vì hàm mũi tên được bind vào ngữ cảnh cha (parent context), <code>this</code> sẽ không trỏ đến đối tượng Vue hiện hành. Do vậy <code>this.a</code> hoặc <code>this.myMethod</code> sẽ không trả về giá trị mà bạn mong đợi, mà thay vào đó thường là các lỗi <code>Uncaught TypeError: Cannot read property of undefined</code> hoặc <code>Uncaught TypeError: this.myMethod is not a function</code>.</p>
 
 <h2 id="So-do-vong-doi"><a href="#So-do-vong-doi" class="headerlink" title="Sơ đồ vòng đời"></a>Sơ đồ vòng đời</h2><p>Dưới đây là sơ đồ vòng đời của một đối tượng Vue. Ngay lúc này thì bạn chưa cần hiểu mọi thứ trong đây, nhưng dần dần về sau khi bạn học và xây dựng thêm với Vue, sơ đồ này sẽ là một nguồn tham khảo rất hữu ích.</p>
 <p><img src="/images/lifecycle.png" alt="Vòng đời của một đối tượng Vue"></p>
 
+  
   
     <div class="guide-links">
       
@@ -803,7 +820,7 @@
     </div>
   
   <div class="footer">
-    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+      <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
 <div class="bsa-cpc"></div>
 <script>
   (function(){

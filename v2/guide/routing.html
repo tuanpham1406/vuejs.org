@@ -70,8 +70,12 @@
       ga('create', 'UA-46852172-1', 'vi.vuejs.org');
       ga('send', 'pageview');
     </script>
+
+    <!-- vimeo analytics -->
+    <script type="text/javascript" defer="defer" src="https://extend.vimeocdn.com/ga/72160148.js"></script>
   </head>
-  <body class="docs">    <div id="mobile-bar" >
+  <body class="docs">
+    <div id="mobile-bar" >
       <a class="menu-button"></a>
       <a class="logo" href="/"></a>
     </div>
@@ -140,12 +144,12 @@
   <a href="/v2/guide/team.html" class="nav-link team">Đội ngũ</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Cửa hàng</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Hỗ trợ Vue trên OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Hỗ trợ Evan trên Patreon</a></li>
+      <li><a href="/support-vuejs/#One-time-Donations" class="nav-link">Đóng góp một lần</a></li>
+      <li><a href="/support-vuejs/#Recurring-Pledges" class="nav-link">Đóng góp thường xuyên</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Mua áo thun</a></li>
     </ul></li>
   </ul>
 </li>
@@ -233,12 +237,12 @@
   <a href="/v2/guide/team.html" class="nav-link team">Đội ngũ</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Hỗ trợ Vue</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Cửa hàng</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Hỗ trợ Vue trên OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Hỗ trợ Evan trên Patreon</a></li>
+      <li><a href="/support-vuejs/#One-time-Donations" class="nav-link">Đóng góp một lần</a></li>
+      <li><a href="/support-vuejs/#Recurring-Pledges" class="nav-link">Đóng góp thường xuyên</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Mua áo thun</a></li>
     </ul></li>
   </ul>
 </li>
@@ -260,13 +264,21 @@
     </ul>
     <div class="list">
       <div class="main-sponsor">
-        <span>Nhà tài trợ bạch kim</span><br>
+        <span>Nhà tài trợ bạch kim</span>
+        <div>
         <a href="https://stdlib.com" target="_blank" class="logo">
           <img src="/images/stdlib.png">
         </a>
         <a href="http://tooltwist.com/" target="_blank" class="logo">
           <img src="/images/tooltwist.png">
         </a>
+        <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
+          <img src="/images/vueschool.png">
+        </a>
+        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
+          <img src="/images/datacamp.png">
+        </a>
+        </div>
       </div>
       <a class="become-backer" href="/support-vuejs">
         Trở thành nhà tài trợ
@@ -608,7 +620,7 @@
     
     
     <li>
-      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit Testing</a>
+      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit Test</a>
     </li>
   
     
@@ -765,14 +777,16 @@
   
     <h1>Routing</h1>
   
-  <p class="tip">Một số tài liệu kĩ thuật dịch “routing” thành “định tuyến” và “router” thành “bộ định tuyến.” Chúng tôi cho rằng cách dịch này nghe khá lạ tai và khiên cưỡng, nên sẽ giữ nguyên bản tiếng Anh của hai từ này.</p>
+  
+    <p class="tip">Một số tài liệu kĩ thuật dịch “routing” thành “định tuyến” và “router” thành “bộ định tuyến.” Chúng tôi cho rằng cách dịch này nghe khá lạ tai và khiên cưỡng, nên sẽ giữ nguyên bản tiếng Anh của hai từ này.</p>
 
-<h2 id="Thu-vien-router-chinh-thuc"><a href="#Thu-vien-router-chinh-thuc" class="headerlink" title="Thư viện router chính thức"></a>Thư viện router chính thức</h2><p>Đối với đa số các ứng dụng một trang (SPA - Single Page Application), chúng tôi khuyến khích sử dụng thư viện chính thức <a href="https://github.com/vuejs/vue-router" target="_blank" rel="external">vue-router</a>. Để biết thêm chi tiết, hãy xem <a href="https://router.vuejs.org/" target="_blank" rel="external">tài liệu về vue-router</a>.</p>
+<h2 id="Thu-vien-router-chinh-thuc"><a href="#Thu-vien-router-chinh-thuc" class="headerlink" title="Thư viện router chính thức"></a>Thư viện router chính thức</h2><p>Đối với đa số các ứng dụng một trang (SPA - Single Page Application), chúng tôi khuyến khích sử dụng thư viện chính thức <a href="https://github.com/vuejs/vue-router" target="_blank" rel="noopener">vue-router</a>. Để biết thêm chi tiết, hãy xem <a href="https://router.vuejs.org/" target="_blank" rel="noopener">tài liệu về vue-router</a>.</p>
 <h2 id="Routing-don-gian"><a href="#Routing-don-gian" class="headerlink" title="Routing đơn giản"></a>Routing đơn giản</h2><p>Nếu chỉ cần routing đơn giản và không muốn sử dụng một thư viện đầy đủ tính năng, bạn có thể render động một component ở cấp toàn trang (page-level) như sau:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> NotFound = &#123; <span class="attr">template</span>: <span class="string">'&lt;p&gt;Không tìm thấy&lt;/p&gt;'</span> &#125;</div><div class="line"><span class="keyword">const</span> Home = &#123; <span class="attr">template</span>: <span class="string">'&lt;p&gt;Trang chủ&lt;/p&gt;'</span> &#125;</div><div class="line"><span class="keyword">const</span> About = &#123; <span class="attr">template</span>: <span class="string">'&lt;p&gt;Giới thiệu&lt;/p&gt;'</span> &#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> routes = &#123;</div><div class="line">  <span class="string">'/'</span>: Home,</div><div class="line">  <span class="string">'/about'</span>: About</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  el: <span class="string">'#app'</span>,</div><div class="line">  data: &#123;</div><div class="line">    currentRoute: <span class="built_in">window</span>.location.pathname</div><div class="line">  &#125;,</div><div class="line">  computed: &#123;</div><div class="line">    ViewComponent () &#123;</div><div class="line">      <span class="keyword">return</span> routes[<span class="keyword">this</span>.currentRoute] || NotFound</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  render (h) &#123; <span class="keyword">return</span> h(<span class="keyword">this</span>.ViewComponent) &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>Bằng việc kết hợp với HTML5 History API, bạn có thể xây dựng cho mình một router phía client hoàn toàn có thể dùng được mặc dù còn rất cơ bản. Đây là <a href="https://github.com/chrisvfritz/vue-2.0-simple-routing-example" target="_blank" rel="external">một ví dụ</a> của router dạng này.</p>
-<h2 id="Su-dung-router-ben-thu-3"><a href="#Su-dung-router-ben-thu-3" class="headerlink" title="Sử dụng router bên thứ 3"></a>Sử dụng router bên thứ 3</h2><p>Nếu bạn muốn sử dụng một thư viện router bên thứ 3 như <a href="https://github.com/visionmedia/page.js" target="_blank" rel="external">Page.js</a> hoặc <a href="https://github.com/flatiron/director" target="_blank" rel="external">Director</a>, việc tích hợp <a href="https://github.com/chrisvfritz/vue-2.0-simple-routing-example/compare/master...pagejs" target="_blank" rel="external">cũng dễ dàng như thế</a>. Đây là một <a href="https://github.com/chrisvfritz/vue-2.0-simple-routing-example/tree/pagejs" target="_blank" rel="external">ví dụ hoàn chỉnh</a> sử dụng Page.js.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> NotFound = &#123; <span class="attr">template</span>: <span class="string">'&lt;p&gt;Không tìm thấy&lt;/p&gt;'</span> &#125;</span><br><span class="line"><span class="keyword">const</span> Home = &#123; <span class="attr">template</span>: <span class="string">'&lt;p&gt;Trang chủ&lt;/p&gt;'</span> &#125;</span><br><span class="line"><span class="keyword">const</span> About = &#123; <span class="attr">template</span>: <span class="string">'&lt;p&gt;Giới thiệu&lt;/p&gt;'</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> routes = &#123;</span><br><span class="line">  <span class="string">'/'</span>: Home,</span><br><span class="line">  <span class="string">'/about'</span>: About</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    currentRoute: <span class="built_in">window</span>.location.pathname</span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    ViewComponent () &#123;</span><br><span class="line">      <span class="keyword">return</span> routes[<span class="keyword">this</span>.currentRoute] || NotFound</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  render (h) &#123; <span class="keyword">return</span> h(<span class="keyword">this</span>.ViewComponent) &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>Bằng việc kết hợp với HTML5 History API, bạn có thể xây dựng cho mình một router phía client hoàn toàn có thể dùng được mặc dù còn rất cơ bản. Đây là <a href="https://github.com/chrisvfritz/vue-2.0-simple-routing-example" target="_blank" rel="noopener">một ví dụ</a> của router dạng này.</p>
+<h2 id="Su-dung-router-ben-thu-3"><a href="#Su-dung-router-ben-thu-3" class="headerlink" title="Sử dụng router bên thứ 3"></a>Sử dụng router bên thứ 3</h2><p>Nếu bạn muốn sử dụng một thư viện router bên thứ 3 như <a href="https://github.com/visionmedia/page.js" target="_blank" rel="noopener">Page.js</a> hoặc <a href="https://github.com/flatiron/director" target="_blank" rel="noopener">Director</a>, việc tích hợp <a href="https://github.com/chrisvfritz/vue-2.0-simple-routing-example/compare/master...pagejs" target="_blank" rel="noopener">cũng dễ dàng như thế</a>. Đây là một <a href="https://github.com/chrisvfritz/vue-2.0-simple-routing-example/tree/pagejs" target="_blank" rel="noopener">ví dụ hoàn chỉnh</a> sử dụng Page.js.</p>
 
+  
   
     <div class="guide-links">
       
@@ -782,7 +796,7 @@
     </div>
   
   <div class="footer">
-    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+      <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
 <div class="bsa-cpc"></div>
 <script>
   (function(){
