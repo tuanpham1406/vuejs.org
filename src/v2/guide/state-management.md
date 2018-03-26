@@ -6,11 +6,11 @@ order: 502
 
 ## Giải pháp chính thức theo kiến trúc Flux
 
-Các ứng dụng lớn có xu hướng ngày càng trở nên phức tạp do có nhiều thành phần trạng thái (state) khác nhau và các giao tiếp giữa các thành phần ấy. Để giải quyết vấn đề này, Vue cung cấp [vuex](https://github.com/vuejs/vuex): thư viện quản lí trạng thái chính thức, lấy cảm hứng từ [Elm](http://elm-lang.org/). Vuex thậm chí còn được tích hợp vào [vue-devtools](https://github.com/vuejs/vue-devtools), cung cấp tính năng [time-travel debugging](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/time-travel-debugging-overview) mà không cần phải cài đặt gì thêm.
+Các ứng dụng lớn có xu hướng ngày càng trở nên phức tạp do có nhiều thành phần trạng thái (state) khác nhau và các giao tiếp giữa các thành phần ấy. Để giải quyết vấn đề này, Vue cung cấp [vuex](https://github.com/vuejs/vuex): thư viện quản lí trạng thái chính thức, lấy cảm hứng từ [Elm](http://elm-lang.org/). Vuex thậm chí còn được tích hợp vào [vue-devtools](https://github.com/vuejs/vue-devtools), cung cấp tính năng [time-travel debugging](src/v2/guide/state-management.md) mà không cần phải cài đặt gì thêm.
 
 ### Thông tin dành cho các lập trình viên React
 
-Nếu đến từ React, có thể bạn đang thắc mắc không biết vuex và [redux](https://github.com/reactjs/redux), giải pháp quản lí trạng thái theo kiến trúc Flux phổ biến nhất trong hệ sinh thái của React, giống và khác nhau như thế nào. Thật ra, Redux độc lập với view layer, và vì thế có thể dùng với Vue thông qua [các ràng buộc đơn giản](https://yarnpkg.com/en/packages?q=redux%20vue&p=1). Trong khi đó, Vuex _biết rằng_ nó đang được sử dụng trong một ứng dụng Vue. Điều này giúp vuex tích hợp tốt hơn với Vue, cung cấp API trực quan hơn và nâng cao trải nghiệp của lập trình viên.
+Nếu đến từ React, có thể bạn đang thắc mắc không biết vuex và [redux](https://github.com/reactjs/redux), giải pháp quản lí trạng thái theo kiến trúc Flux phổ biến nhất trong hệ sinh thái của React, giống và khác nhau như thế nào. Thật ra, Redux độc lập với view layer, và vì thế có thể dùng với Vue thông qua [các ràng buộc đơn giản](https://yarnpkg.com/en/packages?q=redux%20vue&p=1). Trong khi đó, vuex _biết rằng_ nó đang được sử dụng trong một ứng dụng Vue. Điều này giúp vuex tích hợp tốt hơn với Vue, cung cấp API trực quan hơn và nâng cao trải nghiệp của lập trình viên.
 
 ## Xây dựng bộ quản lí trạng thái đơn giản
 
