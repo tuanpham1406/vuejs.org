@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="vi">
   <head>
-    <title>Form Input Bindings — Vue.js</title>
+    <title>Ràng buộc form input — Vue.js</title>
     <meta charset="utf-8">
     <meta name="description" content="Vue.js - Framework JavaScript linh động">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -17,12 +17,12 @@
     <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/guide/forms.html">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Form Input Bindings — Vue.js">
+    <meta property="og:title" content="Ràng buộc form input — Vue.js">
     <meta property="og:description" content="Vue.js - Framework JavaScript linh động">
     <meta property="og:image" content="https://vi.vuejs.org//images/logo.png">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Form Input Bindings — Vue.js">
+    <meta name="twitter:title" content="Ràng buộc form input — Vue.js">
     <meta name="twitter:description" content="Vue.js - Framework JavaScript linh động">
     <meta name="twitter:image" content="https://vi.vuejs.org/images/logo.png">
 
@@ -96,8 +96,9 @@
     <li><ul>
       <li><a href="/v2/guide/" class="nav-link current">Hướng dẫn</a></li>
       <li><a href="/v2/api/" class="nav-link">API</a></li>
-      <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
+      <li><a href="/v2/style-guide/" class="nav-link">Phong cách viết</a></li>
       <li><a href="/v2/examples/" class="nav-link">Một số ví dụ</a></li>
+      <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>
     </ul></li>
   </ul>
 </li>
@@ -126,7 +127,8 @@
     </ul></li>
     <li><h4>Tin tức</h4></li>
     <li><ul>
-      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Lộ trình phát triển</a></li>
+      <li><a href="https://news.vuejs.org" class="nav-link" target="_blank">Tin tức hàng tuần</a></li>
+      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Roadmap</a></li>
       <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
       <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">Blog</a></li>
       <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">Việc làm</a></li>
@@ -189,8 +191,9 @@
     <li><ul>
       <li><a href="/v2/guide/" class="nav-link current">Hướng dẫn</a></li>
       <li><a href="/v2/api/" class="nav-link">API</a></li>
-      <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
+      <li><a href="/v2/style-guide/" class="nav-link">Phong cách viết</a></li>
       <li><a href="/v2/examples/" class="nav-link">Một số ví dụ</a></li>
+      <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>
     </ul></li>
   </ul>
 </li>
@@ -219,7 +222,8 @@
     </ul></li>
     <li><h4>Tin tức</h4></li>
     <li><ul>
-      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Lộ trình phát triển</a></li>
+      <li><a href="https://news.vuejs.org" class="nav-link" target="_blank">Tin tức hàng tuần</a></li>
+      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Roadmap</a></li>
       <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
       <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">Blog</a></li>
       <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">Việc làm</a></li>
@@ -263,30 +267,40 @@
 
     </ul>
     <div class="list">
-      <div class="main-sponsor">
-        <span>Nhà tài trợ bạch kim</span>
-        <div>
-        <a href="https://stdlib.com" target="_blank" class="logo">
-          <img src="/images/stdlib.png">
-        </a>
-        <a href="http://tooltwist.com/" target="_blank" class="logo">
-          <img src="/images/tooltwist.png">
-        </a>
-        <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
-          <img src="/images/vueschool.png">
-        </a>
-        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
-          <img src="/images/datacamp.png">
-        </a>
-        </div>
-      </div>
-      <a class="become-backer" href="/support-vuejs">
-        Trở thành nhà tài trợ
-      </a>
+      <div id="sidebar-sponsors-special">
+  <div class="main-sponsor">
+    <span>Tài trợ đặc biệt</span>
+    <div>
+    <a href="https://stdlib.com" target="_blank" class="logo">
+      <img src="/images/stdlib.png">
+    </a>
+    <a href="https://www.bitsrc.io/?utm_source=vue&utm_medium=vue&utm_campaign=vue&utm_term=vue&utm_content=vue" target="_blank" class="logo">
+      <img src="/images/bit-wide.png">
+    </a>
+    </div>
+  </div>
+</div>
+
+<div id="sidebar-sponsors-platinum">
+  <div class="main-sponsor">
+    <span>Tài trợ Patreon</span>
+    <div>
+    <a href="http://tooltwist.com/" target="_blank" class="logo">
+      <img src="/images/tooltwist.png">
+    </a>
+    <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
+      <img src="/images/vueschool.png">
+    </a>
+    </div>
+  </div>
+  <a class="become-backer" href="/support-vuejs">
+    Trở thành nhà tài trợ
+  </a>
+</div>
+
       <h2>
         
-          Hướng dẫn
-        
+        Hướng dẫn
         <!--
         
           <select class="version-select">
@@ -311,7 +325,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/installation.html" class="sidebar-link">Cài đặt</a>
@@ -326,7 +340,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/index.html" class="sidebar-link">Giới thiệu</a>
@@ -341,7 +355,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/instance.html" class="sidebar-link">Đối tượng Vue</a>
@@ -356,7 +370,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/syntax.html" class="sidebar-link">Cú pháp template</a>
@@ -371,7 +385,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/computed.html" class="sidebar-link">Computed property và watcher</a>
@@ -386,7 +400,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/class-and-style.html" class="sidebar-link">Binding cho class và style</a>
@@ -401,7 +415,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/conditional.html" class="sidebar-link">Render theo điều kiện</a>
@@ -416,7 +430,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/list.html" class="sidebar-link">Render danh sách</a>
@@ -431,7 +445,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/events.html" class="sidebar-link">Xử lí sự kiện</a>
@@ -446,10 +460,10 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/forms.html" class="sidebar-link current">Form Input Bindings</a>
+      <a href="/v2/guide/forms.html" class="sidebar-link current">Ràng buộc form input</a>
     </li>
   
     
@@ -461,14 +475,107 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/components.html" class="sidebar-link">Component</a>
+      <a href="/v2/guide/components.html" class="sidebar-link">Cơ bản về component</a>
     </li>
   
     
     
+      
+      
+        <li><h3>Components In-Depth</h3></li>
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-registration.html" class="sidebar-link">Component Registration</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-props.html" class="sidebar-link">Props</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-custom-events.html" class="sidebar-link">Custom Events</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-slots.html" class="sidebar-link">Slots</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-dynamic-async.html" class="sidebar-link">Dynamic & Async Components</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-edge-cases.html" class="sidebar-link">Handling Edge Cases</a>
+    </li>
+  
+    
+    
+      
       
       
         <li><h3>Hiệu ứng chuyển động</h3></li>
@@ -478,7 +585,6 @@
       
       
       
-    
     
     <li>
       <a href="/v2/guide/transitions.html" class="sidebar-link">Transition cho enter/leave & danh sách</a>
@@ -493,7 +599,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/transitioning-state.html" class="sidebar-link">Transition cho trạng thái</a>
@@ -504,13 +610,13 @@
       
       
       
+      
         <li><h3>Tái sử dụng & kết hợp</h3></li>
       
       
       
       
       
-    
     
     <li>
       <a href="/v2/guide/mixins.html" class="sidebar-link">Mixin</a>
@@ -525,7 +631,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/custom-directive.html" class="sidebar-link">Directive tùy biến</a>
@@ -540,7 +646,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/render-function.html" class="sidebar-link">Các hàm render & JSX</a>
@@ -555,7 +661,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/plugins.html" class="sidebar-link">Plugin</a>
@@ -570,7 +676,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/filters.html" class="sidebar-link">Filter</a>
@@ -582,12 +688,12 @@
       
       
       
+      
         <li><h3>Công cụ</h3></li>
       
       
       
       
-    
     
     <li>
       <a href="/v2/guide/deployment.html" class="sidebar-link">Triển khai cho môi trường production</a>
@@ -602,7 +708,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/single-file-components.html" class="sidebar-link">Single File Components</a>
@@ -617,10 +723,10 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit Test</a>
+      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit test</a>
     </li>
   
     
@@ -632,7 +738,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/typescript.html" class="sidebar-link">TypeScript Support</a>
@@ -645,11 +751,11 @@
       
       
       
+      
         <li><h3>Mở rộng quy mô ứng dụng</h3></li>
       
       
       
-    
     
     <li>
       <a href="/v2/guide/routing.html" class="sidebar-link">Routing</a>
@@ -664,10 +770,10 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/state-management.html" class="sidebar-link">State Management</a>
+      <a href="/v2/guide/state-management.html" class="sidebar-link">Quản lí trạng thái</a>
     </li>
   
     
@@ -679,14 +785,15 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/ssr.html" class="sidebar-link">Server-Side Rendering</a>
+      <a href="/v2/guide/ssr.html" class="sidebar-link">Render ở phía server</a>
     </li>
   
     
     
+      
       
       
       
@@ -696,7 +803,6 @@
         <li><h3>Bên trong Vue</h3></li>
       
       
-    
     
     <li>
       <a href="/v2/guide/reactivity.html" class="sidebar-link">Reactivity in Depth</a>
@@ -711,9 +817,9 @@
       
       
       
+      
         <li><h3>Thông tin thêm</h3></li>
       
-    
     
     <li>
       <a href="/v2/guide/comparison.html" class="sidebar-link">Comparison with Other Frameworks</a>
@@ -728,7 +834,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/join.html" class="sidebar-link">Join the Vue.js Community!</a>
@@ -743,12 +849,11 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/team.html" class="sidebar-link">Đội ngũ</a>
     </li>
-  
   
 </ul>
 
@@ -775,19 +880,19 @@
     
   
   
-    <h1>Form Input Bindings</h1>
+    <h1>Ràng buộc form input</h1>
   
   
-    <h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><p>You can use the <code>v-model</code> directive to create two-way data bindings on form input and textarea elements. It automatically picks the correct way to update the element based on the input type. Although a bit magical, <code>v-model</code> is essentially syntax sugar for updating data on user input events, plus special care for some edge cases.</p>
-<p class="tip"><code>v-model</code> will ignore the initial <code>value</code>, <code>checked</code> or <code>selected</code> attributes found on any form elements. It will always treat the Vue instance data as the source of truth. You should declare the initial value on the JavaScript side, inside the <code>data</code> option of your component.</p>
+    <h2 id="Cach-su-dung-co-ban"><a href="#Cach-su-dung-co-ban" class="headerlink" title="Cách sử dụng cơ bản"></a>Cách sử dụng cơ bản</h2><p>Bạn có thể sử dụng directive <code>v-model</code> để tạo ràng buộc dữ liệu 2 chiều lên các phần tử form input và textarea. Vue sẽ tự động chọn cách phù hợp để cập nhật phần tử này dựa trên kiểu của input. Có một chút ma thuật, <code>v-model</code> là syntax sugar trong việc cập nhật dữ liệu dựa trên các sự kiện input từ người dùng kèm theo một số trường hợp đặc biệt khác.</p>
+<p class="tip"><code>v-model</code> sẽ bỏ qua giá trị khởi tạo của các thuộc tính <code>value</code>, <code>checked</code> hoặc <code>selected</code> trong mọi phần tử form. Nó luôn luôn xem data trong đối tượng Vue là nguồn đáng tin cậy duy nhất. Bạn nên khai báo các giá trị khởi tạo trong JavaScript, bên trong option <code>data</code> của component.</p>
 
-<p class="tip" id="vmodel-ime-tip">For languages that require an <a href="https://en.wikipedia.org/wiki/Input_method" target="_blank" rel="noopener">IME</a> (Chinese, Japanese, Korean etc.), you’ll notice that <code>v-model</code> doesn’t get updated during IME composition. If you want to cater for these updates as well, use <code>input</code> event instead.</p>
+<p class="tip" id="vmodel-ime-tip">Đối với các ngôn ngữ đòi hỏi bộ gõ (<a href="https://en.wikipedia.org/wiki/Input_method" target="_blank" rel="noopener">IME</a>) (tiếng Trung, tiếng Nhật, Tiếng Hàn v.v.), bạn sẽ nhận thấy rằng <code>v-model</code> không thay đổi trong quá trình biên soạn của IME. Nếu bạn muốn nhận các thay đổi này thì phải sử dụng sự kiện <code>input</code>.</p>
 
-<h3 id="Text"><a href="#Text" class="headerlink" title="Text"></a>Text</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"message"</span> <span class="attr">placeholder</span>=<span class="string">"edit me"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Message is: &#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Van-ban"><a href="#Van-ban" class="headerlink" title="Văn bản"></a>Văn bản</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"message"</span> <span class="attr">placeholder</span>=<span class="string">"edit me"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Thông điệp: &#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <div id="example-1" class="demo">
-  <input v-model="message" placeholder="edit me">
-  <p>Message is: {{ message }}</p>
+  <input v-model="message" placeholder="Nhập văn bản">
+  <p>Thông điệp: {{ message }}</p>
 </div>
 <script>
 new Vue({
@@ -798,13 +903,13 @@ new Vue({
 })
 </script>
 
-<h3 id="Multiline-text"><a href="#Multiline-text" class="headerlink" title="Multiline text"></a>Multiline text</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Multiline message is:<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"white-space: pre-line;"</span>&gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">v-model</span>=<span class="string">"message"</span> <span class="attr">placeholder</span>=<span class="string">"add multiple lines"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Van-ban-nhieu-dong"><a href="#Van-ban-nhieu-dong" class="headerlink" title="Văn bản nhiều dòng"></a>Văn bản nhiều dòng</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Thông điệp có nhiều dòng:<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"white-space: pre-line;"</span>&gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">v-model</span>=<span class="string">"message"</span> <span class="attr">placeholder</span>=<span class="string">"Nhập văn bản có nhiều dòng"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <div id="example-textarea" class="demo">
-  <span>Multiline message is:</span>
+  <span>Thông điệp có nhiều dòng:</span>
   <p style="white-space: pre-line;">{{ message }}</p>
   <br>
-  <textarea v-model="message" placeholder="add multiple lines"></textarea>
+  <textarea v-model="message" placeholder="Nhập văn bản có nhiều dòng"></textarea>
 </div>
 <script>
 new Vue({
@@ -816,9 +921,9 @@ new Vue({
 </script>
 
 
-<p class="tip">Interpolation on textareas (<code>&lt;textarea&gt;{{text}}&lt;/textarea&gt;</code>) won't work. Use <code>v-model</code> instead.</p>
+<p class="tip">Nội suy (<code>&lt;textarea&gt;{{text}}&lt;/textarea&gt;</code>) không hoạt động với textarea. Hãy sử dụng <code>v-model</code>.</p>
 
-<h3 id="Checkbox"><a href="#Checkbox" class="headerlink" title="Checkbox"></a>Checkbox</h3><p>Single checkbox, boolean value:</p>
+<h3 id="Checkbox"><a href="#Checkbox" class="headerlink" title="Checkbox"></a>Checkbox</h3><p>Checkbox đơn, giá trị boolean:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"checkbox"</span> <span class="attr">v-model</span>=<span class="string">"checked"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"checkbox"</span>&gt;</span>&#123;&#123; checked &#125;&#125;<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <div id="example-2" class="demo">
@@ -834,19 +939,19 @@ new Vue({
 })
 </script>
 
-<p>Multiple checkboxes, bound to the same Array:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">'example-3'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"jack"</span> <span class="attr">value</span>=<span class="string">"Jack"</span> <span class="attr">v-model</span>=<span class="string">"checkedNames"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"jack"</span>&gt;</span>Jack<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"john"</span> <span class="attr">value</span>=<span class="string">"John"</span> <span class="attr">v-model</span>=<span class="string">"checkedNames"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"john"</span>&gt;</span>John<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"mike"</span> <span class="attr">value</span>=<span class="string">"Mike"</span> <span class="attr">v-model</span>=<span class="string">"checkedNames"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"mike"</span>&gt;</span>Mike<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>Checked names: &#123;&#123; checkedNames &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Nhiều checkbox, ràng buộc vào cùng một mảng:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">'example-3'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"com-chien-toi"</span> <span class="attr">value</span>=<span class="string">"Cơm chiên tỏi"</span> <span class="attr">v-model</span>=<span class="string">"checkedNames"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"com-chien-toi"</span>&gt;</span>Cơm chiên tỏi<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"dot-bi-xao-toi"</span> <span class="attr">value</span>=<span class="string">"Đọt bí xào tỏi"</span> <span class="attr">v-model</span>=<span class="string">"checkedNames"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"dot-bi-xao-toi"</span>&gt;</span>Đọt bí xào tỏi<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"canh-rau-rung"</span> <span class="attr">value</span>=<span class="string">"Canh rau rừng"</span> <span class="attr">v-model</span>=<span class="string">"checkedNames"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"canh-rau-rung"</span>&gt;</span>Canh rau rừng<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>Món đã chọn: &#123;&#123; checkedNames &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#example-3'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    checkedNames: []</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <div id="example-3" class="demo">
-  <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
-  <label for="jack">Jack</label>
-  <input type="checkbox" id="john" value="John" v-model="checkedNames">
-  <label for="john">John</label>
-  <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
-  <label for="mike">Mike</label>
+  <input type="checkbox" id="com-chien-toi" value="Cơm chiên tỏi" v-model="checkedNames">
+  <label for="com-chien-toi">Cơm chiên tỏi</label><br>
+  <input type="checkbox" id="dot-bi-xao-toi" value="Đọt bí xào tỏi" v-model="checkedNames">
+  <label for="dot-bi-xao-toi">Đọt bí xào tỏi</label><br>
+  <input type="checkbox" id="canh-rau-rung" value="Canh rau rừng" v-model="checkedNames">
+  <label for="canh-rau-rung">Canh rau rừng</label>
   <br>
-  <span>Checked names: {{ checkedNames }}</span>
+  <span>Món đã chọn: {{ checkedNames }}</span>
 </div>
 <script>
 new Vue({
@@ -857,16 +962,14 @@ new Vue({
 })
 </script>
 
-<h3 id="Radio"><a href="#Radio" class="headerlink" title="Radio"></a>Radio</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">id</span>=<span class="string">"one"</span> <span class="attr">value</span>=<span class="string">"One"</span> <span class="attr">v-model</span>=<span class="string">"picked"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"one"</span>&gt;</span>One<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">id</span>=<span class="string">"two"</span> <span class="attr">value</span>=<span class="string">"Two"</span> <span class="attr">v-model</span>=<span class="string">"picked"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"two"</span>&gt;</span>Two<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Picked: &#123;&#123; picked &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Radio"><a href="#Radio" class="headerlink" title="Radio"></a>Radio</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">id</span>=<span class="string">"cac-mon-rau"</span> <span class="attr">value</span>=<span class="string">"Các món rau"</span> <span class="attr">v-model</span>=<span class="string">"picked"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"cac-mon-rau"</span>&gt;</span>Các món rau<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">id</span>=<span class="string">"cac-mon-thit"</span> <span class="attr">value</span>=<span class="string">"Các món thịt"</span> <span class="attr">v-model</span>=<span class="string">"picked"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"cac-mon-thit"</span>&gt;</span>Các món thịt<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Đã chọn: &#123;&#123; picked &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <div id="example-4" class="demo">
-  <input type="radio" id="one" value="One" v-model="picked">
-  <label for="one">One</label>
-  <br>
-  <input type="radio" id="two" value="Two" v-model="picked">
-  <label for="two">Two</label>
-  <br>
-  <span>Picked: {{ picked }}</span>
+  <input type="radio" id="cac-mon-rau" value="Các món rau" v-model="picked">
+  <label for="cac-mon-rau">Các món rau</label><br>
+  <input type="radio" id="cac-mon-thit" value="Các món thịt" v-model="picked">
+  <label for="cac-mon-thit">Các món thịt</label><br>
+  <span>Đã chọn: {{ picked }}</span>
 </div>
 <script>
 new Vue({
@@ -877,18 +980,18 @@ new Vue({
 })
 </script>
 
-<h3 id="Select"><a href="#Select" class="headerlink" title="Select"></a>Select</h3><p>Single select:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">v-model</span>=<span class="string">"selected"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">disabled</span> <span class="attr">value</span>=<span class="string">""</span>&gt;</span>Please select one<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span>&gt;</span>A<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span>&gt;</span>B<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span>&gt;</span>C<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Selected: &#123;&#123; selected &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Select"><a href="#Select" class="headerlink" title="Select"></a>Select</h3><p>Select đơn:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">v-model</span>=<span class="string">"selected"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">disabled</span> <span class="attr">value</span>=<span class="string">""</span>&gt;</span>Vui lòng chọn món<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span>&gt;</span>Đọt bí xào tỏi<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span>&gt;</span>Canh bông điên điển<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span>&gt;</span>Lẩu nấm<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Món đã chọn: &#123;&#123; selected &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'...'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    selected: <span class="string">''</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <div id="example-5" class="demo">
   <select v-model="selected">
-    <option disabled value="">Please select one</option>
-    <option>A</option>
-    <option>B</option>
-    <option>C</option>
-  </select>
-  <span>Selected: {{ selected }}</span>
+      <option disabled value="">Vui lòng chọn món</option>
+      <option>Đọt bí xào tỏi</option>
+      <option>Canh bông điên điển</option>
+      <option>Lẩu nấm</option>
+  </select><br>
+  <span>Món đã chọn: {{ selected }}</span>
 </div>
 <script>
 new Vue({
@@ -899,19 +1002,19 @@ new Vue({
 })
 </script>
 
-<p class="tip">If the initial value of your <code>v-model</code> expression does not match any of the options, the <code>&lt;select&gt;</code> element will render in an “unselected” state. On iOS this will cause the user not being able to select the first item because iOS does not fire a change event in this case. It is therefore recommended to provide a disabled option with an empty value, as demonstrated in the example above.</p>
+<p class="tip">Nếu giá trị khởi tạo của biểu thức trong <code>v-model</code> không khớp với bất kỳ option nào, thì <code>&lt;select&gt;</code> sẽ render ở trạng thái “chưa được chọn”. Trên iOS nó sẽ làm cho người dùng không thể chọn item đầu tiên bởi vì iOS không gọi sự kiện change trong trường hợp này. Do đó chúng tôi khuyên bạn nên thêm một lựa chọn có giá trị rỗng giống như trong ví dụ trên.</p>
 
-<p>Multiple select (bound to Array):</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">v-model</span>=<span class="string">"selected"</span> <span class="attr">multiple</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span>&gt;</span>A<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span>&gt;</span>B<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span>&gt;</span>C<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Selected: &#123;&#123; selected &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Select nhiều lựa chọn (được ràng buộc với một mảng):</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">v-model</span>=<span class="string">"selected"</span> <span class="attr">multiple</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span>&gt;</span>Đọt bí xào tỏi<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span>&gt;</span>Canh bông điên điển<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span>&gt;</span>Lẩu nấm<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Món đã chọn: &#123;&#123; selected &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <div id="example-6" class="demo">
-  <select v-model="selected" multiple style="width: 50px;">
-    <option>A</option>
-    <option>B</option>
-    <option>C</option>
+  <select v-model="selected" multiple style="width: 150px;">
+    <option>Đọt bí xào tỏi</option>
+    <option>Canh bông điên điển</option>
+    <option>Lẩu nấm</option>
   </select>
   <br>
-  <span>Selected: {{ selected }}</span>
+  <span>Món đã chọn: {{ selected }}</span>
 </div>
 <script>
 new Vue({
@@ -922,9 +1025,9 @@ new Vue({
 })
 </script>
 
-<p>Dynamic options rendered with <code>v-for</code>:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">v-model</span>=<span class="string">"selected"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">v-for</span>=<span class="string">"option in options"</span> <span class="attr">v-bind:value</span>=<span class="string">"option.value"</span>&gt;</span></span><br><span class="line">    &#123;&#123; option.text &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Selected: &#123;&#123; selected &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'...'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    selected: <span class="string">'A'</span>,</span><br><span class="line">    options: [</span><br><span class="line">      &#123; <span class="attr">text</span>: <span class="string">'One'</span>, <span class="attr">value</span>: <span class="string">'A'</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">text</span>: <span class="string">'Two'</span>, <span class="attr">value</span>: <span class="string">'B'</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">text</span>: <span class="string">'Three'</span>, <span class="attr">value</span>: <span class="string">'C'</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>Render <code>&lt;option&gt;</code> với <code>v-for</code>:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">v-model</span>=<span class="string">"selected"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">v-for</span>=<span class="string">"option in options"</span> <span class="attr">v-bind:value</span>=<span class="string">"option.value"</span>&gt;</span></span><br><span class="line">    &#123;&#123; option.text &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Giá tiền: &#123;&#123; selected &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'...'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    selected: <span class="string">'50k'</span>,</span><br><span class="line">    options: [</span><br><span class="line">      &#123; <span class="attr">text</span>: <span class="string">'Đọt bí xào tỏi'</span>, <span class="attr">value</span>: <span class="string">'50k'</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">text</span>: <span class="string">'Canh bông điên điển'</span>, <span class="attr">value</span>: <span class="string">'30k'</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">text</span>: <span class="string">'Lẩu nấm'</span>, <span class="attr">value</span>: <span class="string">'45k'</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <div id="example-7" class="demo">
   <select v-model="selected">
@@ -932,53 +1035,55 @@ new Vue({
       {{ option.text }}
     </option>
   </select>
-  <span>Selected: {{ selected }}</span>
+  <span>Giá tiền: {{ selected }}</span>
 </div>
 <script>
 new Vue({
   el: '#example-7',
   data: {
-    selected: 'A',
+    selected: '50k',
     options: [
-      { text: 'One', value: 'A' },
-      { text: 'Two', value: 'B' },
-      { text: 'Three', value: 'C' }
+      { text: 'Đọt bí xào tỏi', value: '50k' },
+      { text: 'Canh bông điên điển', value: '30k' },
+      { text: 'Lẩu nấm', value: '45k' }
     ]
   }
 })
 </script>
 
-<h2 id="Value-Bindings"><a href="#Value-Bindings" class="headerlink" title="Value Bindings"></a>Value Bindings</h2><p>For radio, checkbox and select options, the <code>v-model</code> binding values are usually static strings (or booleans for checkbox):</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- `picked` is a string "a" when checked --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">v-model</span>=<span class="string">"picked"</span> <span class="attr">value</span>=<span class="string">"a"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- `toggle` is either true or false --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">v-model</span>=<span class="string">"toggle"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- `selected` is a string "abc" when selected --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">v-model</span>=<span class="string">"selected"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"abc"</span>&gt;</span>ABC<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>But sometimes we may want to bind the value to a dynamic property on the Vue instance. We can use <code>v-bind</code> to achieve that. In addition, using <code>v-bind</code> allows us to bind the input value to non-string values.</p>
+<h2 id="Rang-buoc-gia-tri"><a href="#Rang-buoc-gia-tri" class="headerlink" title="Ràng buộc giá trị"></a>Ràng buộc giá trị</h2><p>Đối với radio, checkbox và select option, <code>v-model</code> thường ràng buộc giá trị kiểu chuỗi tĩnh (hoặc boolean đối với checkbox):</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- `picked` sẽ là chuỗi "a" khi được check --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">v-model</span>=<span class="string">"picked"</span> <span class="attr">value</span>=<span class="string">"a"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- `toggle` có thể là true hoặc false --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">v-model</span>=<span class="string">"toggle"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- `selected` sẽ là chuỗi "abc" khi được chọn --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">v-model</span>=<span class="string">"selected"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"abc"</span>&gt;</span>ABC<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Nhưng đôi khi chúng ta muốn ràng buộc giá trị với một thuộc tính động trong đối tượng Vue. Chúng ta có thể sử dụng <code>v-bind</code> để làm điều này. Thêm nữa, sử dụng <code>v-bind</code> còn cho phép ràng buộc giá trị của input với các trị không phải kiểu chuỗi.</p>
 <h3 id="Checkbox-1"><a href="#Checkbox-1" class="headerlink" title="Checkbox"></a>Checkbox</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span></span></span><br><span class="line"><span class="tag">  <span class="attr">type</span>=<span class="string">"checkbox"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-model</span>=<span class="string">"toggle"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">true-value</span>=<span class="string">"yes"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">false-value</span>=<span class="string">"no"</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// when checked:</span></span><br><span class="line">vm.toggle === <span class="string">'yes'</span></span><br><span class="line"><span class="comment">// when unchecked:</span></span><br><span class="line">vm.toggle === <span class="string">'no'</span></span><br></pre></td></tr></table></figure>
-<p class="tip">The <code>true-value</code> and <code>false-value</code> attributes don’t affect the input’s <code>value</code> attribute, because browsers don’t include unchecked boxes in form submissions. To guarantee that one of two values is submitted in a form (e.g. “yes” or “no”), use radio inputs instead.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// khi được check:</span></span><br><span class="line">vm.toggle === <span class="string">'yes'</span></span><br><span class="line"><span class="comment">// khi không được check:</span></span><br><span class="line">vm.toggle === <span class="string">'no'</span></span><br></pre></td></tr></table></figure>
+<p class="tip">Các thuộc tính <code>true-value</code> và <code>false-value</code> không ảnh hưởng đến thuộc tính <code>value</code> của input, vì trình duyệt không gủi kèm theo các checkbox không được check khi submit form. Để đảm bảo một trong hai giá trị này được submit cùng với form (ví dụ “yes” hoặc “no”), hãy dùng input dạng radio thay thế.</p>
 
 <h3 id="Radio-1"><a href="#Radio-1" class="headerlink" title="Radio"></a>Radio</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">v-model</span>=<span class="string">"pick"</span> <span class="attr">v-bind:value</span>=<span class="string">"a"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// when checked:</span></span><br><span class="line">vm.pick === vm.a</span><br></pre></td></tr></table></figure>
-<h3 id="Select-Options"><a href="#Select-Options" class="headerlink" title="Select Options"></a>Select Options</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">v-model</span>=<span class="string">"selected"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- inline object literal --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">v-bind:value</span>=<span class="string">"&#123; number: 123 &#125;"</span>&gt;</span>123<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// when selected:</span></span><br><span class="line"><span class="keyword">typeof</span> vm.selected <span class="comment">// =&gt; 'object'</span></span><br><span class="line">vm.selected.number <span class="comment">// =&gt; 123</span></span><br></pre></td></tr></table></figure>
-<h2 id="Modifiers"><a href="#Modifiers" class="headerlink" title="Modifiers"></a>Modifiers</h2><h3 id="lazy"><a href="#lazy" class="headerlink" title=".lazy"></a><code>.lazy</code></h3><p>By default, <code>v-model</code> syncs the input with the data after each <code>input</code> event (with the exception of IME composition as <a href="#vmodel-ime-tip">stated above</a>). You can add the <code>lazy</code> modifier to instead sync after <code>change</code> events:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- synced after "change" instead of "input" --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model.lazy</span>=<span class="string">"msg"</span> &gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="number"><a href="#number" class="headerlink" title=".number"></a><code>.number</code></h3><p>If you want user input to be automatically typecast as a number, you can add the <code>number</code> modifier to your <code>v-model</code> managed inputs:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// khi được check:</span></span><br><span class="line">vm.pick === vm.a</span><br></pre></td></tr></table></figure>
+<h3 id="Select-option"><a href="#Select-option" class="headerlink" title="Select option"></a>Select option</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">v-model</span>=<span class="string">"selected"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- inline object literal --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">v-bind:value</span>=<span class="string">"&#123; number: 123 &#125;"</span>&gt;</span>123<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// khi được chọn:</span></span><br><span class="line"><span class="keyword">typeof</span> vm.selected <span class="comment">// =&gt; 'object'</span></span><br><span class="line">vm.selected.number <span class="comment">// =&gt; 123</span></span><br></pre></td></tr></table></figure>
+<h2 id="Modifier"><a href="#Modifier" class="headerlink" title="Modifier"></a>Modifier</h2><h3 id="lazy"><a href="#lazy" class="headerlink" title=".lazy"></a><code>.lazy</code></h3><p>Mặc định, <code>v-model</code> đồng bộ giá trị của input với dữ liệu sau sự kiện <code>input</code> (có ngoại lệ đối với trường hợp bộ gõ như <a href="#vmodel-ime-tip">đã nói ở trên</a>). Bạn có thể thêm modifier <code>lazy</code> để đồng bộ sau sự kiện <code>change</code>:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- được đồng bộ sau sự kiện "change" thay vì "input" --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model.lazy</span>=<span class="string">"msg"</span> &gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="number"><a href="#number" class="headerlink" title=".number"></a><code>.number</code></h3><p>Nếu bạn muốn giá trị từ input được tự động chuyển kiểu về kiểu số, bạn có thể thêm modifier <code>number</code> vào <code>v-model</code>:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model.number</span>=<span class="string">"age"</span> <span class="attr">type</span>=<span class="string">"number"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>This is often useful, because even with <code>type=&quot;number&quot;</code>, the value of HTML input elements always returns a string.</p>
-<h3 id="trim"><a href="#trim" class="headerlink" title=".trim"></a><code>.trim</code></h3><p>If you want user input to be trimmed automatically, you can add the <code>trim</code> modifier to your <code>v-model</code> managed inputs:</p>
+<p>Điều này rất hữu ích, vì kể cả khi input có <code>type=&quot;number&quot;</code> thì giá trị được trả về của nó luôn luôn là chuỗi.</p>
+<h3 id="trim"><a href="#trim" class="headerlink" title=".trim"></a><code>.trim</code></h3><p>Dùng để tự động loại bỏ khoảng trắng trước và sau giá trị trong input.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model.trim</span>=<span class="string">"msg"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="v-model-with-Components"><a href="#v-model-with-Components" class="headerlink" title="v-model with Components"></a><code>v-model</code> with Components</h2><blockquote>
-<p>If you’re not yet familiar with Vue’s components, you can skip this for now.</p>
+<h2 id="v-model-voi-Component"><a href="#v-model-voi-Component" class="headerlink" title="v-model với Component"></a><code>v-model</code> với Component</h2><blockquote>
+<p>Nếu bạn chưa quen với Vue component, bạn có thể bỏ qua phần này.</p>
 </blockquote>
-<p>HTML’s built-in input types won’t always meet your needs. Fortunately, Vue components allow you to build reusable inputs with completely customized behavior. These inputs even work with <code>v-model</code>! To learn more, read about <a href="components.html#Form-Input-Components-using-Custom-Events">custom inputs</a> in the Components guide.</p>
+<p>Không phải lúc nào các kiểu input có sẵn của HTML cũng có thể đáp ứng nhu cầu của bạn. May mắn là các component của Vue cho phép bạn xây dựng các input riêng tái sử dụng được với các hành vi (behavior) được tùy chỉnh hoàn toàn. Các input này thậm chí còn hoạt động với <code>v-model</code>.</p>
 
   
   
     <div class="guide-links">
       
+      
         <span>← <a href="/v2/guide/events.html">Xử lí sự kiện</a></span>
       
       
-        <span style="float: right;"><a href="/v2/guide/components.html">Component</a> →</span>
+      
+        <span style="float: right;"><a href="/v2/guide/components.html">Cơ bản về component</a> →</span>
       
     </div>
   
@@ -998,7 +1103,7 @@ new Vue({
 </script>
 
     Phát hiện lỗi hoặc muốn đóng góp vào nội dung?
-    <a href="https://github.com/vuejs/vuejs.org/blob/master/src/v2/guide/forms.md" target="_blank">
+    <a href="https://github.com/vuejs-vn/vuejs.org/blob/master/src/v2/guide/forms.md" target="_blank">
       Chỉnh sửa trang này trên GitHub!
     </a>
   </div>
@@ -1014,9 +1119,9 @@ new Vue({
     <script src="/js/common.js"></script>
 
     <!-- search -->
-    <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
     <link rel="stylesheet" href="/css/search.css">
-    <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     [
       '#search-query-nav',
@@ -1025,15 +1130,15 @@ new Vue({
     ].forEach(function (selector) {
       if (!document.querySelector(selector)) return
       // search index defaults to v2
-      var match = window.location.pathname.match(/^\/(v\d+)/)
-      var version = match ? match[1] : 'v2'
       docsearch({
-      appId: 'BH4D9OD16A',
-      apiKey: '85cc3221c9f23bfbaa4e3913dd7625ea',
-      indexName: 'vuejs',
-      inputSelector: selector,
-      algoliaOptions: { facetFilters: ["version:" + version] }
-      })
+        apiKey: 'bd7d3891459fccb97fd1f689b1840bc5',
+        indexName: 'vi_vuejs',
+
+        inputSelector: selector,
+        algoliaOptions: { 'facetFilters': ["lang:vi"] },
+
+        debug: true
+      });
     })
     </script>
 

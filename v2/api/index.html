@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="vi">
   <head>
-    <title>Vue.js</title>
+    <title>API — Vue.js</title>
     <meta charset="utf-8">
     <meta name="description" content="Vue.js - Framework JavaScript linh động">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -17,12 +17,12 @@
     <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/api/index.html">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Vue.js">
+    <meta property="og:title" content="API — Vue.js">
     <meta property="og:description" content="Vue.js - Framework JavaScript linh động">
     <meta property="og:image" content="https://vi.vuejs.org//images/logo.png">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Vue.js">
+    <meta name="twitter:title" content="API — Vue.js">
     <meta name="twitter:description" content="Vue.js - Framework JavaScript linh động">
     <meta name="twitter:image" content="https://vi.vuejs.org/images/logo.png">
 
@@ -96,8 +96,9 @@
     <li><ul>
       <li><a href="/v2/guide/" class="nav-link">Hướng dẫn</a></li>
       <li><a href="/v2/api/" class="nav-link current">API</a></li>
-      <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
+      <li><a href="/v2/style-guide/" class="nav-link">Phong cách viết</a></li>
       <li><a href="/v2/examples/" class="nav-link">Một số ví dụ</a></li>
+      <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>
     </ul></li>
   </ul>
 </li>
@@ -126,7 +127,8 @@
     </ul></li>
     <li><h4>Tin tức</h4></li>
     <li><ul>
-      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Lộ trình phát triển</a></li>
+      <li><a href="https://news.vuejs.org" class="nav-link" target="_blank">Tin tức hàng tuần</a></li>
+      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Roadmap</a></li>
       <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
       <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">Blog</a></li>
       <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">Việc làm</a></li>
@@ -189,8 +191,9 @@
     <li><ul>
       <li><a href="/v2/guide/" class="nav-link">Hướng dẫn</a></li>
       <li><a href="/v2/api/" class="nav-link current">API</a></li>
-      <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
+      <li><a href="/v2/style-guide/" class="nav-link">Phong cách viết</a></li>
       <li><a href="/v2/examples/" class="nav-link">Một số ví dụ</a></li>
+      <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>
     </ul></li>
   </ul>
 </li>
@@ -219,7 +222,8 @@
     </ul></li>
     <li><h4>Tin tức</h4></li>
     <li><ul>
-      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Lộ trình phát triển</a></li>
+      <li><a href="https://news.vuejs.org" class="nav-link" target="_blank">Tin tức hàng tuần</a></li>
+      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Roadmap</a></li>
       <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
       <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">Blog</a></li>
       <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">Việc làm</a></li>
@@ -263,30 +267,40 @@
 
     </ul>
     <div class="list">
-      <div class="main-sponsor">
-        <span>Nhà tài trợ bạch kim</span>
-        <div>
-        <a href="https://stdlib.com" target="_blank" class="logo">
-          <img src="/images/stdlib.png">
-        </a>
-        <a href="http://tooltwist.com/" target="_blank" class="logo">
-          <img src="/images/tooltwist.png">
-        </a>
-        <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
-          <img src="/images/vueschool.png">
-        </a>
-        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
-          <img src="/images/datacamp.png">
-        </a>
-        </div>
-      </div>
-      <a class="become-backer" href="/support-vuejs">
-        Trở thành nhà tài trợ
-      </a>
+      <div id="sidebar-sponsors-special">
+  <div class="main-sponsor">
+    <span>Tài trợ đặc biệt</span>
+    <div>
+    <a href="https://stdlib.com" target="_blank" class="logo">
+      <img src="/images/stdlib.png">
+    </a>
+    <a href="https://www.bitsrc.io/?utm_source=vue&utm_medium=vue&utm_campaign=vue&utm_term=vue&utm_content=vue" target="_blank" class="logo">
+      <img src="/images/bit-wide.png">
+    </a>
+    </div>
+  </div>
+</div>
+
+<div id="sidebar-sponsors-platinum">
+  <div class="main-sponsor">
+    <span>Tài trợ Patreon</span>
+    <div>
+    <a href="http://tooltwist.com/" target="_blank" class="logo">
+      <img src="/images/tooltwist.png">
+    </a>
+    <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
+      <img src="/images/vueschool.png">
+    </a>
+    </div>
+  </div>
+  <a class="become-backer" href="/support-vuejs">
+    Trở thành nhà tài trợ
+  </a>
+</div>
+
       <h2>
         
-          API
-        
+        API
         <!--
         
           <select class="version-select">
@@ -299,7 +313,6 @@
         -->
       </h2>
       <ul class="menu-root">
-  
   
 </ul>
 
@@ -325,6 +338,8 @@
 
     
   
+  
+    <h1>API</h1>
   
   
     <h2 id="Global-Config"><a href="#Global-Config" class="headerlink" title="Global Config"></a>Global Config</h2><p><code>Vue.config</code> is an object containing Vue’s global configurations. You can modify its properties listed below before bootstrapping your application:</p>
@@ -419,7 +434,7 @@
 <li><p><strong>Default:</strong> <code>false (from 2.2.3+)</code></p>
 </li>
 <li><p><strong>Usage</strong>:</p>
-<p>Set this to <code>true</code> to enable component init, compile, render and patch performance tracing in the browser devtool timeline. Only works in development mode and in browsers that support the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark" target="_blank" rel="noopener">performance.mark</a> API.</p>
+<p>Set this to <code>true</code> to enable component init, compile, render and patch performance tracing in the browser devtool performance/timeline panel. Only works in development mode and in browsers that support the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark" target="_blank" rel="noopener">performance.mark</a> API.</p>
 </li>
 </ul>
 <h3 id="productionTip"><a href="#productionTip" class="headerlink" title="productionTip"></a>productionTip</h3><blockquote>
@@ -480,7 +495,7 @@
 </li>
 <li><p><strong>Usage:</strong></p>
 <p>Set a property on an object. If the object is reactive, ensure the property is created as a reactive property and trigger view updates. This is primarily used to get around the limitation that Vue cannot detect property additions.</p>
-<p><strong>Note the object cannot be a Vue instance, or the root data object of a Vue instance.</strong></p>
+<p class="tip">The target object cannot be a Vue instance, or the root data object of a Vue instance.</p>
 </li>
 <li><p><strong>See also:</strong> <a href="../guide/reactivity.html">Reactivity in Depth</a></p>
 </li>
@@ -526,6 +541,8 @@
 <li><p><strong>Usage:</strong></p>
 <p>Register or retrieve a global filter.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// register</span></span><br><span class="line">Vue.filter(<span class="string">'my-filter'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// return processed value</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// getter, return the filter if registered</span></span><br><span class="line"><span class="keyword">var</span> myFilter = Vue.filter(<span class="string">'my-filter'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>See also:</strong> <a href="../guide/filters.html">Filters</a></p>
 </li>
 </ul>
 <h3 id="Vue-component-id-definition"><a href="#Vue-component-id-definition" class="headerlink" title="Vue.component( id, [definition] )"></a>Vue.component( id, [definition] )</h3><ul>
@@ -602,7 +619,8 @@
 </li>
 <li><p><strong>Example:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> data = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// direct instance creation</span></span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: data</span><br><span class="line">&#125;)</span><br><span class="line">vm.a <span class="comment">// =&gt; 1</span></span><br><span class="line">vm.$data === data <span class="comment">// =&gt; true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// must use function when in Vue.extend()</span></span><br><span class="line"><span class="keyword">var</span> Component = Vue.extend(&#123;</span><br><span class="line">  data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p class="tip">Note that <strong>you should not use an arrow function with the <code>data</code> property</strong> (e.g. <code>data: () =&gt; { return { a: this.myProp }}</code>). The reason is arrow functions bind the parent context, so <code>this</code> will not be the Vue instance as you expect and <code>this.myProp</code> will be undefined.</p>
+<p>Note that if you use an arrow function with the <code>data</code> property, <code>this</code> won’t be the component’s instance, but you can still access the instance as the function’s first argument:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">data: <span class="function"><span class="params">vm</span> =&gt;</span> (&#123; <span class="attr">a</span>: vm.myProp &#125;)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>See also:</strong> <a href="../guide/reactivity.html">Reactivity in Depth</a></p>
 </li>
@@ -636,8 +654,8 @@
 </li>
 <li><p><strong>Details:</strong></p>
 <p>Computed properties to be mixed into the Vue instance. All getters and setters have their <code>this</code> context automatically bound to the Vue instance.</p>
-<p class="tip">Note that <strong>you should not use an arrow function to define a computed property</strong> (e.g. <code>aDouble: () =&gt; this.a * 2</code>). The reason is arrow functions bind the parent context, so <code>this</code> will not be the Vue instance as you expect and <code>this.a</code> will be undefined.</p>
-
+<p>Note that if you use an arrow function with a computed property, <code>this</code> won’t be the component’s instance, but you can still access the instance as the function’s first argument:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">  aDouble: <span class="function"><span class="params">vm</span> =&gt;</span> vm.a * <span class="number">2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Computed properties are cached, and only re-computed on reactive dependency changes. Note that if a certain dependency is out of the instance’s scope (i.e. not reactive), the computed property will <strong>not</strong> be updated.</p>
 </li>
 <li><p><strong>Example:</strong></p>
@@ -782,9 +800,8 @@
 <li><p><strong>Type:</strong> <code>Function</code></p>
 </li>
 <li><p><strong>Details:</strong></p>
-<p>Called when the data changes, before the virtual DOM is re-rendered and patched.</p>
-<p>You can perform further state changes in this hook and they will not trigger additional re-renders.</p>
-<p><strong>This hook is not called during server-side rendering.</strong></p>
+<p>Called when data changes, before the DOM is patched. This is a good place to access the existing DOM before an update, e.g. to remove manually added event listeners.</p>
+<p><strong>This hook is not called during server-side rendering, because only the initial render is performed server-side.</strong></p>
 </li>
 <li><p><strong>See also:</strong> <a href="../guide/instance.html#Lifecycle-Diagram">Lifecycle Diagram</a></p>
 </li>
@@ -927,7 +944,7 @@
 </li>
 <li><p><strong>Details:</strong></p>
 <p>Allows declaratively extending another component (could be either a plain options object or a constructor) without having to use <code>Vue.extend</code>. This is primarily intended to make it easier to extend between single file components.</p>
-<p>This is similar to <code>mixins</code>, the difference being that the component’s own options takes higher priority than the source component being extended.</p>
+<p>This is similar to <code>mixins</code>.</p>
 </li>
 <li><p><strong>Example:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> CompA = &#123; ... &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// extend CompA without having to call `Vue.extend` on either</span></span><br><span class="line"><span class="keyword">var</span> CompB = &#123;</span><br><span class="line">  extends: CompA,</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -946,9 +963,21 @@
 <li><p><strong>Details:</strong></p>
 <p class="tip"><code>provide</code> and <code>inject</code> are primarily provided for advanced plugin / component library use cases. It is NOT recommended to use them in generic application code.</p>
 
-<p>This pair of options are used together to allow an ancestor component to serve as a dependency injector for its all descendants, regardless of how deep the component hierarchy is, as long as they are in the same parent chain. If you are familiar with React, this is very similar to React’s context feature.</p>
+<p>This pair of options are used together to allow an ancestor component to serve as a dependency injector for all its descendants, regardless of how deep the component hierarchy is, as long as they are in the same parent chain. If you are familiar with React, this is very similar to React’s context feature.</p>
 <p>The <code>provide</code> option should be an object or a function that returns an object. This object contains the properties that are available for injection into its descendants. You can use ES2015 Symbols as keys in this object, but only in environments that natively support <code>Symbol</code> and <code>Reflect.ownKeys</code>.</p>
-<p>The <code>inject</code> options should be either an Array of strings or an object where the keys stand for the local binding name, and the value being the key (string or Symbol) to search for in available injections.</p>
+<p>The <code>inject</code> option should be either:</p>
+<ul>
+<li>an array of strings, or</li>
+<li>an object where the keys are the local binding name and the value is either:<ul>
+<li>the key (string or Symbol) to search for in available injections, or</li>
+<li>an object where:<ul>
+<li>the <code>name</code> property is the key (string or Symbol) to search for in available injections, and</li>
+<li>the <code>default</code> property is used as fallback value</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <p>Note: the <code>provide</code> and <code>inject</code> bindings are NOT reactive. This is intentional. However, if you pass down an observed object, properties on that object do remain reactive.</p>
 </blockquote>
@@ -1162,7 +1191,7 @@
 <li><p><strong>Read only</strong></p>
 </li>
 <li><p><strong>Details:</strong></p>
-<p>An object that holds child components that have <code>ref</code> registered.</p>
+<p>An object of DOM elements and component instances, registered with <a href="#ref"><code>ref</code> attributes</a>.</p>
 </li>
 <li><p><strong>See also:</strong></p>
 <ul>
@@ -1197,7 +1226,7 @@
 <li><p><strong>Read only</strong></p>
 </li>
 <li><p><strong>Details:</strong></p>
-<p>Contains parent-scope <code>v-on</code> event listeners (without <code>.native</code> modifiers). This can be passed down to an inner component via <code>v-on=&quot;$listeners&quot;</code> - useful when creating higher-order components.</p>
+<p>Contains parent-scope <code>v-on</code> event listeners (without <code>.native</code> modifiers). This can be passed down to an inner component via <code>v-on=&quot;$listeners&quot;</code> - useful when creating transparent wrapper components.</p>
 </li>
 </ul>
 <h2 id="Instance-Methods-Data"><a href="#Instance-Methods-Data" class="headerlink" title="Instance Methods / Data"></a>Instance Methods / Data</h2><h3 id="vm-watch-expOrFn-callback-options"><a href="#vm-watch-expOrFn-callback-options" class="headerlink" title="vm.$watch( expOrFn, callback, [options] )"></a>vm.$watch( expOrFn, callback, [options] )</h3><ul>
@@ -1408,7 +1437,7 @@
 <li><p><strong>Expects:</strong> <code>any</code></p>
 </li>
 <li><p><strong>Usage:</strong></p>
-<p>Toggle’s the element’s <code>display</code> CSS property based on the truthy-ness of the expression value.</p>
+<p>Toggles the element’s <code>display</code> CSS property based on the truthy-ness of the expression value.</p>
 <p>This directive triggers transitions when its condition changes.</p>
 </li>
 <li><p><strong>See also:</strong> <a href="../guide/conditional.html#v-show">Conditional Rendering - v-show</a></p>
@@ -1497,12 +1526,12 @@
 </li>
 <li><p><strong>Usage:</strong></p>
 <p>Attaches an event listener to the element. The event type is denoted by the argument. The expression can be a method name, an inline statement, or omitted if there are modifiers present.</p>
-<p>Starting in 2.4.0+, <code>v-on</code> also supports binding to an object of event/listener pairs without an argument. Note when using the object syntax, it does not support any modifiers.</p>
-<p>When used on a normal element, it listens to <strong>native DOM events</strong> only. When used on a custom element component, it also listens to <strong>custom events</strong> emitted on that child component.</p>
+<p>When used on a normal element, it listens to <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank" rel="noopener"><strong>native DOM events</strong></a> only. When used on a custom element component, it listens to <strong>custom events</strong> emitted on that child component.</p>
 <p>When listening to native DOM events, the method receives the native event as the only argument. If using inline statement, the statement has access to the special <code>$event</code> property: <code>v-on:click=&quot;handle(&#39;ok&#39;, $event)&quot;</code>.</p>
+<p>Starting in 2.4.0+, <code>v-on</code> also supports binding to an object of event/listener pairs without an argument. Note when using the object syntax, it does not support any modifiers.</p>
 </li>
 <li><p><strong>Example:</strong></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- method handler --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- object syntax (2.4.0+) --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on</span>=<span class="string">"&#123; mousedown: doThis, mouseup: doThat &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- inline statement --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"doThat('hello', $event)"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- shorthand --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- stop propagation --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click.stop</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- prevent default --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click.prevent</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- prevent default without expression --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> @<span class="attr">submit.prevent</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- chain modifiers --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click.stop.prevent</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- key modifier using keyAlias --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> @<span class="attr">keyup.enter</span>=<span class="string">"onEnter"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- key modifier using keyCode --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> @<span class="attr">keyup.13</span>=<span class="string">"onEnter"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- the click event will be triggered at most once --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click.once</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- method handler --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- inline statement --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"doThat('hello', $event)"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- shorthand --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- stop propagation --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click.stop</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- prevent default --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click.prevent</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- prevent default without expression --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> @<span class="attr">submit.prevent</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- chain modifiers --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click.stop.prevent</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- key modifier using keyAlias --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> @<span class="attr">keyup.enter</span>=<span class="string">"onEnter"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- key modifier using keyCode --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> @<span class="attr">keyup.13</span>=<span class="string">"onEnter"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- the click event will be triggered at most once --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click.once</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- object syntax (2.4.0+) --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on</span>=<span class="string">"&#123; mousedown: doThis, mouseup: doThat &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Listening to custom events on a child component (the handler is called when “my-event” is emitted on the child):</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">my-component</span> @<span class="attr">my-event</span>=<span class="string">"handleThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- inline statement --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">my-component</span> @<span class="attr">my-event</span>=<span class="string">"handleThis(123, $event)"</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- native event on component --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">my-component</span> @<span class="attr">click.native</span>=<span class="string">"onClick"</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -1630,7 +1659,7 @@
 <h3 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h3><ul>
 <li><p><strong>Expects:</strong> <code>string</code></p>
 <p><code>ref</code> is used to register a reference to an element or a child component. The reference will be registered under the parent component’s <code>$refs</code> object. If used on a plain DOM element, the reference will be that element; if used on a child component, the reference will be component instance:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- vm.$refs.p will be the DOM node --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">ref</span>=<span class="string">"p"</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- vm.$refs.child will be the child comp instance --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">child-comp</span> <span class="attr">ref</span>=<span class="string">"child"</span>&gt;</span><span class="tag">&lt;/<span class="name">child-comp</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- vm.$refs.p will be the DOM node --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">ref</span>=<span class="string">"p"</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- vm.$refs.child will be the child component instance --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">child-component</span> <span class="attr">ref</span>=<span class="string">"child"</span>&gt;</span><span class="tag">&lt;/<span class="name">child-component</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>When used on elements/components with <code>v-for</code>, the registered reference will be an Array containing DOM nodes or component instances.</p>
 <p>An important note about the ref registration timing: because the refs themselves are created as a result of the render function, you cannot access them on the initial render - they don’t exist yet! <code>$refs</code> is also non-reactive, therefore you should not attempt to use it in templates for data-binding.</p>
 </li>
@@ -1824,7 +1853,7 @@
 </script>
 
     Phát hiện lỗi hoặc muốn đóng góp vào nội dung?
-    <a href="https://github.com/vuejs/vuejs.org/blob/master/src/v2/api/index.md" target="_blank">
+    <a href="https://github.com/vuejs-vn/vuejs.org/blob/master/src/v2/api/index.md" target="_blank">
       Chỉnh sửa trang này trên GitHub!
     </a>
   </div>
@@ -1840,9 +1869,9 @@
     <script src="/js/common.js"></script>
 
     <!-- search -->
-    <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
     <link rel="stylesheet" href="/css/search.css">
-    <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     [
       '#search-query-nav',
@@ -1851,15 +1880,15 @@
     ].forEach(function (selector) {
       if (!document.querySelector(selector)) return
       // search index defaults to v2
-      var match = window.location.pathname.match(/^\/(v\d+)/)
-      var version = match ? match[1] : 'v2'
       docsearch({
-      appId: 'BH4D9OD16A',
-      apiKey: '85cc3221c9f23bfbaa4e3913dd7625ea',
-      indexName: 'vuejs',
-      inputSelector: selector,
-      algoliaOptions: { facetFilters: ["version:" + version] }
-      })
+        apiKey: 'bd7d3891459fccb97fd1f689b1840bc5',
+        indexName: 'vi_vuejs',
+
+        inputSelector: selector,
+        algoliaOptions: { 'facetFilters': ["lang:vi"] },
+
+        debug: true
+      });
     })
     </script>
 

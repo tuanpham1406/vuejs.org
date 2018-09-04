@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="vi">
   <head>
-    <title>SVG Graph — Vue.js</title>
+    <title>Biểu đồ SVG — Vue.js</title>
     <meta charset="utf-8">
     <meta name="description" content="Vue.js - Framework JavaScript linh động">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -17,12 +17,12 @@
     <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/examples/svg.html">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="SVG Graph — Vue.js">
+    <meta property="og:title" content="Biểu đồ SVG — Vue.js">
     <meta property="og:description" content="Vue.js - Framework JavaScript linh động">
     <meta property="og:image" content="https://vi.vuejs.org//images/logo.png">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="SVG Graph — Vue.js">
+    <meta name="twitter:title" content="Biểu đồ SVG — Vue.js">
     <meta name="twitter:description" content="Vue.js - Framework JavaScript linh động">
     <meta name="twitter:image" content="https://vi.vuejs.org/images/logo.png">
 
@@ -96,8 +96,9 @@
     <li><ul>
       <li><a href="/v2/guide/" class="nav-link">Hướng dẫn</a></li>
       <li><a href="/v2/api/" class="nav-link">API</a></li>
-      <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
+      <li><a href="/v2/style-guide/" class="nav-link">Phong cách viết</a></li>
       <li><a href="/v2/examples/" class="nav-link current">Một số ví dụ</a></li>
+      <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>
     </ul></li>
   </ul>
 </li>
@@ -126,7 +127,8 @@
     </ul></li>
     <li><h4>Tin tức</h4></li>
     <li><ul>
-      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Lộ trình phát triển</a></li>
+      <li><a href="https://news.vuejs.org" class="nav-link" target="_blank">Tin tức hàng tuần</a></li>
+      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Roadmap</a></li>
       <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
       <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">Blog</a></li>
       <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">Việc làm</a></li>
@@ -189,8 +191,9 @@
     <li><ul>
       <li><a href="/v2/guide/" class="nav-link">Hướng dẫn</a></li>
       <li><a href="/v2/api/" class="nav-link">API</a></li>
-      <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
+      <li><a href="/v2/style-guide/" class="nav-link">Phong cách viết</a></li>
       <li><a href="/v2/examples/" class="nav-link current">Một số ví dụ</a></li>
+      <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>
     </ul></li>
   </ul>
 </li>
@@ -219,7 +222,8 @@
     </ul></li>
     <li><h4>Tin tức</h4></li>
     <li><ul>
-      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Lộ trình phát triển</a></li>
+      <li><a href="https://news.vuejs.org" class="nav-link" target="_blank">Tin tức hàng tuần</a></li>
+      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Roadmap</a></li>
       <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
       <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">Blog</a></li>
       <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">Việc làm</a></li>
@@ -263,30 +267,40 @@
 
     </ul>
     <div class="list">
-      <div class="main-sponsor">
-        <span>Nhà tài trợ bạch kim</span>
-        <div>
-        <a href="https://stdlib.com" target="_blank" class="logo">
-          <img src="/images/stdlib.png">
-        </a>
-        <a href="http://tooltwist.com/" target="_blank" class="logo">
-          <img src="/images/tooltwist.png">
-        </a>
-        <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
-          <img src="/images/vueschool.png">
-        </a>
-        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
-          <img src="/images/datacamp.png">
-        </a>
-        </div>
-      </div>
-      <a class="become-backer" href="/support-vuejs">
-        Trở thành nhà tài trợ
-      </a>
+      <div id="sidebar-sponsors-special">
+  <div class="main-sponsor">
+    <span>Tài trợ đặc biệt</span>
+    <div>
+    <a href="https://stdlib.com" target="_blank" class="logo">
+      <img src="/images/stdlib.png">
+    </a>
+    <a href="https://www.bitsrc.io/?utm_source=vue&utm_medium=vue&utm_campaign=vue&utm_term=vue&utm_content=vue" target="_blank" class="logo">
+      <img src="/images/bit-wide.png">
+    </a>
+    </div>
+  </div>
+</div>
+
+<div id="sidebar-sponsors-platinum">
+  <div class="main-sponsor">
+    <span>Tài trợ Patreon</span>
+    <div>
+    <a href="http://tooltwist.com/" target="_blank" class="logo">
+      <img src="/images/tooltwist.png">
+    </a>
+    <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
+      <img src="/images/vueschool.png">
+    </a>
+    </div>
+  </div>
+  <a class="become-backer" href="/support-vuejs">
+    Trở thành nhà tài trợ
+  </a>
+</div>
+
       <h2>
         
-          Một số ví dụ
-        
+        Một số ví dụ
         <!--
         
           <select class="version-select">
@@ -302,12 +316,10 @@
   
     
     
-    
     <li>
       <a href="/v2/examples/index.html" class="sidebar-link">Trình soạn thảo Markdown</a>
     </li>
   
-    
     
     
     <li>
@@ -316,12 +328,10 @@
   
     
     
-    
     <li>
       <a href="/v2/examples/grid-component.html" class="sidebar-link">Component dạng lưới</a>
     </li>
   
-    
     
     
     <li>
@@ -330,12 +340,10 @@
   
     
     
-    
     <li>
-      <a href="/v2/examples/svg.html" class="sidebar-link current">SVG Graph</a>
+      <a href="/v2/examples/svg.html" class="sidebar-link current">Biểu đồ SVG</a>
     </li>
   
-    
     
     
     <li>
@@ -344,19 +352,16 @@
   
     
     
-    
     <li>
       <a href="/v2/examples/elastic-header.html" class="sidebar-link">Tiêu đề đàn hồi được</a>
     </li>
   
     
     
-    
     <li>
-      <a href="/v2/examples/select2.html" class="sidebar-link">Wrapper Component</a>
+      <a href="/v2/examples/select2.html" class="sidebar-link">Component đóng gói</a>
     </li>
   
-    
     
     
     <li>
@@ -365,12 +370,10 @@
   
     
     
-    
     <li>
       <a href="/v2/examples/firebase.html" class="sidebar-link">Firebase + Validation</a>
     </li>
   
-    
     
     
     <li>
@@ -379,11 +382,9 @@
   
     
     
-    
     <li>
       <a href="/v2/examples/hackernews.html" class="sidebar-link">HackerNews Clone</a>
     </li>
-  
   
 </ul>
 
@@ -410,11 +411,11 @@
     
   
   
-    <h1>SVG Graph</h1>
+    <h1>Biểu đồ SVG</h1>
   
   
     <blockquote>
-<p>This example showcases a combination of custom component, computed property, two-way binding and SVG support.</p>
+<p>Ví dụ này giới thiệu cách sử dụng component tuỳ biến, two-way binding (ràng buộc hai chiều) và SVG.</p>
 </blockquote>
 <iframe width="100%" height="500" src="https://jsfiddle.net/yyx990803/mhrckqgq/embedded/result,html,js,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
@@ -436,7 +437,7 @@
 </script>
 
     Phát hiện lỗi hoặc muốn đóng góp vào nội dung?
-    <a href="https://github.com/vuejs/vuejs.org/blob/master/src/v2/examples/svg.md" target="_blank">
+    <a href="https://github.com/vuejs-vn/vuejs.org/blob/master/src/v2/examples/svg.md" target="_blank">
       Chỉnh sửa trang này trên GitHub!
     </a>
   </div>
@@ -452,9 +453,9 @@
     <script src="/js/common.js"></script>
 
     <!-- search -->
-    <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
     <link rel="stylesheet" href="/css/search.css">
-    <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     [
       '#search-query-nav',
@@ -463,15 +464,15 @@
     ].forEach(function (selector) {
       if (!document.querySelector(selector)) return
       // search index defaults to v2
-      var match = window.location.pathname.match(/^\/(v\d+)/)
-      var version = match ? match[1] : 'v2'
       docsearch({
-      appId: 'BH4D9OD16A',
-      apiKey: '85cc3221c9f23bfbaa4e3913dd7625ea',
-      indexName: 'vuejs',
-      inputSelector: selector,
-      algoliaOptions: { facetFilters: ["version:" + version] }
-      })
+        apiKey: 'bd7d3891459fccb97fd1f689b1840bc5',
+        indexName: 'vi_vuejs',
+
+        inputSelector: selector,
+        algoliaOptions: { 'facetFilters': ["lang:vi"] },
+
+        debug: true
+      });
     })
     </script>
 

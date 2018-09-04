@@ -96,8 +96,9 @@
     <li><ul>
       <li><a href="/v2/guide/" class="nav-link current">Hướng dẫn</a></li>
       <li><a href="/v2/api/" class="nav-link">API</a></li>
-      <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
+      <li><a href="/v2/style-guide/" class="nav-link">Phong cách viết</a></li>
       <li><a href="/v2/examples/" class="nav-link">Một số ví dụ</a></li>
+      <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>
     </ul></li>
   </ul>
 </li>
@@ -126,7 +127,8 @@
     </ul></li>
     <li><h4>Tin tức</h4></li>
     <li><ul>
-      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Lộ trình phát triển</a></li>
+      <li><a href="https://news.vuejs.org" class="nav-link" target="_blank">Tin tức hàng tuần</a></li>
+      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Roadmap</a></li>
       <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
       <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">Blog</a></li>
       <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">Việc làm</a></li>
@@ -189,8 +191,9 @@
     <li><ul>
       <li><a href="/v2/guide/" class="nav-link current">Hướng dẫn</a></li>
       <li><a href="/v2/api/" class="nav-link">API</a></li>
-      <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
+      <li><a href="/v2/style-guide/" class="nav-link">Phong cách viết</a></li>
       <li><a href="/v2/examples/" class="nav-link">Một số ví dụ</a></li>
+      <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>
     </ul></li>
   </ul>
 </li>
@@ -219,7 +222,8 @@
     </ul></li>
     <li><h4>Tin tức</h4></li>
     <li><ul>
-      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Lộ trình phát triển</a></li>
+      <li><a href="https://news.vuejs.org" class="nav-link" target="_blank">Tin tức hàng tuần</a></li>
+      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Roadmap</a></li>
       <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
       <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">Blog</a></li>
       <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">Việc làm</a></li>
@@ -263,30 +267,40 @@
 
     </ul>
     <div class="list">
-      <div class="main-sponsor">
-        <span>Nhà tài trợ bạch kim</span>
-        <div>
-        <a href="https://stdlib.com" target="_blank" class="logo">
-          <img src="/images/stdlib.png">
-        </a>
-        <a href="http://tooltwist.com/" target="_blank" class="logo">
-          <img src="/images/tooltwist.png">
-        </a>
-        <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
-          <img src="/images/vueschool.png">
-        </a>
-        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
-          <img src="/images/datacamp.png">
-        </a>
-        </div>
-      </div>
-      <a class="become-backer" href="/support-vuejs">
-        Trở thành nhà tài trợ
-      </a>
+      <div id="sidebar-sponsors-special">
+  <div class="main-sponsor">
+    <span>Tài trợ đặc biệt</span>
+    <div>
+    <a href="https://stdlib.com" target="_blank" class="logo">
+      <img src="/images/stdlib.png">
+    </a>
+    <a href="https://www.bitsrc.io/?utm_source=vue&utm_medium=vue&utm_campaign=vue&utm_term=vue&utm_content=vue" target="_blank" class="logo">
+      <img src="/images/bit-wide.png">
+    </a>
+    </div>
+  </div>
+</div>
+
+<div id="sidebar-sponsors-platinum">
+  <div class="main-sponsor">
+    <span>Tài trợ Patreon</span>
+    <div>
+    <a href="http://tooltwist.com/" target="_blank" class="logo">
+      <img src="/images/tooltwist.png">
+    </a>
+    <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
+      <img src="/images/vueschool.png">
+    </a>
+    </div>
+  </div>
+  <a class="become-backer" href="/support-vuejs">
+    Trở thành nhà tài trợ
+  </a>
+</div>
+
       <h2>
         
-          Hướng dẫn
-        
+        Hướng dẫn
         <!--
         
           <select class="version-select">
@@ -311,7 +325,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/installation.html" class="sidebar-link">Cài đặt</a>
@@ -326,7 +340,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/index.html" class="sidebar-link">Giới thiệu</a>
@@ -341,7 +355,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/instance.html" class="sidebar-link">Đối tượng Vue</a>
@@ -356,7 +370,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/syntax.html" class="sidebar-link">Cú pháp template</a>
@@ -371,7 +385,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/computed.html" class="sidebar-link">Computed property và watcher</a>
@@ -386,7 +400,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/class-and-style.html" class="sidebar-link">Binding cho class và style</a>
@@ -401,7 +415,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/conditional.html" class="sidebar-link">Render theo điều kiện</a>
@@ -416,7 +430,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/list.html" class="sidebar-link">Render danh sách</a>
@@ -431,7 +445,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/events.html" class="sidebar-link">Xử lí sự kiện</a>
@@ -446,10 +460,10 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/forms.html" class="sidebar-link">Form Input Bindings</a>
+      <a href="/v2/guide/forms.html" class="sidebar-link">Ràng buộc form input</a>
     </li>
   
     
@@ -461,14 +475,107 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/components.html" class="sidebar-link">Component</a>
+      <a href="/v2/guide/components.html" class="sidebar-link">Cơ bản về component</a>
     </li>
   
     
     
+      
+      
+        <li><h3>Components In-Depth</h3></li>
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-registration.html" class="sidebar-link">Component Registration</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-props.html" class="sidebar-link">Props</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-custom-events.html" class="sidebar-link">Custom Events</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-slots.html" class="sidebar-link">Slots</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-dynamic-async.html" class="sidebar-link">Dynamic & Async Components</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-edge-cases.html" class="sidebar-link">Handling Edge Cases</a>
+    </li>
+  
+    
+    
+      
       
       
         <li><h3>Hiệu ứng chuyển động</h3></li>
@@ -478,7 +585,6 @@
       
       
       
-    
     
     <li>
       <a href="/v2/guide/transitions.html" class="sidebar-link">Transition cho enter/leave & danh sách</a>
@@ -493,7 +599,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/transitioning-state.html" class="sidebar-link current">Transition cho trạng thái</a>
@@ -504,13 +610,13 @@
       
       
       
+      
         <li><h3>Tái sử dụng & kết hợp</h3></li>
       
       
       
       
       
-    
     
     <li>
       <a href="/v2/guide/mixins.html" class="sidebar-link">Mixin</a>
@@ -525,7 +631,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/custom-directive.html" class="sidebar-link">Directive tùy biến</a>
@@ -540,7 +646,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/render-function.html" class="sidebar-link">Các hàm render & JSX</a>
@@ -555,7 +661,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/plugins.html" class="sidebar-link">Plugin</a>
@@ -570,7 +676,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/filters.html" class="sidebar-link">Filter</a>
@@ -582,12 +688,12 @@
       
       
       
+      
         <li><h3>Công cụ</h3></li>
       
       
       
       
-    
     
     <li>
       <a href="/v2/guide/deployment.html" class="sidebar-link">Triển khai cho môi trường production</a>
@@ -602,7 +708,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/single-file-components.html" class="sidebar-link">Single File Components</a>
@@ -617,10 +723,10 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit Test</a>
+      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit test</a>
     </li>
   
     
@@ -632,7 +738,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/typescript.html" class="sidebar-link">TypeScript Support</a>
@@ -645,11 +751,11 @@
       
       
       
+      
         <li><h3>Mở rộng quy mô ứng dụng</h3></li>
       
       
       
-    
     
     <li>
       <a href="/v2/guide/routing.html" class="sidebar-link">Routing</a>
@@ -664,10 +770,10 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/state-management.html" class="sidebar-link">State Management</a>
+      <a href="/v2/guide/state-management.html" class="sidebar-link">Quản lí trạng thái</a>
     </li>
   
     
@@ -679,14 +785,15 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/ssr.html" class="sidebar-link">Server-Side Rendering</a>
+      <a href="/v2/guide/ssr.html" class="sidebar-link">Render ở phía server</a>
     </li>
   
     
     
+      
       
       
       
@@ -696,7 +803,6 @@
         <li><h3>Bên trong Vue</h3></li>
       
       
-    
     
     <li>
       <a href="/v2/guide/reactivity.html" class="sidebar-link">Reactivity in Depth</a>
@@ -711,9 +817,9 @@
       
       
       
+      
         <li><h3>Thông tin thêm</h3></li>
       
-    
     
     <li>
       <a href="/v2/guide/comparison.html" class="sidebar-link">Comparison with Other Frameworks</a>
@@ -728,7 +834,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/join.html" class="sidebar-link">Join the Vue.js Community!</a>
@@ -743,12 +849,11 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/team.html" class="sidebar-link">Đội ngũ</a>
     </li>
-  
   
 </ul>
 
@@ -786,11 +891,11 @@
 <li>kích cỡ và các thuộc tính khác của các phần tử web</li>
 </ul>
 <p>Tất cả những thông tin này đều hoặc đã được lưu trữ sẵn dưới dạng số liệu, hoặc có thể được chuyển đổi thành số liệu. Một khi làm vậy, chúng ta có thể animate những thay đổi trạng thái này bằng cách dùng những thư viện bên thứ ba, kết hợp với hệ thống phản ứng (reactivity) và component của Vue.</p>
-<h2 id="Animate-cho-trang-thai-bang-watcher"><a href="#Animate-cho-trang-thai-bang-watcher" class="headerlink" title="Animate cho trạng thái bằng watcher"></a>Animate cho trạng thái bằng watcher</h2><p>Watcher cho phép chúng ta animate các thay đổi từ bất kì thuộc tính dạng số nào sang một thuộc tính khác. Điều này nói một cách trừu tượng thì nghe có vẻ phức tạp, vì thế chúng ta hãy xem một ví dụ với <a href="https://github.com/tweenjs/tween.js" target="_blank" rel="noopener">Tween.js</a>:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/tween.js@16.3.4"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"animated-number-demo"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model.number</span>=<span class="string">"number"</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">step</span>=<span class="string">"20"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; animatedNumber &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#animated-number-demo'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    number: <span class="number">0</span>,</span><br><span class="line">    animatedNumber: <span class="number">0</span></span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    number: <span class="function"><span class="keyword">function</span>(<span class="params">newValue, oldValue</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> vm = <span class="keyword">this</span></span><br><span class="line">      <span class="function"><span class="keyword">function</span> <span class="title">animate</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (TWEEN.update()) &#123;</span><br><span class="line">          requestAnimationFrame(animate)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">new</span> TWEEN.Tween(&#123; <span class="attr">tweeningNumber</span>: oldValue &#125;)</span><br><span class="line">        .easing(TWEEN.Easing.Quadratic.Out)</span><br><span class="line">        .to(&#123; <span class="attr">tweeningNumber</span>: newValue &#125;, <span class="number">500</span>)</span><br><span class="line">        .onUpdate(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">          vm.animatedNumber = <span class="keyword">this</span>.tweeningNumber.toFixed(<span class="number">0</span>)</span><br><span class="line">        &#125;)</span><br><span class="line">        .start()</span><br><span class="line"></span><br><span class="line">      animate()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="Animate-cho-trang-thai-bang-watcher"><a href="#Animate-cho-trang-thai-bang-watcher" class="headerlink" title="Animate cho trạng thái bằng watcher"></a>Animate cho trạng thái bằng watcher</h2><p>Watcher cho phép chúng ta animate các thay đổi từ bất kì thuộc tính dạng số nào sang một thuộc tính khác. Điều này nói một cách trừu tượng thì nghe có vẻ phức tạp, vì thế chúng ta hãy xem một ví dụ với <a href="https://greensock.com/" target="_blank" rel="noopener">Greensock</a>:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"animated-number-demo"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model.number</span>=<span class="string">"number"</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">step</span>=<span class="string">"20"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; animatedNumber &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#animated-number-demo'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    number: <span class="number">0</span>,</span><br><span class="line">    tweenedNumber: <span class="number">0</span></span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    animatedNumber: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.tweenedNumber.toFixed(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    number: <span class="function"><span class="keyword">function</span>(<span class="params">newValue</span>) </span>&#123;</span><br><span class="line">      TweenLite.to(<span class="keyword">this</span>.$data, <span class="number">0.5</span>, &#123; <span class="attr">tweenedNumber</span>: newValue &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<script src="https://cdn.jsdelivr.net/npm/tween.js@16.3.4"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 <div id="animated-number-demo" class="demo">
   <input v-model.number="number" type="number" step="20">
   <p>{{ animatedNumber }}</p>
@@ -800,32 +905,22 @@ new Vue({
   el: '#animated-number-demo',
   data: {
     number: 0,
-    animatedNumber: 0
+    tweenedNumber: 0
+  },
+  computed: {
+    animatedNumber: function() {
+      return this.tweenedNumber.toFixed(0);
+    }
   },
   watch: {
-    number: function(newValue, oldValue) {
-      var vm = this
-      function animate () {
-        if (TWEEN.update()) {
-          requestAnimationFrame(animate)
-        }
-      }
-
-      new TWEEN.Tween({ tweeningNumber: oldValue })
-        .easing(TWEEN.Easing.Quadratic.Out)
-        .to({ tweeningNumber: newValue }, 500)
-        .onUpdate(function () {
-          vm.animatedNumber = this.tweeningNumber.toFixed(0)
-        })
-        .start()
-
-      animate()
+    number: function(newValue) {
+      TweenLite.to(this.$data, 0.5, { tweenedNumber: newValue });
     }
   }
 })
 </script>
 
-<p>Khi bạn cập nhật con số trong input trên đây, thay đổi sẽ được animate. Ví dụ này khá ổn, nhưng nếu dữ liệu không phải là một con số trực tiếp mà là một cái gì đó khác, ví dụ như màu CSS thì sao? Dưới đây là một cách thực hiện điều này khi tích hợp với <a href="https://github.com/brehaut/color-js" target="_blank" rel="noopener">Color.js</a>:</p>
+<p>Khi bạn cập nhật con số trong input trên đây, thay đổi sẽ được animate. Ví dụ này khá ổn, nhưng nếu dữ liệu không phải là một con số trực tiếp mà là một cái gì đó khác, ví dụ như màu CSS thì sao? Dưới đây là một cách thực hiện điều này khi tích hợp với <a href="https://github.com/tweenjs/tween.js" target="_blank" rel="noopener">Tween.js</a> và <a href="https://github.com/brehaut/color-js" target="_blank" rel="noopener">Color.js</a>:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/tween.js@16.3.4"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/color-js@1.0.3"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"example-7"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span></span></span><br><span class="line"><span class="tag">    <span class="attr">v-model</span>=<span class="string">"colorQuery"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">v-on:keyup.enter</span>=<span class="string">"updateColor"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">placeholder</span>=<span class="string">"Nhập vào một màu"</span></span></span><br><span class="line"><span class="tag">  &gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span></span></span><br><span class="line"><span class="tag">      <span class="attr">v-bind:style</span>=<span class="string">"&#123; backgroundColor: tweenedCSSColor &#125;"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">class</span>=<span class="string">"example-7-color-preview"</span></span></span><br><span class="line"><span class="tag">    &gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; tweenedCSSColor &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Color = net.brehaut.Color</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#example-7'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    colorQuery: <span class="string">''</span>,</span><br><span class="line">    color: &#123;</span><br><span class="line">      red: <span class="number">0</span>,</span><br><span class="line">      green: <span class="number">0</span>,</span><br><span class="line">      blue: <span class="number">0</span>,</span><br><span class="line">      alpha: <span class="number">1</span></span><br><span class="line">    &#125;,</span><br><span class="line">    tweenedColor: &#123;&#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.tweenedColor = <span class="built_in">Object</span>.assign(&#123;&#125;, <span class="keyword">this</span>.color)</span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    color: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="function"><span class="keyword">function</span> <span class="title">animate</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (TWEEN.update()) &#123;</span><br><span class="line">          requestAnimationFrame(animate)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">new</span> TWEEN.Tween(<span class="keyword">this</span>.tweenedColor)</span><br><span class="line">        .to(<span class="keyword">this</span>.color, <span class="number">750</span>)</span><br><span class="line">        .start()</span><br><span class="line"></span><br><span class="line">      animate()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    tweenedCSSColor: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">new</span> Color(&#123;</span><br><span class="line">        red: <span class="keyword">this</span>.tweenedColor.red,</span><br><span class="line">        green: <span class="keyword">this</span>.tweenedColor.green,</span><br><span class="line">        blue: <span class="keyword">this</span>.tweenedColor.blue,</span><br><span class="line">        alpha: <span class="keyword">this</span>.tweenedColor.alpha</span><br><span class="line">      &#125;).toCSS()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    updateColor: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.color = <span class="keyword">new</span> Color(<span class="keyword">this</span>.colorQuery).toRGB()</span><br><span class="line">      <span class="keyword">this</span>.colorQuery = <span class="string">''</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.example-7-color-preview</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1094,8 +1189,12 @@ new Vue({
   
     <div class="guide-links">
       
+      
         <span>← <a href="/v2/guide/transitions.html">Transition cho enter/leave & danh sách</a></span>
       
+      
+      
+        <span style="float: right;"><a href="/v2/guide/mixins.html">Mixin</a> →</span>
       
     </div>
   
@@ -1115,7 +1214,7 @@ new Vue({
 </script>
 
     Phát hiện lỗi hoặc muốn đóng góp vào nội dung?
-    <a href="https://github.com/vuejs/vuejs.org/blob/master/src/v2/guide/transitioning-state.md" target="_blank">
+    <a href="https://github.com/vuejs-vn/vuejs.org/blob/master/src/v2/guide/transitioning-state.md" target="_blank">
       Chỉnh sửa trang này trên GitHub!
     </a>
   </div>
@@ -1131,9 +1230,9 @@ new Vue({
     <script src="/js/common.js"></script>
 
     <!-- search -->
-    <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
     <link rel="stylesheet" href="/css/search.css">
-    <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     [
       '#search-query-nav',
@@ -1142,15 +1241,15 @@ new Vue({
     ].forEach(function (selector) {
       if (!document.querySelector(selector)) return
       // search index defaults to v2
-      var match = window.location.pathname.match(/^\/(v\d+)/)
-      var version = match ? match[1] : 'v2'
       docsearch({
-      appId: 'BH4D9OD16A',
-      apiKey: '85cc3221c9f23bfbaa4e3913dd7625ea',
-      indexName: 'vuejs',
-      inputSelector: selector,
-      algoliaOptions: { facetFilters: ["version:" + version] }
-      })
+        apiKey: 'bd7d3891459fccb97fd1f689b1840bc5',
+        indexName: 'vi_vuejs',
+
+        inputSelector: selector,
+        algoliaOptions: { 'facetFilters': ["lang:vi"] },
+
+        debug: true
+      });
     })
     </script>
 

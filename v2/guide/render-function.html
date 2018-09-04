@@ -96,8 +96,9 @@
     <li><ul>
       <li><a href="/v2/guide/" class="nav-link current">Hướng dẫn</a></li>
       <li><a href="/v2/api/" class="nav-link">API</a></li>
-      <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
+      <li><a href="/v2/style-guide/" class="nav-link">Phong cách viết</a></li>
       <li><a href="/v2/examples/" class="nav-link">Một số ví dụ</a></li>
+      <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>
     </ul></li>
   </ul>
 </li>
@@ -126,7 +127,8 @@
     </ul></li>
     <li><h4>Tin tức</h4></li>
     <li><ul>
-      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Lộ trình phát triển</a></li>
+      <li><a href="https://news.vuejs.org" class="nav-link" target="_blank">Tin tức hàng tuần</a></li>
+      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Roadmap</a></li>
       <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
       <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">Blog</a></li>
       <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">Việc làm</a></li>
@@ -189,8 +191,9 @@
     <li><ul>
       <li><a href="/v2/guide/" class="nav-link current">Hướng dẫn</a></li>
       <li><a href="/v2/api/" class="nav-link">API</a></li>
-      <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
+      <li><a href="/v2/style-guide/" class="nav-link">Phong cách viết</a></li>
       <li><a href="/v2/examples/" class="nav-link">Một số ví dụ</a></li>
+      <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>
     </ul></li>
   </ul>
 </li>
@@ -219,7 +222,8 @@
     </ul></li>
     <li><h4>Tin tức</h4></li>
     <li><ul>
-      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Lộ trình phát triển</a></li>
+      <li><a href="https://news.vuejs.org" class="nav-link" target="_blank">Tin tức hàng tuần</a></li>
+      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Roadmap</a></li>
       <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
       <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">Blog</a></li>
       <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">Việc làm</a></li>
@@ -263,30 +267,40 @@
 
     </ul>
     <div class="list">
-      <div class="main-sponsor">
-        <span>Nhà tài trợ bạch kim</span>
-        <div>
-        <a href="https://stdlib.com" target="_blank" class="logo">
-          <img src="/images/stdlib.png">
-        </a>
-        <a href="http://tooltwist.com/" target="_blank" class="logo">
-          <img src="/images/tooltwist.png">
-        </a>
-        <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
-          <img src="/images/vueschool.png">
-        </a>
-        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
-          <img src="/images/datacamp.png">
-        </a>
-        </div>
-      </div>
-      <a class="become-backer" href="/support-vuejs">
-        Trở thành nhà tài trợ
-      </a>
+      <div id="sidebar-sponsors-special">
+  <div class="main-sponsor">
+    <span>Tài trợ đặc biệt</span>
+    <div>
+    <a href="https://stdlib.com" target="_blank" class="logo">
+      <img src="/images/stdlib.png">
+    </a>
+    <a href="https://www.bitsrc.io/?utm_source=vue&utm_medium=vue&utm_campaign=vue&utm_term=vue&utm_content=vue" target="_blank" class="logo">
+      <img src="/images/bit-wide.png">
+    </a>
+    </div>
+  </div>
+</div>
+
+<div id="sidebar-sponsors-platinum">
+  <div class="main-sponsor">
+    <span>Tài trợ Patreon</span>
+    <div>
+    <a href="http://tooltwist.com/" target="_blank" class="logo">
+      <img src="/images/tooltwist.png">
+    </a>
+    <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
+      <img src="/images/vueschool.png">
+    </a>
+    </div>
+  </div>
+  <a class="become-backer" href="/support-vuejs">
+    Trở thành nhà tài trợ
+  </a>
+</div>
+
       <h2>
         
-          Hướng dẫn
-        
+        Hướng dẫn
         <!--
         
           <select class="version-select">
@@ -311,7 +325,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/installation.html" class="sidebar-link">Cài đặt</a>
@@ -326,7 +340,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/index.html" class="sidebar-link">Giới thiệu</a>
@@ -341,7 +355,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/instance.html" class="sidebar-link">Đối tượng Vue</a>
@@ -356,7 +370,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/syntax.html" class="sidebar-link">Cú pháp template</a>
@@ -371,7 +385,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/computed.html" class="sidebar-link">Computed property và watcher</a>
@@ -386,7 +400,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/class-and-style.html" class="sidebar-link">Binding cho class và style</a>
@@ -401,7 +415,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/conditional.html" class="sidebar-link">Render theo điều kiện</a>
@@ -416,7 +430,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/list.html" class="sidebar-link">Render danh sách</a>
@@ -431,7 +445,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/events.html" class="sidebar-link">Xử lí sự kiện</a>
@@ -446,10 +460,10 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/forms.html" class="sidebar-link">Form Input Bindings</a>
+      <a href="/v2/guide/forms.html" class="sidebar-link">Ràng buộc form input</a>
     </li>
   
     
@@ -461,14 +475,107 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/components.html" class="sidebar-link">Component</a>
+      <a href="/v2/guide/components.html" class="sidebar-link">Cơ bản về component</a>
     </li>
   
     
     
+      
+      
+        <li><h3>Components In-Depth</h3></li>
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-registration.html" class="sidebar-link">Component Registration</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-props.html" class="sidebar-link">Props</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-custom-events.html" class="sidebar-link">Custom Events</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-slots.html" class="sidebar-link">Slots</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-dynamic-async.html" class="sidebar-link">Dynamic & Async Components</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-edge-cases.html" class="sidebar-link">Handling Edge Cases</a>
+    </li>
+  
+    
+    
+      
       
       
         <li><h3>Hiệu ứng chuyển động</h3></li>
@@ -478,7 +585,6 @@
       
       
       
-    
     
     <li>
       <a href="/v2/guide/transitions.html" class="sidebar-link">Transition cho enter/leave & danh sách</a>
@@ -493,7 +599,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/transitioning-state.html" class="sidebar-link">Transition cho trạng thái</a>
@@ -504,13 +610,13 @@
       
       
       
+      
         <li><h3>Tái sử dụng & kết hợp</h3></li>
       
       
       
       
       
-    
     
     <li>
       <a href="/v2/guide/mixins.html" class="sidebar-link">Mixin</a>
@@ -525,7 +631,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/custom-directive.html" class="sidebar-link">Directive tùy biến</a>
@@ -540,7 +646,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/render-function.html" class="sidebar-link current">Các hàm render & JSX</a>
@@ -555,7 +661,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/plugins.html" class="sidebar-link">Plugin</a>
@@ -570,7 +676,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/filters.html" class="sidebar-link">Filter</a>
@@ -582,12 +688,12 @@
       
       
       
+      
         <li><h3>Công cụ</h3></li>
       
       
       
       
-    
     
     <li>
       <a href="/v2/guide/deployment.html" class="sidebar-link">Triển khai cho môi trường production</a>
@@ -602,7 +708,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/single-file-components.html" class="sidebar-link">Single File Components</a>
@@ -617,10 +723,10 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit Test</a>
+      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit test</a>
     </li>
   
     
@@ -632,7 +738,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/typescript.html" class="sidebar-link">TypeScript Support</a>
@@ -645,11 +751,11 @@
       
       
       
+      
         <li><h3>Mở rộng quy mô ứng dụng</h3></li>
       
       
       
-    
     
     <li>
       <a href="/v2/guide/routing.html" class="sidebar-link">Routing</a>
@@ -664,10 +770,10 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/state-management.html" class="sidebar-link">State Management</a>
+      <a href="/v2/guide/state-management.html" class="sidebar-link">Quản lí trạng thái</a>
     </li>
   
     
@@ -679,14 +785,15 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/ssr.html" class="sidebar-link">Server-Side Rendering</a>
+      <a href="/v2/guide/ssr.html" class="sidebar-link">Render ở phía server</a>
     </li>
   
     
     
+      
       
       
       
@@ -696,7 +803,6 @@
         <li><h3>Bên trong Vue</h3></li>
       
       
-    
     
     <li>
       <a href="/v2/guide/reactivity.html" class="sidebar-link">Reactivity in Depth</a>
@@ -711,9 +817,9 @@
       
       
       
+      
         <li><h3>Thông tin thêm</h3></li>
       
-    
     
     <li>
       <a href="/v2/guide/comparison.html" class="sidebar-link">Comparison with Other Frameworks</a>
@@ -728,7 +834,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/join.html" class="sidebar-link">Join the Vue.js Community!</a>
@@ -743,12 +849,11 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/team.html" class="sidebar-link">Đội ngũ</a>
     </li>
-  
   
 </ul>
 
@@ -804,9 +909,9 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">return</span> createElement(<span class="string">'h1'</span>, <span class="keyword">this</span>.blogTitle)</span><br></pre></td></tr></table></figure>
 <p>Lệnh <code>createElement</code> ở đây thực chất là đang trả về cái gì? <em>Không hẳn</em> là một element (phần tử) DOM thật sự. Nếu nói cho đúng, chúng ta có thể đặt lại tên cho hàm này một cách chính xác hơn là <code>tạoMôTảChoNode</code>, vì nó chứa những thông tin mô tả node mà Vue cần biết để render, bao gồm cả mô tả cho các node con. Chúng ta gọi mô tả này là một “virtual node” (node ảo), thường viết tắt là <strong>VNode</strong>. “Virtual DOM” là tên của toàn bộ một cây các VNode, được xây dựng từ một cây các component Vue.</p>
 <h2 id="Cac-tham-so-cua-createElement"><a href="#Cac-tham-so-cua-createElement" class="headerlink" title="Các tham số của createElement"></a>Các tham số của <code>createElement</code></h2><p>Điều tiếp theo mà bạn cần thông thạo là cách dùng các tính năng của template trong hàm <code>createElement</code>. Đây là danh sách các tham số mà <code>createElement</code> nhận:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// @returns &#123;VNode&#125;</span></span><br><span class="line">createElement(</span><br><span class="line">  <span class="comment">// &#123;String | Object | Function&#125;</span></span><br><span class="line">  <span class="comment">// Một tên thẻ HTML, các tùy chọn cho component, hoặc một hàm</span></span><br><span class="line">  <span class="comment">// trả về một trong những thứ này. Bắt buộc.</span></span><br><span class="line">  <span class="string">'div'</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// &#123;Object&#125;</span></span><br><span class="line">  <span class="comment">// Một "data object" chứa dữ liệu tương ứng với các thuộc tính</span></span><br><span class="line">  <span class="comment">// mà bạn muốn dùng trong một template. Không bắt buộc.</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">// (Xem chi tiết ở phần tiếp theo bên dưới)</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// &#123;String | Array&#125;</span></span><br><span class="line">  <span class="comment">// Các VNode con, được tạo ra bằng cách dùng `createElement()`,</span></span><br><span class="line">  <span class="comment">// hoặc dùng chuỗi để tạo các 'text VNode'. Không bắt buộc.</span></span><br><span class="line">  [</span><br><span class="line">    <span class="string">'Một ít text trước.'</span>,</span><br><span class="line">    createElement(<span class="string">'h1'</span>, <span class="string">'Một tiêu đề'</span>),</span><br><span class="line">    createElement(MyComponent, &#123;</span><br><span class="line">      props: &#123;</span><br><span class="line">        someProp: <span class="string">'foobar'</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// @returns &#123;VNode&#125;</span></span><br><span class="line">createElement(</span><br><span class="line">  <span class="comment">// &#123;String | Object | Function&#125;</span></span><br><span class="line">  <span class="comment">// Một tên thẻ HTML, các tùy chọn cho component, hoặc một hàm</span></span><br><span class="line">  <span class="comment">// phân giải thành một trong những thứ này. Bắt buộc.</span></span><br><span class="line">  <span class="string">'div'</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// &#123;Object&#125;</span></span><br><span class="line">  <span class="comment">// Một "data object" chứa dữ liệu tương ứng với các thuộc tính</span></span><br><span class="line">  <span class="comment">// mà bạn muốn dùng trong một template. Không bắt buộc.</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">// (Xem chi tiết ở phần tiếp theo bên dưới)</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// &#123;String | Array&#125;</span></span><br><span class="line">  <span class="comment">// Các VNode con, được tạo ra bằng cách dùng `createElement()`,</span></span><br><span class="line">  <span class="comment">// hoặc dùng chuỗi để tạo các 'text VNode'. Không bắt buộc.</span></span><br><span class="line">  [</span><br><span class="line">    <span class="string">'Một ít text trước.'</span>,</span><br><span class="line">    createElement(<span class="string">'h1'</span>, <span class="string">'Một tiêu đề'</span>),</span><br><span class="line">    createElement(MyComponent, &#123;</span><br><span class="line">      props: &#123;</span><br><span class="line">        someProp: <span class="string">'foobar'</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 <h3 id="Chi-tiet-ve-data-object"><a href="#Chi-tiet-ve-data-object" class="headerlink" title="Chi tiết về data object"></a>Chi tiết về data object</h3><p>Một điểm cần lưu ý: tương tự với việc được <a href="class-and-style.html">đối xử đặc biệt</a> trong template, <code>v-bind:class</code> và <code>v-bind:style</code> cũng có các field (trường) riêng ở top-level (cấp cao nhất) trong data object của VNode. Object này cũng cho phép bạn bind (ràng buộc) các thuộc tính HTML thông thường cũng như các thuộc tính DOM như <code>innerHTML</code> (thay thế cho directive <code>v-html</code>):</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="comment">// Có cùng API với `v-bind:class`</span></span><br><span class="line">  <span class="string">'class'</span>: &#123;</span><br><span class="line">    foo: <span class="literal">true</span>,</span><br><span class="line">    bar: <span class="literal">false</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Có cùng API với `v-bind:style`</span></span><br><span class="line">  style: &#123;</span><br><span class="line">    color: <span class="string">'red'</span>,</span><br><span class="line">    fontSize: <span class="string">'14px'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Các thuộc tính HTML thông thường</span></span><br><span class="line">  attrs: &#123;</span><br><span class="line">    id: <span class="string">'foo'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Các prop cho component</span></span><br><span class="line">  props: &#123;</span><br><span class="line">    myProp: <span class="string">'bar'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Các thuộc tính DOM</span></span><br><span class="line">  domProps: &#123;</span><br><span class="line">    innerHTML: <span class="string">'baz'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Các hàm xử lí sự kiện được lồng vào bên trong `on`,</span></span><br><span class="line">  <span class="comment">// tuy rằng modifier (như trong `v-on:keyup.enter`) không được</span></span><br><span class="line">  <span class="comment">// hỗ trợ. Thay vào đó, bạn sẽ phải tự kiểm tra keyCode bên</span></span><br><span class="line">  <span class="comment">// trong hàm.</span></span><br><span class="line">  on: &#123;</span><br><span class="line">    click: <span class="keyword">this</span>.clickHandler</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Chỉ dành riêng cho component. Cho phép bạn lắng nghe các</span></span><br><span class="line">  <span class="comment">// sự kiện native, thay vì các sự kiện được phát ra từ component</span></span><br><span class="line">  <span class="comment">// bằng cách sử dụng `vm.$emit`.</span></span><br><span class="line">  nativeOn: &#123;</span><br><span class="line">    click: <span class="keyword">this</span>.nativeClickHandler</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Các directive tùy biến. Lưu ý là bạn không thể gán giá trị</span></span><br><span class="line">  <span class="comment">// `oldValue`, vì Vue sẽ tự động quản lí giá trị này thay bạn.</span></span><br><span class="line">  directives: [</span><br><span class="line">    &#123;</span><br><span class="line">      name: <span class="string">'my-custom-directive'</span>,</span><br><span class="line">      value: <span class="string">'2'</span>,</span><br><span class="line">      expression: <span class="string">'1 + 1'</span>,</span><br><span class="line">      arg: <span class="string">'foo'</span>,</span><br><span class="line">      modifiers: &#123;</span><br><span class="line">        bar: <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="comment">// Các scoped slot dưới dạng</span></span><br><span class="line">  <span class="comment">// &#123; name: props =&gt; VNode | Array&lt;VNode&gt; &#125;</span></span><br><span class="line">  scopedSlots: &#123;</span><br><span class="line">    <span class="keyword">default</span>: <span class="function"><span class="params">props</span> =&gt;</span> createElement(<span class="string">'span'</span>, props.text)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Tên của slot, nếu component này là con của một component khác</span></span><br><span class="line">  <span class="comment">// child of another component</span></span><br><span class="line">  slot: <span class="string">'name-of-slot'</span>,</span><br><span class="line">  <span class="comment">// Các thuộc tính top-level khác</span></span><br><span class="line">  key: <span class="string">'myKey'</span>,</span><br><span class="line">  ref: <span class="string">'myRef'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="comment">// Có cùng API với `v-bind:class`</span></span><br><span class="line">  class: &#123;</span><br><span class="line">    foo: <span class="literal">true</span>,</span><br><span class="line">    bar: <span class="literal">false</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Có cùng API với `v-bind:style`</span></span><br><span class="line">  style: &#123;</span><br><span class="line">    color: <span class="string">'red'</span>,</span><br><span class="line">    fontSize: <span class="string">'14px'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Các thuộc tính HTML thông thường</span></span><br><span class="line">  attrs: &#123;</span><br><span class="line">    id: <span class="string">'foo'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Các prop cho component</span></span><br><span class="line">  props: &#123;</span><br><span class="line">    myProp: <span class="string">'bar'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Các thuộc tính DOM</span></span><br><span class="line">  domProps: &#123;</span><br><span class="line">    innerHTML: <span class="string">'baz'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Các hàm xử lí sự kiện được lồng vào bên trong `on`,</span></span><br><span class="line">  <span class="comment">// tuy rằng modifier (như trong `v-on:keyup.enter`) không được</span></span><br><span class="line">  <span class="comment">// hỗ trợ. Thay vào đó, bạn sẽ phải tự kiểm tra keyCode bên</span></span><br><span class="line">  <span class="comment">// trong hàm.</span></span><br><span class="line">  on: &#123;</span><br><span class="line">    click: <span class="keyword">this</span>.clickHandler</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Chỉ dành riêng cho component. Cho phép bạn lắng nghe các</span></span><br><span class="line">  <span class="comment">// sự kiện native, thay vì các sự kiện được phát ra từ component</span></span><br><span class="line">  <span class="comment">// bằng cách sử dụng `vm.$emit`.</span></span><br><span class="line">  nativeOn: &#123;</span><br><span class="line">    click: <span class="keyword">this</span>.nativeClickHandler</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Các directive tùy biến. Lưu ý là bạn không thể gán giá trị</span></span><br><span class="line">  <span class="comment">// `oldValue`, vì Vue sẽ tự động quản lí giá trị này thay bạn.</span></span><br><span class="line">  directives: [</span><br><span class="line">    &#123;</span><br><span class="line">      name: <span class="string">'my-custom-directive'</span>,</span><br><span class="line">      value: <span class="string">'2'</span>,</span><br><span class="line">      expression: <span class="string">'1 + 1'</span>,</span><br><span class="line">      arg: <span class="string">'foo'</span>,</span><br><span class="line">      modifiers: &#123;</span><br><span class="line">        bar: <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="comment">// Các scoped slot dưới dạng</span></span><br><span class="line">  <span class="comment">// &#123; name: props =&gt; VNode | Array&lt;VNode&gt; &#125;</span></span><br><span class="line">  scopedSlots: &#123;</span><br><span class="line">    <span class="keyword">default</span>: <span class="function"><span class="params">props</span> =&gt;</span> createElement(<span class="string">'span'</span>, props.text)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Tên của slot, nếu component này là con của một component khác</span></span><br><span class="line">  <span class="comment">// child of another component</span></span><br><span class="line">  slot: <span class="string">'name-of-slot'</span>,</span><br><span class="line">  <span class="comment">// Các thuộc tính top-level khác</span></span><br><span class="line">  key: <span class="string">'myKey'</span>,</span><br><span class="line">  ref: <span class="string">'myRef'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="Vi-du-hoan-chinh"><a href="#Vi-du-hoan-chinh" class="headerlink" title="Ví dụ hoàn chỉnh"></a>Ví dụ hoàn chỉnh</h3><p>Với kiến thức đã học, bây giờ chúng ta đã có thể viết nốt component trên đây:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> getChildrenTextContent = <span class="function"><span class="keyword">function</span> (<span class="params">children</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> children.map(<span class="function"><span class="keyword">function</span> (<span class="params">node</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> node.children</span><br><span class="line">      ? getChildrenTextContent(node.children)</span><br><span class="line">      : node.text</span><br><span class="line">  &#125;).join(<span class="string">''</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Vue.component(<span class="string">'anchored-heading'</span>, &#123;</span><br><span class="line">  render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// tạo id với kebabCase</span></span><br><span class="line">    <span class="keyword">var</span> headingId = getChildrenTextContent(<span class="keyword">this</span>.$slots.default)</span><br><span class="line">      .toLowerCase()</span><br><span class="line">      .replace(<span class="regexp">/\W+/g</span>, <span class="string">'-'</span>)</span><br><span class="line">      .replace(<span class="regexp">/(^\-|\-$)/g</span>, <span class="string">''</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> createElement(</span><br><span class="line">      <span class="string">'h'</span> + <span class="keyword">this</span>.level,</span><br><span class="line">      [</span><br><span class="line">        createElement(<span class="string">'a'</span>, &#123;</span><br><span class="line">          attrs: &#123;</span><br><span class="line">            name: headingId,</span><br><span class="line">            href: <span class="string">'#'</span> + headingId</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;, <span class="keyword">this</span>.$slots.default)</span><br><span class="line">      ]</span><br><span class="line">    )</span><br><span class="line">  &#125;,</span><br><span class="line">  props: &#123;</span><br><span class="line">    level: &#123;</span><br><span class="line">      type: <span class="built_in">Number</span>,</span><br><span class="line">      required: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h3 id="Mot-so-han-che"><a href="#Mot-so-han-che" class="headerlink" title="Một số hạn chế"></a>Một số hạn chế</h3><h4 id="VNode-phai-la-duy-nhat"><a href="#VNode-phai-la-duy-nhat" class="headerlink" title="VNode phải là duy nhất"></a>VNode phải là duy nhất</h4><p>Tất cả các VNode trong cây component phải là duy nhất. Điều này có nghĩa là hàm render sau đây không hợp lệ:</p>
@@ -816,9 +921,9 @@
 <h2 id="Thay-the-cac-tinh-nang-cua-template-bang-JavaScript-don-thuan"><a href="#Thay-the-cac-tinh-nang-cua-template-bang-JavaScript-don-thuan" class="headerlink" title="Thay thế các tính năng của template bằng JavaScript đơn thuần"></a>Thay thế các tính năng của template bằng JavaScript đơn thuần</h2><h3 id="v-if-va-v-for"><a href="#v-if-va-v-for" class="headerlink" title="v-if và v-for"></a><code>v-if</code> và <code>v-for</code></h3><p>Bất cứ khi nào một việc gì đó có thể làm được dễ dàng bằng JavaScript đơn thuần, các hàm render của Vue đều <em>không</em> cung cấp một giải pháp thay thế chuyên biệt. Ví dụ, trong một template có sử dụng <code>v-if</code> và <code>v-for</code>:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">v-if</span>=<span class="string">"items.length"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"item in items"</span>&gt;</span>&#123;&#123; item.name &#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">v-else</span>&gt;</span>Không tìm thấy kết quả nào.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Ví dụ này có thể được viết lại với <code>if</code>/<code>else</code> và <code>map</code> của JavaScript trong một hàm render:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.items.length) &#123;</span><br><span class="line">    <span class="keyword">return</span> createElement(<span class="string">'ul'</span>, <span class="keyword">this</span>.items.map(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> createElement(<span class="string">'li'</span>, item.name)</span><br><span class="line">    &#125;))</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> createElement(<span class="string">'p'</span>, <span class="string">'Không tìm thấy kết quả nào.'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">props: [<span class="string">'items'</span>],</span><br><span class="line">render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.items.length) &#123;</span><br><span class="line">    <span class="keyword">return</span> createElement(<span class="string">'ul'</span>, <span class="keyword">this</span>.items.map(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> createElement(<span class="string">'li'</span>, item.name)</span><br><span class="line">    &#125;))</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> createElement(<span class="string">'p'</span>, <span class="string">'Không tìm thấy kết quả nào.'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a><code>v-model</code></h3><p>Vue không cung cấp tính năng thay thế cho <code>v-model</code> trong các hàm render - bạn sẽ phải tự phát triển logic này:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> self = <span class="keyword">this</span></span><br><span class="line">  <span class="keyword">return</span> createElement(<span class="string">'input'</span>, &#123;</span><br><span class="line">    domProps: &#123;</span><br><span class="line">      value: self.value</span><br><span class="line">    &#125;,</span><br><span class="line">    on: &#123;</span><br><span class="line">      input: <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">        self.value = event.target.value</span><br><span class="line">        self.$emit(<span class="string">'input'</span>, event.target.value)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">props: [<span class="string">'value'</span>],</span><br><span class="line">render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> self = <span class="keyword">this</span></span><br><span class="line">  <span class="keyword">return</span> createElement(<span class="string">'input'</span>, &#123;</span><br><span class="line">    domProps: &#123;</span><br><span class="line">      value: self.value</span><br><span class="line">    &#125;,</span><br><span class="line">    on: &#123;</span><br><span class="line">      input: <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">        self.$emit(<span class="string">'input'</span>, event.target.value)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Đây là cái giá cho việc viết code ở cấp thấp – tuy nhiên bù vào đó thì bạn có gần như toàn quyền điều khiển các tương tác nếu so sánh với <code>v-model</code>.</p>
 <h3 id="Event-va-key-modifier"><a href="#Event-va-key-modifier" class="headerlink" title="Event và key modifier"></a>Event và key modifier</h3><p>Đối với các <a href="events.html#Event-modifier">event modifier</a> <code>.passive</code>, <code>.capture</code> và <code>.once</code>, Vue cung cấp các prefix (tiền tố) có thể sử dụng với <code>on</code>:</p>
 <table>
@@ -848,7 +953,7 @@
 </tbody>
 </table>
 <p>Ví dụ:</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">on: &#123;</span><br><span class="line">  <span class="string">'!click'</span>: <span class="keyword">this</span>.doThisInCapturingMode,</span><br><span class="line">  <span class="string">'~keyup'</span>: <span class="keyword">this</span>.doThisOnce,</span><br><span class="line">  <span class="string">`~!mouseover`</span>: <span class="keyword">this</span>.doThisOnceInCapturingMode</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">on: &#123;</span><br><span class="line">  <span class="string">'!click'</span>: <span class="keyword">this</span>.doThisInCapturingMode,</span><br><span class="line">  <span class="string">'~keyup'</span>: <span class="keyword">this</span>.doThisOnce,</span><br><span class="line">  <span class="string">'~!mouseover'</span>: <span class="keyword">this</span>.doThisOnceInCapturingMode</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Đối với tất cả các event và key modifier khác, một prefix chuyên biệt là không cần thiết vì bạn có thể dùng các phương thức sự kiện bên trong hàm xử lí:</p>
 <table>
 <thead>
@@ -885,15 +990,15 @@
 <h3 id="Slot"><a href="#Slot" class="headerlink" title="Slot"></a>Slot</h3><p>Bạn có thể truy xuất đến các nội dung tĩnh của <a href="components.html#Phan-bo-noi-dung-voi-slot">slot</a> dưới dạng các mảng VNode thông qua <a href="../api/#vm-slots"><code>this.$slots</code></a>:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// `&lt;div&gt;&lt;slot&gt;&lt;/slot&gt;&lt;/div&gt;`</span></span><br><span class="line">  <span class="keyword">return</span> createElement(<span class="string">'div'</span>, <span class="keyword">this</span>.$slots.default)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>và truy xuất đến các <a href="components.html#Scoped-slot">scoped slot</a> dưới dạng các hàm trả về VNode thông qua <a href="../api/#vm-scopedSlots"><code>this.$scopedSlots</code></a>:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// `&lt;div&gt;&lt;slot :text="msg"&gt;&lt;/slot&gt;&lt;/div&gt;`</span></span><br><span class="line">  <span class="keyword">return</span> createElement(<span class="string">'div'</span>, [</span><br><span class="line">    <span class="keyword">this</span>.$scopedSlots.default(&#123;</span><br><span class="line">      text: <span class="keyword">this</span>.msg</span><br><span class="line">    &#125;)</span><br><span class="line">  ])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">props: [<span class="string">'message'</span>],</span><br><span class="line">render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// `&lt;div&gt;&lt;slot :text="message"&gt;&lt;/slot&gt;&lt;/div&gt;`</span></span><br><span class="line">  <span class="keyword">return</span> createElement(<span class="string">'div'</span>, [</span><br><span class="line">    <span class="keyword">this</span>.$scopedSlots.default(&#123;</span><br><span class="line">      text: <span class="keyword">this</span>.message</span><br><span class="line">    &#125;)</span><br><span class="line">  ])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Để truyền các scoped slot vào một component con bằng hàm render, dùng trường <code>scopeSlots</code> trong dữ liệu của VNode:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">render (createElement) &#123;</span><br><span class="line">  <span class="keyword">return</span> createElement(<span class="string">'div'</span>, [</span><br><span class="line">    createElement(<span class="string">'child'</span>, &#123;</span><br><span class="line">      <span class="comment">// truyền `scopedSlots` trong object dữ liệu dưới dạng</span></span><br><span class="line">      <span class="comment">// &#123; name: props =&gt; VNode | Array&lt;VNode&gt; &#125;</span></span><br><span class="line">      scopedSlots: &#123;</span><br><span class="line">        <span class="keyword">default</span>: <span class="function"><span class="keyword">function</span> (<span class="params">props</span>) </span>&#123;</span><br><span class="line">          <span class="keyword">return</span> createElement(<span class="string">'span'</span>, props.text)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  ])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> createElement(<span class="string">'div'</span>, [</span><br><span class="line">    createElement(<span class="string">'child'</span>, &#123;</span><br><span class="line">      <span class="comment">// truyền `scopedSlots` trong object dữ liệu dưới dạng</span></span><br><span class="line">      <span class="comment">// &#123; name: props =&gt; VNode | Array&lt;VNode&gt; &#125;</span></span><br><span class="line">      scopedSlots: &#123;</span><br><span class="line">        <span class="keyword">default</span>: <span class="function"><span class="keyword">function</span> (<span class="params">props</span>) </span>&#123;</span><br><span class="line">          <span class="keyword">return</span> createElement(<span class="string">'span'</span>, props.text)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  ])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h2><p>Nếu dùng nhiều hàm <code>render</code>, có lẽ bạn sẽ cảm thấy khá cực nhọc khi phải viết những đi viết lại những dòng code như thế này:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">createElement(</span><br><span class="line">  <span class="string">'anchored-heading'</span>, &#123;</span><br><span class="line">    props: &#123;</span><br><span class="line">      level: <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, [</span><br><span class="line">    createElement(<span class="string">'span'</span>, <span class="string">'Hello'</span>),</span><br><span class="line">    <span class="string">' world!'</span></span><br><span class="line">  ]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 <p>Nhất là khi nếu dùng template thì đơn giản hơn nhiều:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">anchored-heading</span> <span class="attr">:level</span>=<span class="string">"1"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span> world!</span><br><span class="line"><span class="tag">&lt;/<span class="name">anchored-heading</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Đó là lí do Vue cung cấp một <a href="https://github.com/vuejs/babel-plugin-transform-vue-jsx" target="_blank" rel="noopener">plugin dành cho Babel</a> để dùng JSX với Vue, giúp chúng ta quay lại sử dụng một cú pháp gần gũi hơn với template:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> AnchoredHeading <span class="keyword">from</span> <span class="string">'./AnchoredHeading.vue'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#demo'</span>,</span><br><span class="line">  render (h) &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;AnchoredHeading level=&#123;<span class="number">1</span>&#125;&gt;</span><br><span class="line">        &lt;span&gt;Hello&lt;<span class="regexp">/span&gt; world!</span></span><br><span class="line"><span class="regexp">      &lt;/</span>AnchoredHeading&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> AnchoredHeading <span class="keyword">from</span> <span class="string">'./AnchoredHeading.vue'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#demo'</span>,</span><br><span class="line">  render: <span class="function"><span class="keyword">function</span> (<span class="params">h</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;AnchoredHeading level=&#123;<span class="number">1</span>&#125;&gt;</span><br><span class="line">        &lt;span&gt;Hello&lt;<span class="regexp">/span&gt; world!</span></span><br><span class="line"><span class="regexp">      &lt;/</span>AnchoredHeading&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p class="tip">Dùng <code>h</code> thay cho <code>createElement</code> là một quy ước thông dụng trong hệ sinh thái của Vue, đồng thời là bắt buộc đối với JSX. Nếu <code>h</code> không tồn tại trong scope, ứng dụng của bạn sẽ xảy ra lỗi.</p>
 
 <p>Để biết thêm chi tiết về cách thức đối chiếu từ JSX sang JavaScript, hãy <a href="https://github.com/vuejs/babel-plugin-transform-vue-jsx#usage" target="_blank" rel="noopener">đọc kĩ hướng dẫn sử dụng trước khi dùng</a>.</p>
@@ -904,7 +1009,7 @@
 <p>Trong các phiên bản trước 2.3.0, tùy chọn <code>props</code> là bắt buộc nếu bạn muốn nhận props trong một functional component. Từ phiên bản 2.3.0 trở về sau, bạn có thể bỏ qua tùy chọn <code>props</code>, và khi đó tất cả các thuộc tính tìm thấy trên component node sẽ được trích xuất ngầm thành props.</p>
 </blockquote>
 <p>Từ bản 2.5.0 trở đi, nếu bạn đang dùng <a href="single-file-components.html">single-file component</a>, functional component dựa trên template có thể được khai báo như sau:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;template functional&gt;</span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">functional</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Mọi thứ mà component cần được truyền vào thông qua <code>context</code>, một object chứa:</p>
 <ul>
 <li><code>props</code>: Một object chứa các prop được cung cấp</li>
@@ -924,6 +1029,12 @@
 </ul>
 <p>Sau đây là một ví dụ về một component <code>smart-list</code>, component này đóng vai trò “delegate” cho các component cụ thể hơn dựa trên các prop được truyền vào:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> EmptyList = &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line"><span class="keyword">var</span> TableList = &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line"><span class="keyword">var</span> OrderedList = &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line"><span class="keyword">var</span> UnorderedList = &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line"></span><br><span class="line">Vue.component(<span class="string">'smart-list'</span>, &#123;</span><br><span class="line">  functional: <span class="literal">true</span>,</span><br><span class="line">  render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement, context</span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">appropriateListComponent</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> items = context.props.items</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (items.length === <span class="number">0</span>)           <span class="keyword">return</span> EmptyList</span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">typeof</span> items[<span class="number">0</span>] === <span class="string">'object'</span>) <span class="keyword">return</span> TableList</span><br><span class="line">      <span class="keyword">if</span> (context.props.isOrdered)      <span class="keyword">return</span> OrderedList</span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> UnorderedList</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> createElement(</span><br><span class="line">      appropriateListComponent(),</span><br><span class="line">      context.data,</span><br><span class="line">      context.children</span><br><span class="line">    )</span><br><span class="line">  &#125;,</span><br><span class="line">  props: &#123;</span><br><span class="line">    items: &#123;</span><br><span class="line">      type: <span class="built_in">Array</span>,</span><br><span class="line">      required: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    isOrdered: <span class="built_in">Boolean</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="Truyen-thuoc-tinh-va-su-kien-xuong-phan-tu-hoac-component-con"><a href="#Truyen-thuoc-tinh-va-su-kien-xuong-phan-tu-hoac-component-con" class="headerlink" title="Truyền thuộc tính và sự kiện xuống phần tử hoặc component con"></a>Truyền thuộc tính và sự kiện xuống phần tử hoặc component con</h3><p>Với những component thông thường, các thuộc tính (attribute) không được định nghĩa dưới dạng prop sẽ được thêm vào phần tử gốc (root element) của component, thay thế hoặc <a href="class-and-style.html">merge một cách thông minh</a> các thuộc tính trùng tên có sẵn.</p>
+<p>Tuy nhiên, các component chức năng bắt buộc bạn phải định nghĩa minh bạch hành vi này:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.component(<span class="string">'my-functional-button'</span>, &#123;</span><br><span class="line">  functional: <span class="literal">true</span>,</span><br><span class="line">  render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement, context</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Truyền các thuộc tính, hàm lắng nghe sự kiện, các phần tử con v.v.</span></span><br><span class="line">    <span class="keyword">return</span> createElement(<span class="string">'button'</span>, context.data, context.children)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>Bằng cách truyền <code>context.data</code> làm tham số thứ hai cho <code>createElement</code>, chúng ta đang truyền xuống bất cứ thuộc tính hoặc hàm lắng nghe sự kiện nào được dùng trong <code>my-function-button</code>. Việc này minh bạch đến mức các sự kiện này thậm chí không cần modifier <code>.native</code>.</p>
+<p>Nếu đang dùng component chức năng dựa trên template, bạn cũng sẽ phải tự thêm vào các thuộc tính và hàm lắng nghe sự kiện. Vì có quyền truy xuất đến các nội dung ngữ cảnh riêng biệt, chúng ta có thể dùng <code>data.attrs</code> để truyền xuống các thuộc tính HTML và dùng <code>listeners</code> <em>(alias của <code>data.on</code>)</em> để truyền xuống các hàm lắng nghe sự kiện.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">functional</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span></span></span><br><span class="line"><span class="tag">    <span class="attr">class</span>=<span class="string">"btn btn-primary"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">v-bind</span>=<span class="string">"data.attrs"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">v-on</span>=<span class="string">"listeners"</span></span></span><br><span class="line"><span class="tag">  &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">slot</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="So-sanh-giua-slots-va-children"><a href="#So-sanh-giua-slots-va-children" class="headerlink" title="So sánh giữa slots() và children"></a>So sánh giữa <code>slots()</code> và <code>children</code></h3><p>Bạn có thể tự hỏi tại sao chúng ta lại cần cả hai <code>slots()</code> và <code>children</code>. Chẳng phải <code>slots().default</code> và <code>children</code> là như nhau hay sao? Trong một số trường hợp thì điều này là đúng, tuy nhiên hãy xem một functional component với các phần tử con như sau:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">my-functional-component</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">slot</span>=<span class="string">"foo"</span>&gt;</span></span><br><span class="line">    thứ nhất</span><br><span class="line">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>thứ hai<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">my-functional-component</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Trong component này, <code>children</code> sẽ chứa cả hai phần tử <code>&lt;p&gt;</code>, <code>slots().default</code> chỉ chứa phần tử thứ hai, và<code>slots().foo</code> chỉ chứa phần tử thứ nhất. Việc có cả hai <code>children</code> và <code>slots()</code> vì vậy sẽ cho phép bạn quyết định component này có biết về hệ thống slot hay không, hoặc có thể giao phó trách nhiệm này cho một component khác bằng cách truyền <code>children</code>.</p>
@@ -1011,7 +1122,9 @@ console.error = function (error) {
   
     <div class="guide-links">
       
+      
         <span>← <a href="/v2/guide/custom-directive.html">Directive tùy biến</a></span>
+      
       
       
         <span style="float: right;"><a href="/v2/guide/plugins.html">Plugin</a> →</span>
@@ -1034,7 +1147,7 @@ console.error = function (error) {
 </script>
 
     Phát hiện lỗi hoặc muốn đóng góp vào nội dung?
-    <a href="https://github.com/vuejs/vuejs.org/blob/master/src/v2/guide/render-function.md" target="_blank">
+    <a href="https://github.com/vuejs-vn/vuejs.org/blob/master/src/v2/guide/render-function.md" target="_blank">
       Chỉnh sửa trang này trên GitHub!
     </a>
   </div>
@@ -1050,9 +1163,9 @@ console.error = function (error) {
     <script src="/js/common.js"></script>
 
     <!-- search -->
-    <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
     <link rel="stylesheet" href="/css/search.css">
-    <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     [
       '#search-query-nav',
@@ -1061,15 +1174,15 @@ console.error = function (error) {
     ].forEach(function (selector) {
       if (!document.querySelector(selector)) return
       // search index defaults to v2
-      var match = window.location.pathname.match(/^\/(v\d+)/)
-      var version = match ? match[1] : 'v2'
       docsearch({
-      appId: 'BH4D9OD16A',
-      apiKey: '85cc3221c9f23bfbaa4e3913dd7625ea',
-      indexName: 'vuejs',
-      inputSelector: selector,
-      algoliaOptions: { facetFilters: ["version:" + version] }
-      })
+        apiKey: 'bd7d3891459fccb97fd1f689b1840bc5',
+        indexName: 'vi_vuejs',
+
+        inputSelector: selector,
+        algoliaOptions: { 'facetFilters': ["lang:vi"] },
+
+        debug: true
+      });
     })
     </script>
 

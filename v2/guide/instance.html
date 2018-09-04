@@ -96,8 +96,9 @@
     <li><ul>
       <li><a href="/v2/guide/" class="nav-link current">Hướng dẫn</a></li>
       <li><a href="/v2/api/" class="nav-link">API</a></li>
-      <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
+      <li><a href="/v2/style-guide/" class="nav-link">Phong cách viết</a></li>
       <li><a href="/v2/examples/" class="nav-link">Một số ví dụ</a></li>
+      <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>
     </ul></li>
   </ul>
 </li>
@@ -126,7 +127,8 @@
     </ul></li>
     <li><h4>Tin tức</h4></li>
     <li><ul>
-      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Lộ trình phát triển</a></li>
+      <li><a href="https://news.vuejs.org" class="nav-link" target="_blank">Tin tức hàng tuần</a></li>
+      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Roadmap</a></li>
       <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
       <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">Blog</a></li>
       <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">Việc làm</a></li>
@@ -189,8 +191,9 @@
     <li><ul>
       <li><a href="/v2/guide/" class="nav-link current">Hướng dẫn</a></li>
       <li><a href="/v2/api/" class="nav-link">API</a></li>
-      <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
+      <li><a href="/v2/style-guide/" class="nav-link">Phong cách viết</a></li>
       <li><a href="/v2/examples/" class="nav-link">Một số ví dụ</a></li>
+      <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>
     </ul></li>
   </ul>
 </li>
@@ -219,7 +222,8 @@
     </ul></li>
     <li><h4>Tin tức</h4></li>
     <li><ul>
-      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Lộ trình phát triển</a></li>
+      <li><a href="https://news.vuejs.org" class="nav-link" target="_blank">Tin tức hàng tuần</a></li>
+      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Roadmap</a></li>
       <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
       <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">Blog</a></li>
       <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">Việc làm</a></li>
@@ -263,30 +267,40 @@
 
     </ul>
     <div class="list">
-      <div class="main-sponsor">
-        <span>Nhà tài trợ bạch kim</span>
-        <div>
-        <a href="https://stdlib.com" target="_blank" class="logo">
-          <img src="/images/stdlib.png">
-        </a>
-        <a href="http://tooltwist.com/" target="_blank" class="logo">
-          <img src="/images/tooltwist.png">
-        </a>
-        <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
-          <img src="/images/vueschool.png">
-        </a>
-        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
-          <img src="/images/datacamp.png">
-        </a>
-        </div>
-      </div>
-      <a class="become-backer" href="/support-vuejs">
-        Trở thành nhà tài trợ
-      </a>
+      <div id="sidebar-sponsors-special">
+  <div class="main-sponsor">
+    <span>Tài trợ đặc biệt</span>
+    <div>
+    <a href="https://stdlib.com" target="_blank" class="logo">
+      <img src="/images/stdlib.png">
+    </a>
+    <a href="https://www.bitsrc.io/?utm_source=vue&utm_medium=vue&utm_campaign=vue&utm_term=vue&utm_content=vue" target="_blank" class="logo">
+      <img src="/images/bit-wide.png">
+    </a>
+    </div>
+  </div>
+</div>
+
+<div id="sidebar-sponsors-platinum">
+  <div class="main-sponsor">
+    <span>Tài trợ Patreon</span>
+    <div>
+    <a href="http://tooltwist.com/" target="_blank" class="logo">
+      <img src="/images/tooltwist.png">
+    </a>
+    <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
+      <img src="/images/vueschool.png">
+    </a>
+    </div>
+  </div>
+  <a class="become-backer" href="/support-vuejs">
+    Trở thành nhà tài trợ
+  </a>
+</div>
+
       <h2>
         
-          Hướng dẫn
-        
+        Hướng dẫn
         <!--
         
           <select class="version-select">
@@ -311,7 +325,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/installation.html" class="sidebar-link">Cài đặt</a>
@@ -326,7 +340,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/index.html" class="sidebar-link">Giới thiệu</a>
@@ -341,7 +355,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/instance.html" class="sidebar-link current">Đối tượng Vue</a>
@@ -356,7 +370,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/syntax.html" class="sidebar-link">Cú pháp template</a>
@@ -371,7 +385,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/computed.html" class="sidebar-link">Computed property và watcher</a>
@@ -386,7 +400,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/class-and-style.html" class="sidebar-link">Binding cho class và style</a>
@@ -401,7 +415,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/conditional.html" class="sidebar-link">Render theo điều kiện</a>
@@ -416,7 +430,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/list.html" class="sidebar-link">Render danh sách</a>
@@ -431,7 +445,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/events.html" class="sidebar-link">Xử lí sự kiện</a>
@@ -446,10 +460,10 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/forms.html" class="sidebar-link">Form Input Bindings</a>
+      <a href="/v2/guide/forms.html" class="sidebar-link">Ràng buộc form input</a>
     </li>
   
     
@@ -461,14 +475,107 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/components.html" class="sidebar-link">Component</a>
+      <a href="/v2/guide/components.html" class="sidebar-link">Cơ bản về component</a>
     </li>
   
     
     
+      
+      
+        <li><h3>Components In-Depth</h3></li>
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-registration.html" class="sidebar-link">Component Registration</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-props.html" class="sidebar-link">Props</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-custom-events.html" class="sidebar-link">Custom Events</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-slots.html" class="sidebar-link">Slots</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-dynamic-async.html" class="sidebar-link">Dynamic & Async Components</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-edge-cases.html" class="sidebar-link">Handling Edge Cases</a>
+    </li>
+  
+    
+    
+      
       
       
         <li><h3>Hiệu ứng chuyển động</h3></li>
@@ -478,7 +585,6 @@
       
       
       
-    
     
     <li>
       <a href="/v2/guide/transitions.html" class="sidebar-link">Transition cho enter/leave & danh sách</a>
@@ -493,7 +599,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/transitioning-state.html" class="sidebar-link">Transition cho trạng thái</a>
@@ -504,13 +610,13 @@
       
       
       
+      
         <li><h3>Tái sử dụng & kết hợp</h3></li>
       
       
       
       
       
-    
     
     <li>
       <a href="/v2/guide/mixins.html" class="sidebar-link">Mixin</a>
@@ -525,7 +631,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/custom-directive.html" class="sidebar-link">Directive tùy biến</a>
@@ -540,7 +646,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/render-function.html" class="sidebar-link">Các hàm render & JSX</a>
@@ -555,7 +661,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/plugins.html" class="sidebar-link">Plugin</a>
@@ -570,7 +676,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/filters.html" class="sidebar-link">Filter</a>
@@ -582,12 +688,12 @@
       
       
       
+      
         <li><h3>Công cụ</h3></li>
       
       
       
       
-    
     
     <li>
       <a href="/v2/guide/deployment.html" class="sidebar-link">Triển khai cho môi trường production</a>
@@ -602,7 +708,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/single-file-components.html" class="sidebar-link">Single File Components</a>
@@ -617,10 +723,10 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit Test</a>
+      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit test</a>
     </li>
   
     
@@ -632,7 +738,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/typescript.html" class="sidebar-link">TypeScript Support</a>
@@ -645,11 +751,11 @@
       
       
       
+      
         <li><h3>Mở rộng quy mô ứng dụng</h3></li>
       
       
       
-    
     
     <li>
       <a href="/v2/guide/routing.html" class="sidebar-link">Routing</a>
@@ -664,10 +770,10 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/state-management.html" class="sidebar-link">State Management</a>
+      <a href="/v2/guide/state-management.html" class="sidebar-link">Quản lí trạng thái</a>
     </li>
   
     
@@ -679,14 +785,15 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/ssr.html" class="sidebar-link">Server-Side Rendering</a>
+      <a href="/v2/guide/ssr.html" class="sidebar-link">Render ở phía server</a>
     </li>
   
     
     
+      
       
       
       
@@ -696,7 +803,6 @@
         <li><h3>Bên trong Vue</h3></li>
       
       
-    
     
     <li>
       <a href="/v2/guide/reactivity.html" class="sidebar-link">Reactivity in Depth</a>
@@ -711,9 +817,9 @@
       
       
       
+      
         <li><h3>Thông tin thêm</h3></li>
       
-    
     
     <li>
       <a href="/v2/guide/comparison.html" class="sidebar-link">Comparison with Other Frameworks</a>
@@ -728,7 +834,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/join.html" class="sidebar-link">Join the Vue.js Community!</a>
@@ -743,12 +849,11 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/team.html" class="sidebar-link">Đội ngũ</a>
     </li>
-  
   
 </ul>
 
@@ -788,14 +893,14 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Root Instance</span><br><span class="line">└─ TodoList</span><br><span class="line">   ├─ TodoItem</span><br><span class="line">   │  ├─ DeleteTodoButton</span><br><span class="line">   │  └─ EditTodoButton</span><br><span class="line">   └─ TodoListFooter</span><br><span class="line">      ├─ ClearTodosButton</span><br><span class="line">      └─ TodoListStatistics</span><br></pre></td></tr></table></figure>
 <p>Chúng ta sẽ nói chi tiết về <a href="components.html">hệ thống component</a> sau. Hiện tại, bạn chỉ cần biết rằng một component Vue cũng là một đối tượng Vue và do đó cũng nhận cùng một object <code>options</code> (trừ một số tùy chọn chỉ dành riêng cho root).</p>
 <h2 id="Du-lieu-va-phuong-thuc"><a href="#Du-lieu-va-phuong-thuc" class="headerlink" title="Dữ liệu và phương thức"></a>Dữ liệu và phương thức</h2><p>Khi một đối tượng Vue được khởi tạo, tất cả các thuộc tính (property) được tìm thấy trong object <code>data</code> sẽ được thêm vào <strong>reactivity system</strong> (hiểu nôm na là “hệ thống phản ứng”) của Vue. Điều này có nghĩa là view sẽ “react” (phản ứng) khi giá trị của các thuộc tính này thay đổi, và tự cập nhật tương ứng với các giá trị mới.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Chúng ta khởi tạo một object "data"</span></span><br><span class="line"><span class="keyword">var</span> data = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Object này được truyền vào một đối tượng Vue</span></span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: data</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// vm.a và data.a cùng trỏ đến một đối tượng!</span></span><br><span class="line">vm.a === data.a <span class="comment">// =&gt; true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Thay đổi thuộc tính của vm cũng</span></span><br><span class="line"><span class="comment">// ảnh hưởng đến dữ liệu ban đầu</span></span><br><span class="line">vm.a = <span class="number">2</span></span><br><span class="line">data.a <span class="comment">// =&gt; 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ... và ngược lại</span></span><br><span class="line">data.a = <span class="number">3</span></span><br><span class="line">vm.a <span class="comment">// =&gt; 3</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Chúng ta khởi tạo một object "data"</span></span><br><span class="line"><span class="keyword">var</span> data = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Object này được truyền vào một đối tượng Vue</span></span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: data</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Truy xuất đến thuộc tính của đối tượng </span></span><br><span class="line"><span class="comment">// trả về giá trị của object "data" đã khởi tạo </span></span><br><span class="line">vm.a == data.a <span class="comment">// =&gt; true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Thay đổi thuộc tính của vm cũng</span></span><br><span class="line"><span class="comment">// ảnh hưởng đến dữ liệu ban đầu</span></span><br><span class="line">vm.a = <span class="number">2</span></span><br><span class="line">data.a <span class="comment">// =&gt; 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ... và ngược lại</span></span><br><span class="line">data.a = <span class="number">3</span></span><br><span class="line">vm.a <span class="comment">// =&gt; 3</span></span><br></pre></td></tr></table></figure>
 <p>Khi dữ liệu thay đổi, view sẽ render lại. Cũng nên lưu ý rằng một thuộc tính trong object <code>data</code> chỉ trở nên reactive nếu nó đã tồn tại khi chúng ta khởi tạo đối tượng Vue. Có nghĩa là nếu bạn thêm vào một thuộc tính mới như sau:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">vm.b = <span class="string">'Aloha'</span></span><br></pre></td></tr></table></figure>
 <p>thì những thay đổi với <code>b</code> sẽ không kích hoạt thay đổi trên view. Vì thế, nếu bạn biết là sau này mình sẽ cần một thuộc tính nào đó nhưng khi khởi tạo Vue thì thuộc tính này là rỗng hoặc chưa tồn tại, bạn cần gán cho nó một giá trị ban đầu, ví dụ như thế này:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  newTodoText: <span class="string">''</span>,</span><br><span class="line">  visitCount: <span class="number">0</span>,</span><br><span class="line">  hideCompletedTodos: <span class="literal">false</span>,</span><br><span class="line">  todos: [],</span><br><span class="line">  error: <span class="literal">null</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Ngoại lệ duy nhất ở đây là việc sử dụng <code>Object.freeze()</code>. <code>Object.freeze()</code> ngăn không cho những thuộc tính sẵn có bị chỉnh sửa, cũng có nghĩa là hệ thống reactivity không thể <em>theo dõi</em> các thay đổi xảy ra.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  foo: <span class="string">'bar'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.freeze(obj)</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  data () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      obj</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; obj.foo &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- obj.foo sẽ không thay đổi --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"obj.foo = 'baz'"</span>&gt;</span>Thay đổi<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  foo: <span class="string">'bar'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.freeze(obj)</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  data: obj</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; foo &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- foo sẽ không được cập nhật! --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"foo = 'baz'"</span>&gt;</span>Cập nhật đi chứ<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Ngoài <code>data</code>, một đối tượng Vue cũng hỗ trợ một số thuộc tính và phương thức đối tượng (instance properties &amp; methods) hữu dụng khác. Các thuộc tính và phương thức này được bắt đầu bằng kí hiệu <code>$</code> để phân biệt với thuộc tính và phương thức do người dùng định nghĩa. Ví dụ:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> data = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#example'</span>,</span><br><span class="line">  data: data</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">vm.$data === data <span class="comment">// =&gt; true</span></span><br><span class="line">vm.$el === <span class="built_in">document</span>.getElementById(<span class="string">'example'</span>) <span class="comment">// =&gt; true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// $watch là một phương thức của đối tượng Vue</span></span><br><span class="line">vm.$watch(<span class="string">'a'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">newValue, oldValue</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// Hàm callback này sẽ được gọi khi `vm.a` thay đổi</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>Bạn cũng có thể tham khảo danh sách đầy đủ các thuộc tính và phương thức đối tượng trên trang <a href="../api/#Instance-Properties">API</a>.</p>
@@ -812,7 +917,9 @@
   
     <div class="guide-links">
       
+      
         <span>← <a href="/v2/guide/index.html">Giới thiệu</a></span>
+      
       
       
         <span style="float: right;"><a href="/v2/guide/syntax.html">Cú pháp template</a> →</span>
@@ -835,7 +942,7 @@
 </script>
 
     Phát hiện lỗi hoặc muốn đóng góp vào nội dung?
-    <a href="https://github.com/vuejs/vuejs.org/blob/master/src/v2/guide/instance.md" target="_blank">
+    <a href="https://github.com/vuejs-vn/vuejs.org/blob/master/src/v2/guide/instance.md" target="_blank">
       Chỉnh sửa trang này trên GitHub!
     </a>
   </div>
@@ -851,9 +958,9 @@
     <script src="/js/common.js"></script>
 
     <!-- search -->
-    <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
     <link rel="stylesheet" href="/css/search.css">
-    <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     [
       '#search-query-nav',
@@ -862,15 +969,15 @@
     ].forEach(function (selector) {
       if (!document.querySelector(selector)) return
       // search index defaults to v2
-      var match = window.location.pathname.match(/^\/(v\d+)/)
-      var version = match ? match[1] : 'v2'
       docsearch({
-      appId: 'BH4D9OD16A',
-      apiKey: '85cc3221c9f23bfbaa4e3913dd7625ea',
-      indexName: 'vuejs',
-      inputSelector: selector,
-      algoliaOptions: { facetFilters: ["version:" + version] }
-      })
+        apiKey: 'bd7d3891459fccb97fd1f689b1840bc5',
+        indexName: 'vi_vuejs',
+
+        inputSelector: selector,
+        algoliaOptions: { 'facetFilters': ["lang:vi"] },
+
+        debug: true
+      });
     })
     </script>
 

@@ -96,8 +96,9 @@
     <li><ul>
       <li><a href="/v2/guide/" class="nav-link current">Hướng dẫn</a></li>
       <li><a href="/v2/api/" class="nav-link">API</a></li>
-      <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
+      <li><a href="/v2/style-guide/" class="nav-link">Phong cách viết</a></li>
       <li><a href="/v2/examples/" class="nav-link">Một số ví dụ</a></li>
+      <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>
     </ul></li>
   </ul>
 </li>
@@ -126,7 +127,8 @@
     </ul></li>
     <li><h4>Tin tức</h4></li>
     <li><ul>
-      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Lộ trình phát triển</a></li>
+      <li><a href="https://news.vuejs.org" class="nav-link" target="_blank">Tin tức hàng tuần</a></li>
+      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Roadmap</a></li>
       <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
       <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">Blog</a></li>
       <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">Việc làm</a></li>
@@ -189,8 +191,9 @@
     <li><ul>
       <li><a href="/v2/guide/" class="nav-link current">Hướng dẫn</a></li>
       <li><a href="/v2/api/" class="nav-link">API</a></li>
-      <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
+      <li><a href="/v2/style-guide/" class="nav-link">Phong cách viết</a></li>
       <li><a href="/v2/examples/" class="nav-link">Một số ví dụ</a></li>
+      <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>
     </ul></li>
   </ul>
 </li>
@@ -219,7 +222,8 @@
     </ul></li>
     <li><h4>Tin tức</h4></li>
     <li><ul>
-      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Lộ trình phát triển</a></li>
+      <li><a href="https://news.vuejs.org" class="nav-link" target="_blank">Tin tức hàng tuần</a></li>
+      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Roadmap</a></li>
       <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
       <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">Blog</a></li>
       <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">Việc làm</a></li>
@@ -263,30 +267,40 @@
 
     </ul>
     <div class="list">
-      <div class="main-sponsor">
-        <span>Nhà tài trợ bạch kim</span>
-        <div>
-        <a href="https://stdlib.com" target="_blank" class="logo">
-          <img src="/images/stdlib.png">
-        </a>
-        <a href="http://tooltwist.com/" target="_blank" class="logo">
-          <img src="/images/tooltwist.png">
-        </a>
-        <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
-          <img src="/images/vueschool.png">
-        </a>
-        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
-          <img src="/images/datacamp.png">
-        </a>
-        </div>
-      </div>
-      <a class="become-backer" href="/support-vuejs">
-        Trở thành nhà tài trợ
-      </a>
+      <div id="sidebar-sponsors-special">
+  <div class="main-sponsor">
+    <span>Tài trợ đặc biệt</span>
+    <div>
+    <a href="https://stdlib.com" target="_blank" class="logo">
+      <img src="/images/stdlib.png">
+    </a>
+    <a href="https://www.bitsrc.io/?utm_source=vue&utm_medium=vue&utm_campaign=vue&utm_term=vue&utm_content=vue" target="_blank" class="logo">
+      <img src="/images/bit-wide.png">
+    </a>
+    </div>
+  </div>
+</div>
+
+<div id="sidebar-sponsors-platinum">
+  <div class="main-sponsor">
+    <span>Tài trợ Patreon</span>
+    <div>
+    <a href="http://tooltwist.com/" target="_blank" class="logo">
+      <img src="/images/tooltwist.png">
+    </a>
+    <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
+      <img src="/images/vueschool.png">
+    </a>
+    </div>
+  </div>
+  <a class="become-backer" href="/support-vuejs">
+    Trở thành nhà tài trợ
+  </a>
+</div>
+
       <h2>
         
-          Hướng dẫn
-        
+        Hướng dẫn
         <!--
         
           <select class="version-select">
@@ -311,7 +325,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/installation.html" class="sidebar-link">Cài đặt</a>
@@ -326,7 +340,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/index.html" class="sidebar-link">Giới thiệu</a>
@@ -341,7 +355,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/instance.html" class="sidebar-link">Đối tượng Vue</a>
@@ -356,7 +370,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/syntax.html" class="sidebar-link">Cú pháp template</a>
@@ -371,7 +385,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/computed.html" class="sidebar-link">Computed property và watcher</a>
@@ -386,7 +400,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/class-and-style.html" class="sidebar-link">Binding cho class và style</a>
@@ -401,7 +415,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/conditional.html" class="sidebar-link">Render theo điều kiện</a>
@@ -416,7 +430,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/list.html" class="sidebar-link">Render danh sách</a>
@@ -431,7 +445,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/events.html" class="sidebar-link current">Xử lí sự kiện</a>
@@ -446,10 +460,10 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/forms.html" class="sidebar-link">Form Input Bindings</a>
+      <a href="/v2/guide/forms.html" class="sidebar-link">Ràng buộc form input</a>
     </li>
   
     
@@ -461,14 +475,107 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/components.html" class="sidebar-link">Component</a>
+      <a href="/v2/guide/components.html" class="sidebar-link">Cơ bản về component</a>
     </li>
   
     
     
+      
+      
+        <li><h3>Components In-Depth</h3></li>
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-registration.html" class="sidebar-link">Component Registration</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-props.html" class="sidebar-link">Props</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-custom-events.html" class="sidebar-link">Custom Events</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-slots.html" class="sidebar-link">Slots</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-dynamic-async.html" class="sidebar-link">Dynamic & Async Components</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-edge-cases.html" class="sidebar-link">Handling Edge Cases</a>
+    </li>
+  
+    
+    
+      
       
       
         <li><h3>Hiệu ứng chuyển động</h3></li>
@@ -478,7 +585,6 @@
       
       
       
-    
     
     <li>
       <a href="/v2/guide/transitions.html" class="sidebar-link">Transition cho enter/leave & danh sách</a>
@@ -493,7 +599,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/transitioning-state.html" class="sidebar-link">Transition cho trạng thái</a>
@@ -504,13 +610,13 @@
       
       
       
+      
         <li><h3>Tái sử dụng & kết hợp</h3></li>
       
       
       
       
       
-    
     
     <li>
       <a href="/v2/guide/mixins.html" class="sidebar-link">Mixin</a>
@@ -525,7 +631,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/custom-directive.html" class="sidebar-link">Directive tùy biến</a>
@@ -540,7 +646,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/render-function.html" class="sidebar-link">Các hàm render & JSX</a>
@@ -555,7 +661,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/plugins.html" class="sidebar-link">Plugin</a>
@@ -570,7 +676,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/filters.html" class="sidebar-link">Filter</a>
@@ -582,12 +688,12 @@
       
       
       
+      
         <li><h3>Công cụ</h3></li>
       
       
       
       
-    
     
     <li>
       <a href="/v2/guide/deployment.html" class="sidebar-link">Triển khai cho môi trường production</a>
@@ -602,7 +708,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/single-file-components.html" class="sidebar-link">Single File Components</a>
@@ -617,10 +723,10 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit Test</a>
+      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit test</a>
     </li>
   
     
@@ -632,7 +738,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/typescript.html" class="sidebar-link">TypeScript Support</a>
@@ -645,11 +751,11 @@
       
       
       
+      
         <li><h3>Mở rộng quy mô ứng dụng</h3></li>
       
       
       
-    
     
     <li>
       <a href="/v2/guide/routing.html" class="sidebar-link">Routing</a>
@@ -664,10 +770,10 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/state-management.html" class="sidebar-link">State Management</a>
+      <a href="/v2/guide/state-management.html" class="sidebar-link">Quản lí trạng thái</a>
     </li>
   
     
@@ -679,14 +785,15 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/ssr.html" class="sidebar-link">Server-Side Rendering</a>
+      <a href="/v2/guide/ssr.html" class="sidebar-link">Render ở phía server</a>
     </li>
   
     
     
+      
       
       
       
@@ -696,7 +803,6 @@
         <li><h3>Bên trong Vue</h3></li>
       
       
-    
     
     <li>
       <a href="/v2/guide/reactivity.html" class="sidebar-link">Reactivity in Depth</a>
@@ -711,9 +817,9 @@
       
       
       
+      
         <li><h3>Thông tin thêm</h3></li>
       
-    
     
     <li>
       <a href="/v2/guide/comparison.html" class="sidebar-link">Comparison with Other Frameworks</a>
@@ -728,7 +834,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/join.html" class="sidebar-link">Join the Vue.js Community!</a>
@@ -743,12 +849,11 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/team.html" class="sidebar-link">Đội ngũ</a>
     </li>
-  
   
 </ul>
 
@@ -868,9 +973,10 @@ new Vue({
 <blockquote>
 <p>Từ phiên bản 2.3.0 trở đi</p>
 </blockquote>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- sự kiện scroll sẽ không chặn hành vi scroll mặc định --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-on:scroll.passive</span>=<span class="string">"onScroll"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>Ngoài những modifier kể trên, Vue còn cung cấp thêm modifier <code>.passive</code> để cải thiện hiệu năng, nhất là trên nền tảng di động. Ví dụ, khi thực hiện cuộn trang (scroll), trình duyệt sẽ chỉ cuộn sau khi hàm xử lí được hoàn tất, vì trình duyệt không biết sự kiện có gọi <code>event.preventDefault()</code> để chặn hành vi mặc định bên trong hàm xử lí hay không. Chúng ta có thể dùng modifier <code>.passive</code> để thông báo trước cho trình duyệt biết rằng sự kiện sẽ không chặn hành vi mặc định.</p>
-<p class="tip">Đừng dùng <code>.passive</code> và <code>.prevent</code> chung với nhau, vì <code>.passive</code> không thể chặn sự kiện mặc định.</p>
+<p>Vue cũng cung cấp modifier <code>.passive</code>, tương ứng với <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Parameters" target="_blank" rel="noopener">tùy chọn <code>passive</code> cho <code>addEventListener</code></a>.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment">hành vi mặc định của sự kiện scroll (cuộn trang) sẽ xảy ra </span></span><br><span class="line"><span class="comment">ngay lập tức, thay vì đợi `onScroll` hoàn tất.</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-on:scroll.passive</span>=<span class="string">"onScroll"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Modifier <code>.passive</code> đặc biệt hữu ích để cải thiện hiệu năng của ứng dụng trên các thiết bị di động.</p>
+<p class="tip">Đừng dùng <code>.passive</code> và <code>.prevent</code> cùng nhau, vì <code>.prevent</code> sẽ không có hiệu lực, và trình duyệt có thể sẽ bật cảnh báo. Nên nhớ rằng <code>.passive</code> thông báo cho trình duyệt biết rằng bạn <em>không muốn</em> ngăn chặn hành vi mặc định của sự kiện.</p>
 
 <h2 id="Key-modifier"><a href="#Key-modifier" class="headerlink" title="Key modifier"></a>Key modifier</h2><p>Khi lắng nghe các sự kiện bàn phím (keyboard event), chúng ta thường phải kiểm tra mã phím (key code). Vue hỗ trợ thêm key modifier (modifer cho mã phím) cho <code>v-on</code> trong các trường hợp này:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- chỉ gọi vm.submit() khi keyCode là 13 (phím Enter) --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-on:keyup.13</span>=<span class="string">"submit"</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -943,10 +1049,12 @@ new Vue({
   
     <div class="guide-links">
       
+      
         <span>← <a href="/v2/guide/list.html">Render danh sách</a></span>
       
       
-        <span style="float: right;"><a href="/v2/guide/forms.html">Form Input Bindings</a> →</span>
+      
+        <span style="float: right;"><a href="/v2/guide/forms.html">Ràng buộc form input</a> →</span>
       
     </div>
   
@@ -966,7 +1074,7 @@ new Vue({
 </script>
 
     Phát hiện lỗi hoặc muốn đóng góp vào nội dung?
-    <a href="https://github.com/vuejs/vuejs.org/blob/master/src/v2/guide/events.md" target="_blank">
+    <a href="https://github.com/vuejs-vn/vuejs.org/blob/master/src/v2/guide/events.md" target="_blank">
       Chỉnh sửa trang này trên GitHub!
     </a>
   </div>
@@ -982,9 +1090,9 @@ new Vue({
     <script src="/js/common.js"></script>
 
     <!-- search -->
-    <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
     <link rel="stylesheet" href="/css/search.css">
-    <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     [
       '#search-query-nav',
@@ -993,15 +1101,15 @@ new Vue({
     ].forEach(function (selector) {
       if (!document.querySelector(selector)) return
       // search index defaults to v2
-      var match = window.location.pathname.match(/^\/(v\d+)/)
-      var version = match ? match[1] : 'v2'
       docsearch({
-      appId: 'BH4D9OD16A',
-      apiKey: '85cc3221c9f23bfbaa4e3913dd7625ea',
-      indexName: 'vuejs',
-      inputSelector: selector,
-      algoliaOptions: { facetFilters: ["version:" + version] }
-      })
+        apiKey: 'bd7d3891459fccb97fd1f689b1840bc5',
+        indexName: 'vi_vuejs',
+
+        inputSelector: selector,
+        algoliaOptions: { 'facetFilters': ["lang:vi"] },
+
+        debug: true
+      });
     })
     </script>
 

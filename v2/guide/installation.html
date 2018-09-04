@@ -96,8 +96,9 @@
     <li><ul>
       <li><a href="/v2/guide/" class="nav-link current">Hướng dẫn</a></li>
       <li><a href="/v2/api/" class="nav-link">API</a></li>
-      <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
+      <li><a href="/v2/style-guide/" class="nav-link">Phong cách viết</a></li>
       <li><a href="/v2/examples/" class="nav-link">Một số ví dụ</a></li>
+      <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>
     </ul></li>
   </ul>
 </li>
@@ -126,7 +127,8 @@
     </ul></li>
     <li><h4>Tin tức</h4></li>
     <li><ul>
-      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Lộ trình phát triển</a></li>
+      <li><a href="https://news.vuejs.org" class="nav-link" target="_blank">Tin tức hàng tuần</a></li>
+      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Roadmap</a></li>
       <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
       <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">Blog</a></li>
       <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">Việc làm</a></li>
@@ -189,8 +191,9 @@
     <li><ul>
       <li><a href="/v2/guide/" class="nav-link current">Hướng dẫn</a></li>
       <li><a href="/v2/api/" class="nav-link">API</a></li>
-      <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
+      <li><a href="/v2/style-guide/" class="nav-link">Phong cách viết</a></li>
       <li><a href="/v2/examples/" class="nav-link">Một số ví dụ</a></li>
+      <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>
     </ul></li>
   </ul>
 </li>
@@ -219,7 +222,8 @@
     </ul></li>
     <li><h4>Tin tức</h4></li>
     <li><ul>
-      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Lộ trình phát triển</a></li>
+      <li><a href="https://news.vuejs.org" class="nav-link" target="_blank">Tin tức hàng tuần</a></li>
+      <li><a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Roadmap</a></li>
       <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
       <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">Blog</a></li>
       <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">Việc làm</a></li>
@@ -263,30 +267,40 @@
 
     </ul>
     <div class="list">
-      <div class="main-sponsor">
-        <span>Nhà tài trợ bạch kim</span>
-        <div>
-        <a href="https://stdlib.com" target="_blank" class="logo">
-          <img src="/images/stdlib.png">
-        </a>
-        <a href="http://tooltwist.com/" target="_blank" class="logo">
-          <img src="/images/tooltwist.png">
-        </a>
-        <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
-          <img src="/images/vueschool.png">
-        </a>
-        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
-          <img src="/images/datacamp.png">
-        </a>
-        </div>
-      </div>
-      <a class="become-backer" href="/support-vuejs">
-        Trở thành nhà tài trợ
-      </a>
+      <div id="sidebar-sponsors-special">
+  <div class="main-sponsor">
+    <span>Tài trợ đặc biệt</span>
+    <div>
+    <a href="https://stdlib.com" target="_blank" class="logo">
+      <img src="/images/stdlib.png">
+    </a>
+    <a href="https://www.bitsrc.io/?utm_source=vue&utm_medium=vue&utm_campaign=vue&utm_term=vue&utm_content=vue" target="_blank" class="logo">
+      <img src="/images/bit-wide.png">
+    </a>
+    </div>
+  </div>
+</div>
+
+<div id="sidebar-sponsors-platinum">
+  <div class="main-sponsor">
+    <span>Tài trợ Patreon</span>
+    <div>
+    <a href="http://tooltwist.com/" target="_blank" class="logo">
+      <img src="/images/tooltwist.png">
+    </a>
+    <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
+      <img src="/images/vueschool.png">
+    </a>
+    </div>
+  </div>
+  <a class="become-backer" href="/support-vuejs">
+    Trở thành nhà tài trợ
+  </a>
+</div>
+
       <h2>
         
-          Hướng dẫn
-        
+        Hướng dẫn
         <!--
         
           <select class="version-select">
@@ -311,7 +325,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/installation.html" class="sidebar-link current">Cài đặt</a>
@@ -326,7 +340,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/index.html" class="sidebar-link">Giới thiệu</a>
@@ -341,7 +355,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/instance.html" class="sidebar-link">Đối tượng Vue</a>
@@ -356,7 +370,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/syntax.html" class="sidebar-link">Cú pháp template</a>
@@ -371,7 +385,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/computed.html" class="sidebar-link">Computed property và watcher</a>
@@ -386,7 +400,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/class-and-style.html" class="sidebar-link">Binding cho class và style</a>
@@ -401,7 +415,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/conditional.html" class="sidebar-link">Render theo điều kiện</a>
@@ -416,7 +430,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/list.html" class="sidebar-link">Render danh sách</a>
@@ -431,7 +445,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/events.html" class="sidebar-link">Xử lí sự kiện</a>
@@ -446,10 +460,10 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/forms.html" class="sidebar-link">Form Input Bindings</a>
+      <a href="/v2/guide/forms.html" class="sidebar-link">Ràng buộc form input</a>
     </li>
   
     
@@ -461,14 +475,107 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/components.html" class="sidebar-link">Component</a>
+      <a href="/v2/guide/components.html" class="sidebar-link">Cơ bản về component</a>
     </li>
   
     
     
+      
+      
+        <li><h3>Components In-Depth</h3></li>
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-registration.html" class="sidebar-link">Component Registration</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-props.html" class="sidebar-link">Props</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-custom-events.html" class="sidebar-link">Custom Events</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-slots.html" class="sidebar-link">Slots</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-dynamic-async.html" class="sidebar-link">Dynamic & Async Components</a>
+    </li>
+  
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    <li>
+      <a href="/v2/guide/components-edge-cases.html" class="sidebar-link">Handling Edge Cases</a>
+    </li>
+  
+    
+    
+      
       
       
         <li><h3>Hiệu ứng chuyển động</h3></li>
@@ -478,7 +585,6 @@
       
       
       
-    
     
     <li>
       <a href="/v2/guide/transitions.html" class="sidebar-link">Transition cho enter/leave & danh sách</a>
@@ -493,7 +599,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/transitioning-state.html" class="sidebar-link">Transition cho trạng thái</a>
@@ -504,13 +610,13 @@
       
       
       
+      
         <li><h3>Tái sử dụng & kết hợp</h3></li>
       
       
       
       
       
-    
     
     <li>
       <a href="/v2/guide/mixins.html" class="sidebar-link">Mixin</a>
@@ -525,7 +631,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/custom-directive.html" class="sidebar-link">Directive tùy biến</a>
@@ -540,7 +646,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/render-function.html" class="sidebar-link">Các hàm render & JSX</a>
@@ -555,7 +661,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/plugins.html" class="sidebar-link">Plugin</a>
@@ -570,7 +676,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/filters.html" class="sidebar-link">Filter</a>
@@ -582,12 +688,12 @@
       
       
       
+      
         <li><h3>Công cụ</h3></li>
       
       
       
       
-    
     
     <li>
       <a href="/v2/guide/deployment.html" class="sidebar-link">Triển khai cho môi trường production</a>
@@ -602,7 +708,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/single-file-components.html" class="sidebar-link">Single File Components</a>
@@ -617,10 +723,10 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit Test</a>
+      <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit test</a>
     </li>
   
     
@@ -632,7 +738,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/typescript.html" class="sidebar-link">TypeScript Support</a>
@@ -645,11 +751,11 @@
       
       
       
+      
         <li><h3>Mở rộng quy mô ứng dụng</h3></li>
       
       
       
-    
     
     <li>
       <a href="/v2/guide/routing.html" class="sidebar-link">Routing</a>
@@ -664,10 +770,10 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/state-management.html" class="sidebar-link">State Management</a>
+      <a href="/v2/guide/state-management.html" class="sidebar-link">Quản lí trạng thái</a>
     </li>
   
     
@@ -679,14 +785,15 @@
       
       
       
-    
+      
     
     <li>
-      <a href="/v2/guide/ssr.html" class="sidebar-link">Server-Side Rendering</a>
+      <a href="/v2/guide/ssr.html" class="sidebar-link">Render ở phía server</a>
     </li>
   
     
     
+      
       
       
       
@@ -696,7 +803,6 @@
         <li><h3>Bên trong Vue</h3></li>
       
       
-    
     
     <li>
       <a href="/v2/guide/reactivity.html" class="sidebar-link">Reactivity in Depth</a>
@@ -711,9 +817,9 @@
       
       
       
+      
         <li><h3>Thông tin thêm</h3></li>
       
-    
     
     <li>
       <a href="/v2/guide/comparison.html" class="sidebar-link">Comparison with Other Frameworks</a>
@@ -728,7 +834,7 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/join.html" class="sidebar-link">Join the Vue.js Community!</a>
@@ -743,12 +849,11 @@
       
       
       
-    
+      
     
     <li>
       <a href="/v2/guide/team.html" class="sidebar-link">Đội ngũ</a>
     </li>
-  
   
 </ul>
 
@@ -779,20 +884,23 @@
   
   
     <h3 id="Kha-nang-tuong-thich"><a href="#Kha-nang-tuong-thich" class="headerlink" title="Khả năng tương thích"></a>Khả năng tương thích</h3><p>Do sử dụng một số tính năng ECMAScript 5 không được hỗ trợ trên IE8, Vue <strong>không</strong> hỗ trợ IE8 và các phiên bản thấp hơn. Tuy nhiên Vue hỗ trợ <a href="http://caniuse.com/#feat=es5" target="_blank" rel="noopener">mọi trình duyệt tương thích với ECMAScript 5</a>.</p>
-<h3 id="Ghi-chu-phat-hanh"><a href="#Ghi-chu-phat-hanh" class="headerlink" title="Ghi chú phát hành"></a>Ghi chú phát hành</h3><p>Phiên bản ổn định mới nhất: 2.5.13</p>
+<h3 id="Ghi-chu-phat-hanh"><a href="#Ghi-chu-phat-hanh" class="headerlink" title="Ghi chú phát hành"></a>Ghi chú phát hành</h3><p>Phiên bản ổn định mới nhất: 2.5.17</p>
 <p>Mọi ghi chú chi tiết về các bản phát hành của mỗi phiên bản đều có trên <a href="https://github.com/vuejs/vue/releases" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Vue-Devtools"><a href="#Vue-Devtools" class="headerlink" title="Vue Devtools"></a>Vue Devtools</h2><p>Chúng tôi khuyên bạn nên cài add-on <a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">Vue Devtools</a> vào trình duyệt. Add-on này giúp bạn kiểm tra và debug (kiểm lỗi) ứng dụng Vue với giao diện thân thiện.</p>
 <h2 id="Dung-the-lt-script-gt-truc-tiep"><a href="#Dung-the-lt-script-gt-truc-tiep" class="headerlink" title="Dùng thẻ &lt;script&gt; trực tiếp"></a>Dùng thẻ <code>&lt;script&gt;</code> trực tiếp</h2><p>Chỉ cần tải file thư viện về rồi sử dụng nó trong thẻ script. <code>Vue</code> sẽ được đăng ký thành một biến toàn cục.</p>
 <p class="tip">Nếu đang phát triển ứng dụng, đừng dùng bản rút gọn vì bạn sẽ không thấy cảnh báo về những lỗi thường gặp.</p>
 
-<div id="downloads"><br><a class="button" href="/js/vue.js" download="">Bản development</a><span class="light info">Với đầy đủ cảnh báo và chế độ debug</span><br><br><a class="button" href="/js/vue.min.js" download="">Bản production</a><span class="light info">Không có các cảnh báo, 30.67KB min+gzip</span><br></div>
+<div id="downloads"><br><a class="button" href="/js/vue.js" download="">Bản development</a><span class="light info">Với đầy đủ cảnh báo và chế độ debug</span><br><br><a class="button" href="/js/vue.min.js" download="">Bản production</a><span class="light info">Không có các cảnh báo, 30.90KB min+gzip</span><br></div>
 
-<h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><p>Nên dùng: <a href="https://cdn.jsdelivr.net/npm/vue" target="_blank" rel="noopener">https://cdn.jsdelivr.net/npm/vue</a>, nó sẽ trỏ tới bản mới nhất của Vue trên npm. Bạn có thể xem mã nguồn của package trên npm tại <a href="https://cdn.jsdelivr.net/npm/vue/" target="_blank" rel="noopener">https://cdn.jsdelivr.net/npm/vue/</a>.</p>
-<p>Ngoài ra, bạn cũng có thể sử dụng <a href="https://unpkg.com/vue" target="_blank" rel="noopener">unpkg</a> hoặc <a href="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" target="_blank" rel="noopener">cdnjs</a> (cdnjs cần nhiều thời gian để đồng bộ nên có thể nó chưa phải phiên bản mới nhất).</p>
+<h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><p>Chúng tôi khuyến khích trỏ đến một phiên bản cụ thể mà bạn có thể tự thay đổi nếu cần:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Bạn có thể xem mã nguồn của package trên npm tại <a href="https://cdn.jsdelivr.net/npm/vue/" target="_blank" rel="noopener">https://cdn.jsdelivr.net/npm/vue/</a>.</p>
+<p>Ngoài ra, bạn cũng có thể sử dụng <a href="https://unpkg.com/vue" target="_blank" rel="noopener">unpkg</a> hoặc <a href="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js" target="_blank" rel="noopener">cdnjs</a> (cdnjs cần nhiều thời gian để đồng bộ nên có thể nó chưa phải phiên bản mới nhất).</p>
+<p>Nhớ đọc thêm về <a href="#giai-thich-ve-cac-ban-build">các bản build khác nhau của Vue</a> và sử dụng bản Vue production khi publish bản production cho trang web hoặc app của bạn, thay <code>vue.js</code> bằng <code>vue.min.js</code>. Đây là bản nhỏ hơn, được tối ưu về tốc độ. </p>
 <h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><p>Chúng tôi khuyên bạn nên sử dụng NPM khi muốn xây dựng một ứng dụng lớn với Vue. NPM hoạt động rất tốt với các module bundler (các công cụ đóng gói module) như <a href="https://webpack.js.org/" target="_blank" rel="noopener">Webpack</a> hoặc <a href="http://browserify.org/" target="_blank" rel="noopener">Browserify</a>. Vue cũng cung cấp công cụ hỗ trợ để viết các <a href="single-file-components.html">single file component</a>.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># latest stable</span></span><br><span class="line">$ npm install vue</span><br></pre></td></tr></table></figure>
 <h2 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h2><p>Vue.js cung cấp một <a href="https://github.com/vuejs/vue-cli" target="_blank" rel="noopener">CLI</a> giúp nhanh chóng khởi tạo nền tảng (scaffolding) cho các ứng dụng một trang. Vue-CLI chuẩn bị sẵn các cài đặt phong phú cho một quy trình front-end hiện đại. Chỉ mất vài phút, bạn đã có thể bắt đầu xây dựng ứng dụng với các tính năng như hot-reload, tinh chỉnh code khi save (lint-on-save), và các bản build sẵn sàng để deploy lên production:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cài đặt vue-cli</span></span><br><span class="line">$ npm install --global vue-cli</span><br><span class="line"><span class="comment"># tạo một dự án mới với template "webpack"</span></span><br><span class="line">$ vue init webpack my-project</span><br><span class="line"><span class="comment"># cài đặt các thư viện phụ thuộc và bắt tay vào việc!</span></span><br><span class="line">$ <span class="built_in">cd</span> my-project</span><br><span class="line">$ npm install</span><br><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cài đặt vue-cli</span></span><br><span class="line">$ npm install --global vue-cli</span><br><span class="line"><span class="comment"># tạo một dự án mới với template "webpack"</span></span><br><span class="line">$ vue init webpack my-project</span><br><span class="line"><span class="comment"># cài đặt các thư viện phụ thuộc và bắt tay vào việc!</span></span><br><span class="line">$ <span class="built_in">cd</span> my-project</span><br><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure>
 <p class="tip">CLI yêu cầu nhiều kiến thức về Node.js và các công cụ hỗ trợ. Nếu bạn mới làm quen với Vue hoặc các công cụ build, chúng tôi đề nghị bạn nên xem qua <a href="./">hướng dẫn</a> mà không sử dụng các công cụ build sau đó mới quay lại sử dụng CLI.</p>
 
 <h2 id="Giai-thich-ve-cac-ban-build"><a href="#Giai-thich-ve-cac-ban-build" class="headerlink" title="Giải thích về các bản build"></a>Giải thích về các bản build</h2><p>Trong thư mục <a href="https://cdn.jsdelivr.net/npm/vue/dist/" target="_blank" rel="noopener"><code>dist/</code> của gói trên NPM</a> bạn sẽ thấy nhiều bản build khác nhau của Vue.js. Dưới đây là các điểm khác biệt cơ bản giữa các phiên bản này:</p>
@@ -877,6 +985,8 @@
     <div class="guide-links">
       
       
+      
+      
         <span style="float: right;"><a href="/v2/guide/index.html">Giới thiệu</a> →</span>
       
     </div>
@@ -897,7 +1007,7 @@
 </script>
 
     Phát hiện lỗi hoặc muốn đóng góp vào nội dung?
-    <a href="https://github.com/vuejs/vuejs.org/blob/master/src/v2/guide/installation.md" target="_blank">
+    <a href="https://github.com/vuejs-vn/vuejs.org/blob/master/src/v2/guide/installation.md" target="_blank">
       Chỉnh sửa trang này trên GitHub!
     </a>
   </div>
@@ -913,9 +1023,9 @@
     <script src="/js/common.js"></script>
 
     <!-- search -->
-    <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
     <link rel="stylesheet" href="/css/search.css">
-    <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     [
       '#search-query-nav',
@@ -924,15 +1034,15 @@
     ].forEach(function (selector) {
       if (!document.querySelector(selector)) return
       // search index defaults to v2
-      var match = window.location.pathname.match(/^\/(v\d+)/)
-      var version = match ? match[1] : 'v2'
       docsearch({
-      appId: 'BH4D9OD16A',
-      apiKey: '85cc3221c9f23bfbaa4e3913dd7625ea',
-      indexName: 'vuejs',
-      inputSelector: selector,
-      algoliaOptions: { facetFilters: ["version:" + version] }
-      })
+        apiKey: 'bd7d3891459fccb97fd1f689b1840bc5',
+        indexName: 'vi_vuejs',
+
+        inputSelector: selector,
+        algoliaOptions: { 'facetFilters': ["lang:vi"] },
+
+        debug: true
+      });
     })
     </script>
 
